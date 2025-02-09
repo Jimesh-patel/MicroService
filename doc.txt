@@ -1,0 +1,15 @@
+npm init -y
+npm i express morgan
+npm i mongoose
+npm i bcrypt jsonwebtoken
+npm i dotenv
+npm i cookie-parser
+npm i express-validator
+
+npm i express-http-proxy
+
+npm i axios
+
+
+
+npx nodemon
