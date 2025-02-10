@@ -3,9 +3,9 @@ const captainService = require('../services/captain.service');
 const blackListTokenModel = require('../models/blackListToken.model');
 const { validationResult } = require('express-validator');
 const axios = require('axios');
-// const { sendMessageToSocketId } = require('../services/socket');
 const { params } = require('express-validator');
-
+const { subscribeToQueue } = require('../services/rabbitmq');
+const { sendMessageToSocketId } = require('../socket');
 
 
 
@@ -123,7 +123,7 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
 
 
 
-const { subscribeToQueue } = require('../services/rabbitmq');
+
 
 
 module.exports.waitForNewRide = async (req, res) => {
@@ -139,7 +139,6 @@ subscribeToQueue("new-ride-available", async (data) => {
         }
     });
     const pickupCoordinates = response.data;
-    console.log(pickupCoordinates);
     const captainsInRadius = await captainService.getCaptainsInTheRadius(pickupCoordinates.ltd, pickupCoordinates.lng, ride.vehicleType, 100);
 
     if (captainsInRadius.length === 0) {
@@ -147,10 +146,11 @@ subscribeToQueue("new-ride-available", async (data) => {
         return;
     }
     console.log(captainsInRadius);
-    // captainsInRadius.map(captain => {
-    //     sendMessageToSocketId(captain.socketId, {
-    //         event: 'new-ride',
-    //         data: rideWithUser
-    //     });
-    // });
+    
+    captainsInRadius.map(captain => {
+        sendMessageToSocketId(captain.socketId, {
+            event: 'new-ride',
+            data: ride
+        });
+    });
 });

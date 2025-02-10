@@ -1,41 +1,51 @@
-const rideModel = require('../models/ride.model');
 
-async function getFare(pickup, destination, distanceTime) {
+const rideModel = require('../models/ride.model');
+const axios = require('axios');
+const crypto = require('crypto');
+
+
+async function getFare(pickup, destination) {
 
     if (!pickup || !destination) {
         throw new Error('Pickup and destination are required');
     }
+    try {
+        const distanceTime = await axios.get(`${process.env.BASE_URL}/maps/get-distance-time?origin=${pickup}&destination=${destination}`);
 
-    if (!distanceTime) {
-        throw new Error('Distance and time are required');
+        if (!distanceTime || !distanceTime.data || !distanceTime.data.distance || !distanceTime.data.duration) {
+            throw new Error('Invalid response from distance-time API');
+        }
+
+        const baseFare = {
+            auto: 30,
+            car: 50,
+            moto: 20
+        };
+
+        const perKmRate = {
+            auto: 10,
+            car: 15,
+            moto: 8
+        };
+
+        const perMinuteRate = {
+            auto: 2,
+            car: 3,
+            moto: 1.5
+        };
+
+        const fare = {
+            auto: Math.round(baseFare.auto + ((distanceTime.data.distance.value / 1000) * perKmRate.auto) + ((distanceTime.data.duration.value / 60) * perMinuteRate.auto)),
+            car: Math.round(baseFare.car + ((distanceTime.data.distance.value / 1000) * perKmRate.car) + ((distanceTime.data.duration.value / 60) * perMinuteRate.car)),
+            moto: Math.round(baseFare.moto + ((distanceTime.data.distance.value / 1000) * perKmRate.moto) + ((distanceTime.data.duration.value / 60) * perMinuteRate.moto))
+        };
+
+        return { fare, distanceTime: distanceTime.data };
+
+    } catch (error) {
+        console.error('Error fetching distance and time:', error.message);
+        throw new Error('Can not fetch distance and time');
     }
-
-    const baseFare = {
-        auto: 30,
-        car: 50,
-        moto: 20
-    };
-
-    const perKmRate = {
-        auto: 10,
-        car: 15,
-        moto: 8
-    };
-
-    const perMinuteRate = {
-        auto: 2,
-        car: 3,
-        moto: 1.5
-    };
-
-    const fare = {
-        auto: Math.round(baseFare.auto + ((distanceTime.distance.value / 1000) * perKmRate.auto) + ((distanceTime.duration.value / 60) * perMinuteRate.auto)),
-        car: Math.round(baseFare.car + ((distanceTime.distance.value / 1000) * perKmRate.car) + ((distanceTime.duration.value / 60) * perMinuteRate.car)),
-        moto: Math.round(baseFare.moto + ((distanceTime.distance.value / 1000) * perKmRate.moto) + ((distanceTime.duration.value / 60) * perMinuteRate.moto))
-    };
-
-    return fare;
-
 }
 
 module.exports.getFare = getFare;
@@ -47,33 +57,26 @@ module.exports.createRide = async ({ user, pickup, destination, vehicleType }) =
         throw new Error('All fields are required');
     }
 
-    // try {
-    //     const distanceTime = await axios.get(`${process.env.BASE_URL}/maps/get-distance-time?origin=${pickup}&&destination=${destination}`)
-
-    //     if(!distanceTime) {
-    //         throw new Error('Can not fetch distance and time');
-    //     }
-
-    // } catch (error) {
-    //     throw new Error('Can not fetch distance and time');
-    // }
-
-    // const fare = await getFare(pickup, destination, distanceTime);
+    const { fare, distanceTime } = await getFare(pickup, destination);
 
     const ride = rideModel.create({
         user,
         pickup,
         destination,
-        // otp: getOtp(6),
-        otp: 123456,
-        // fare: fare[vehicleType],
-        fare: 100,
+        otp: getOtp(6),
+        fare: fare[vehicleType],
         vehicleType: vehicleType,
-        // duration: distanceTime.duration.value,
-        // distance: distanceTime.distance.value
-        duration: 100,
-        distance: 1000
+        duration: distanceTime.duration.value,
+        distance: distanceTime.distance.value
     })
 
     return ride;
+}
+
+function getOtp(num) {
+    function generateOtp(num) {
+        const otp = crypto.randomInt(Math.pow(10, num - 1), Math.pow(10, num)).toString();
+        return otp;
+    }
+    return generateOtp(num);
 }

@@ -6,6 +6,8 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('../ride/db/db');
 const RabbitMQ = require('../ride/services/rabbitmq');
 const rideRoutes = require('../ride/routes/ride.route')
+const cors = require('cors');
+app.use(cors());    
 
 connectDB();
 RabbitMQ.connect();
