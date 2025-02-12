@@ -19,5 +19,19 @@ router.get('/get-fare',
     rideController.getFare
 )
 
+router.put('/change-status',
+    authMiddleware.authCaptain,
+    body('rideId').isMongoId().withMessage('Invalid ride ID'),
+    body('status').isString().isIn([ 'accepted', 'completed', 'cancelled' ]).withMessage('Invalid status'),
+    rideController.changeRideStatus
+)
+
+router.get('/start-ride',
+    authMiddleware.authCaptain,
+    query('rideId').isMongoId().withMessage('Invalid ride id'),
+    query('otp').isString().isLength({ min: 6, max: 6 }).withMessage('Invalid OTP'),
+    rideController.startRide
+)
+
 
 module.exports = router;

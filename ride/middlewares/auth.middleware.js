@@ -1,11 +1,10 @@
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 
-
 module.exports.authUser = async (req, res, next) => {
     try {
-        const token = req.headers.authorization.split(' ')[ 1 ] || req.cookies.token;
- 
+        const token = req.headers.authorization?.split(' ')[1] || req.cookies.token;
+
         if (!token) {
             return res.status(401).json({ message: 'Unauthorized' });
         }
@@ -14,7 +13,7 @@ module.exports.authUser = async (req, res, next) => {
             headers: {
                 Authorization: `Bearer ${token}`
             }
-        })
+        });
 
         const user = response.data;
 
@@ -25,24 +24,26 @@ module.exports.authUser = async (req, res, next) => {
         req.user = user;
         next();
 
-    }
-    catch (error) {
+    } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
 
 module.exports.authCaptain = async (req, res, next) => {
     try {
-        const token = req.headers.authorization.split(' ')[ 1 ] || req.cookies.token;
+        const token = req.headers.authorization?.split(' ')[1] || req.cookies.token;
         if (!token) {
             return res.status(401).json({ message: 'Unauthorized' });
         }
 
-        const response = await axios.get(`${process.env.BASE_URL}/captain/profile`, {
+        const url = `${process.env.BASE_URL}/captains/profile`;
+        console.log(`Requesting captain profile from URL: ${url}`);
+
+        const response = await axios.get(url, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
-        })
+        });
 
         const captain = response.data;
 
@@ -54,8 +55,8 @@ module.exports.authCaptain = async (req, res, next) => {
 
         next();
 
-    }
-    catch (error) {
+    } catch (error) {
+        console.log(`Error fetching captain profile: ${error.message}`);
         res.status(500).json({ message: error.message });
     }
-}
+};

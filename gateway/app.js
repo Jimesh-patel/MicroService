@@ -21,13 +21,12 @@ app.use('/captains', expressProxy('http://localhost:3002'));
 app.use('/rides', expressProxy('http://localhost:3003'));
 app.use('/maps', expressProxy('http://localhost:3004'));
 
-
 // Connect to the Captain Server
 const captainSocket = Client('http://localhost:3002');
 // Connect to the User Server
 const userSocket = Client('http://localhost:3001');
-
-const socket = Client('http://localhost:3000');
+// Connect to the Ride Server
+const rideSocket = Client('http://localhost:3003');
 
 io.on('connection', (socket) => {
     console.log(`Client connected: ${socket.id}`);
@@ -44,15 +43,24 @@ io.on('connection', (socket) => {
         captainSocket.emit('update-location-captain', data);
     }); 
 
-    captainSocket.on('new-ride' , (data) => {
+    captainSocket.off('new-ride').on('new-ride', (data) => {
         socket.emit('new-ride', data);
+    });
+
+    captainSocket.on('ride-confirmed', (data) => {
+        console.log("Ride Confirmed: ");
+        console.log(data); 
+        socket.emit('ride-confirmed', data);
+    });
+
+    rideSocket.on('ride-started', (data) => {
+        socket.emit('ride-started', data);
     });
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${socket.id}`);
     });
 });
-
 
 server.listen(3000, () => {
     console.log('Gateway listening on port 3000');

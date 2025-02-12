@@ -74,3 +74,18 @@ module.exports.logoutUser = async (req, res, next) => {
     res.status(200).json({ message: 'Logged out' });
 
 }
+
+module.exports.getUserById = async (req, res, next) => {
+    try {
+        const userId = req.query.userId; // Change from req.params to req.query
+        const user = await userModel.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.status(200).json(user);
+    } catch (error) {
+        next(error);
+    }
+};

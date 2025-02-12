@@ -1,11 +1,12 @@
 const captainModel = require('../models/captain.model');
 const captainService = require('../services/captain.service');
 const blackListTokenModel = require('../models/blackListToken.model');
-const { validationResult } = require('express-validator');
+const { validationResult, body } = require('express-validator');
 const axios = require('axios');
 const { params } = require('express-validator');
 const { subscribeToQueue } = require('../services/rabbitmq');
 const { sendMessageToSocketId } = require('../socket');
+const { query } = require('express');
 
 
 
@@ -75,7 +76,7 @@ module.exports.getCaptainProfile = async (req, res, next) => {
 }
 
 module.exports.logoutCaptain = async (req, res, next) => {
-    const token = req.cookies.token || req.headers.authorization?.split(' ')[ 1 ];
+    const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
 
     await blackListTokenModel.create({ token });
 
@@ -104,7 +105,7 @@ module.exports.changeCaptainStatus = async (req, res, next) => {
 }
 
 module.exports.getCaptainsInTheRadius = async (req, res, next) => {
-    
+
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -114,7 +115,7 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
         const { ltd, lng, radius } = req.query;
         const captains = await captainService.getCaptainsInTheRadius(ltd, lng, radius);
         res.status(200).json(captains);
-        
+
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Internal server error' });
@@ -122,20 +123,12 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
 }
 
 
-
-
-
-
-module.exports.waitForNewRide = async (req, res) => {
-    
-};
-
 subscribeToQueue("new-ride-available", async (data) => {
     const ride = JSON.parse(data);
-    console.log(ride);
+    // console.log(ride);
     const response = await axios.get(`${process.env.BASE_URL}/maps/get-coordinates`, {
         params: {
-            address: ride.pickup 
+            address: ride.pickup
         }
     });
     const pickupCoordinates = response.data;
@@ -145,8 +138,8 @@ subscribeToQueue("new-ride-available", async (data) => {
         console.log('No captains in radius');
         return;
     }
-    console.log(captainsInRadius);
-    
+    // console.log(captainsInRadius);
+
     captainsInRadius.map(captain => {
         sendMessageToSocketId(captain.socketId, {
             event: 'new-ride',
@@ -154,3 +147,50 @@ subscribeToQueue("new-ride-available", async (data) => {
         });
     });
 });
+
+
+module.exports.confirmRide = async (req, res, next) => {
+    var { ride } = req.body;
+    const token = req.headers.authorization.split(' ')[1] || req.cookies.token;
+
+    if (!ride) {
+        return res.status(400).json({ message: 'Ride is required' });
+    }
+
+    try {
+        const response = await axios.put(
+            `${process.env.BASE_URL}/rides/change-status`,
+            { rideId: ride._id, status: 'accepted' },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+
+        captainService.changeCaptainStatus(req.captain._id, 'busy');
+
+        ride.status = response.data.status;
+        ride.otp = response.data.otp;
+
+        ride = {
+            ...ride,
+            captain: req.captain
+        }
+
+        sendMessageToSocketId(req.captain.socketId, {
+            event: 'ride-confirmed',
+            data: ride
+        })
+
+        if (!response.data) {
+            return res.status(500).json({ message: 'Ride not found' });
+        }
+
+        res.status(200).json(ride);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Can not confirm ride' });
+    }
+};
+

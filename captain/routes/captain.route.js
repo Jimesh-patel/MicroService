@@ -43,7 +43,11 @@ router.get('/get-captains-in-radius',
     captainController.getCaptainsInTheRadius
 )
 
-router.get('/new-ride-available', authMiddleware.authCaptain, captainController.waitForNewRide)
+router.post('/confirm',
+    authMiddleware.authCaptain,
+    body('ride').isObject().withMessage('Invalid ride object'),
+    captainController.confirmRide
+)
 
 
 module.exports = router;

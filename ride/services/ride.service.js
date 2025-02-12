@@ -80,3 +80,51 @@ function getOtp(num) {
     }
     return generateOtp(num);
 }
+
+module.exports.changeRideStatus = async (rideId, status) => {
+    if (!rideId || !status) {
+        throw new Error('Ride id and status are required');
+    }
+
+    const ride = await rideModel.findOneAndUpdate({
+        _id: rideId
+    }, {
+        status
+    }, { new: true }).select('+otp');
+
+    if (!ride) {
+        throw new Error('Ride not found');
+    }   
+
+    return ride;
+}
+
+module.exports.startRide = async ({ rideId, otp, captain }) => {
+    if (!rideId || !otp) {
+        throw new Error('Ride id and OTP are required');
+    }
+
+    const ride = await rideModel.findOne({
+        _id: rideId
+    }).select('+otp');
+
+    if (!ride) {
+        throw new Error('Ride not found');
+    }
+
+    if (ride.status !== 'accepted') {
+        throw new Error('Ride not accepted');
+    }
+
+    if (ride.otp !== otp) {
+        throw new Error('Invalid OTP');
+    }
+
+    await rideModel.findOneAndUpdate({
+        _id: rideId
+    }, {
+        status: 'ongoing'
+    })
+
+    return ride;
+}

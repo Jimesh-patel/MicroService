@@ -51,23 +51,19 @@ const CaptainHome = () => {
 
     socket.on('new-ride', (data) => {
         setRide(data)
-        console.log(data)
         setRidePopupPanel(true)
     })
 
     async function confirmRide() {
-
-        const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/confirm`, {
-
-            rideId: ride._id,
-            captainId: captain._id,
-
+        console.log(ride);
+        const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/confirm`, {
+            ride
         }, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-
+        
         setRidePopupPanel(false)
         setConfirmRidePopupPanel(true)
     }
@@ -137,7 +133,8 @@ const CaptainHome = () => {
             <div ref={confirmRidePopupPanelRef} className='fixed w-full h-screen z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
                 <ConfirmRidePopUp
                     ride={ride}
-                    setConfirmRidePopupPanel={setConfirmRidePopupPanel} setRidePopupPanel={setRidePopupPanel} />
+                    setConfirmRidePopupPanel={setConfirmRidePopupPanel} 
+                    setRidePopupPanel={setRidePopupPanel} />
             </div>
         </div>
     )
