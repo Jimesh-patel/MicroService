@@ -125,7 +125,6 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
 
 subscribeToQueue("new-ride-available", async (data) => {
     const ride = JSON.parse(data);
-    // console.log(ride);
     const response = await axios.get(`${process.env.BASE_URL}/maps/get-coordinates`, {
         params: {
             address: ride.pickup
@@ -138,7 +137,6 @@ subscribeToQueue("new-ride-available", async (data) => {
         console.log('No captains in radius');
         return;
     }
-    // console.log(captainsInRadius);
 
     captainsInRadius.map(captain => {
         sendMessageToSocketId(captain.socketId, {

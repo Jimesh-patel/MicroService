@@ -43,19 +43,21 @@ io.on('connection', (socket) => {
         captainSocket.emit('update-location-captain', data);
     }); 
 
-    captainSocket.off('new-ride').on('new-ride', (data) => {
+    captainSocket.on('new-ride', (data) => {
         socket.emit('new-ride', data);
     });
 
-    captainSocket.on('ride-confirmed', (data) => {
-        console.log("Ride Confirmed: ");
-        console.log(data); 
+    captainSocket.on('ride-confirmed', (data) => { 
         socket.emit('ride-confirmed', data);
     });
-
-    rideSocket.on('ride-started', (data) => {
-        socket.emit('ride-started', data);
+    
+    socket.on('ride-started', (data) =>{
+        io.emit('ride-started', data);
     });
+
+    socket.on('ride-ended', (data)=>{
+        io.emit("ride-ended", data);
+    })
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${socket.id}`);

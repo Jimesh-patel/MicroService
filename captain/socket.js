@@ -15,7 +15,7 @@ function initializeSocket(server) {
         console.log(`Captain connected: ${socket.id}`);
 
         socket.on('join', async (data) => {
-            const { userId, userType} = data;
+            const { userId, userType } = data;
 
             await captainModel.findByIdAndUpdate(userId, { socketId: socket.id });
             console.log('Captain joined');
@@ -43,7 +43,6 @@ function initializeSocket(server) {
 }
 
 const sendMessageToSocketId = (socketId, messageObject) => {
-    console.log(messageObject);
 
     if (io) {
         io.to(socketId).emit(messageObject.event, messageObject.data);

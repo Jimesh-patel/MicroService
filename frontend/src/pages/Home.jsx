@@ -47,9 +47,13 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
+
+        socket.on('ride-started', ride => {
+            setWaitingForDriver(false);
+            navigate('/riding', { state: { ride } });
+        });
+        
         const handleRideConfirmed = (ride) => {
-            console.log("Ride-data : ");
-            console.log(ride);
             setRide(ride);
             setVehicleFound(false);
             setWaitingForDriver(true);
@@ -62,10 +66,7 @@ const Home = () => {
         };
     }, [socket]);
 
-    socket.on('ride-started', ride => {
-        setWaitingForDriver(false);
-        navigate('/riding', { state: { ride } });
-    });
+    
 
 
     const handlePickupChange = async (e) => {
@@ -245,7 +246,7 @@ const Home = () => {
             }
 
             <div className='h-[72%] w-screen'>
-                {/* <LiveTracking /> */}
+                <LiveTracking />
             </div>
             <div className='flex flex-col justify-end h-screen absolute top-0 w-full'>
                 <div ref={suggestionsRef} className='h-[28%] p-6 bg-white relative rounded-t-3xl'>

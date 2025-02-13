@@ -1,10 +1,13 @@
 const rideService = require('../services/ride.service')
-const { validationResult } = require('express-validator')
+const { validationResult, header } = require('express-validator')
 const { publishToQueue } = require('../services/rabbitmq')
-const rideModel = require('../models/ride.model')
-const { param } = require('../routes/ride.route')
 const axios = require('axios')
-const { sendMessageToSocketId } = require('../socket')
+
+const io = require('socket.io-client');
+const gatewaySocket = io(process.env.BASE_URL);
+gatewaySocket.on('connect', () => {
+    console.log('Ride microservice connected to Gateway WebSocket');
+});
 
 module.exports.createRide = async (req, res) => {
     const errors = validationResult(req);
@@ -21,7 +24,6 @@ module.exports.createRide = async (req, res) => {
             ...ride.toObject(),  
             user: req.user
         };
-        console.log(rideWithUser);
         await publishToQueue('new-ride-available', JSON.stringify(rideWithUser));
         res.status(201).json({ message: 'Ride created successfully', rideWithUser });
 
@@ -72,7 +74,6 @@ module.exports.startRide = async (req, res) => {
     }
 
     const { rideId, otp } = req.query;
-
     try {
         let ride = await rideService.startRide({ rideId, otp, captain: req.captain });
 
@@ -90,14 +91,43 @@ module.exports.startRide = async (req, res) => {
             user: user
         };
 
-        sendMessageToSocketId(user.socketId, {
-            event: 'ride-started',
-            data: ride
-        });
+        // Send message to the user
+        gatewaySocket.emit('ride-started', ride);
 
         return res.status(200).json(ride);
     } catch (err) {
         console.log(err);
         return res.status(500).json({ message: err.message });
     }
-};
+}
+
+module.exports.endRide = async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { rideId } = req.body;
+    const token = req.headers.authorization?.split(' ')[ 1 ] || req.cookies.token;
+
+    try {
+        const ride = await rideService.endRide({ rideId, captain: req.captain });
+        const captain = await axios.patch(
+            `${process.env.BASE_URL}/captains/status`,
+            { status: 'active' }, // Request body
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+        
+
+        gatewaySocket.emit('ride-ended', ride);
+
+        return res.status(200).json(ride);
+    } catch (err) {
+        console.log(err)
+        return res.status(500).json({ message: err.message });
+    } 
+}

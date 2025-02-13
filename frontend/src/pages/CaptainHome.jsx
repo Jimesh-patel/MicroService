@@ -55,7 +55,7 @@ const CaptainHome = () => {
     })
 
     async function confirmRide() {
-        console.log(ride);
+    
         const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/confirm`, {
             ride
         }, {
@@ -117,7 +117,7 @@ const CaptainHome = () => {
             </div>
             
             <div className='h-[55%]'>
-                {/* <LiveTracking /> */}
+                <LiveTracking />
             </div>
             <div className='h-[32%] p-6'>
                 <CaptainDetails />
