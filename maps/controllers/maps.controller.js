@@ -58,3 +58,25 @@ module.exports.getAutoCompleteSuggestions = async (req, res, next) => {
     }
 }
 
+module.exports.getTrafficData = async (req, res, next) => {
+    try{
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { origin, destination } = req.query;
+
+        if (!origin || !destination) {
+            return res.status(400).json({ message: "Origin and Destination are required" });
+        }
+
+        const traffic = await mapService.getTrafficData(origin, destination);
+
+        return res.status(200).json(traffic);
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+}

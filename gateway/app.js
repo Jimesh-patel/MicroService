@@ -20,6 +20,7 @@ app.use('/users', expressProxy('http://localhost:3001'));
 app.use('/captains', expressProxy('http://localhost:3002'));
 app.use('/rides', expressProxy('http://localhost:3003'));
 app.use('/maps', expressProxy('http://localhost:3004'));
+app.use('/price', expressProxy('http://localhost:3005'))
 
 // Connect to the Captain Server
 const captainSocket = Client('http://localhost:3002');

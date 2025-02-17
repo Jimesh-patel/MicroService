@@ -1,5 +1,5 @@
 npm init -y
-npm i express morgan
+npm i express morgan cors
 npm i mongoose
 npm i bcrypt jsonwebtoken
 npm i dotenv
@@ -8,7 +8,7 @@ npm i express-validator
 
 npm i express-http-proxy
 
-npm i axios
+npm i axios 
 
 
 

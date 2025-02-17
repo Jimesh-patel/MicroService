@@ -1,5 +1,5 @@
 const rideService = require('../services/ride.service')
-const { validationResult, header } = require('express-validator')
+const { validationResult } = require('express-validator')
 const { publishToQueue } = require('../services/rabbitmq')
 const axios = require('axios')
 
@@ -15,10 +15,10 @@ module.exports.createRide = async (req, res) => {
         return res.status(400).json({ message: 'Validation error', errors: errors.array() });
     }
 
-    const { pickup, destination, vehicleType } = req.body;
+    const { pickup, destination, vehicleType, selected_fare } = req.body;
 
     try {
-        const ride = await rideService.createRide({ user: req.user._id, pickup, destination, vehicleType });
+        const ride = await rideService.createRide({ user: req.user._id, pickup, destination, vehicleType, selected_fare });
         ride.otp = "";
         const rideWithUser = {
             ...ride.toObject(),  

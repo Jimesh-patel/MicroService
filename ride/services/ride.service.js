@@ -51,27 +51,50 @@ async function getFare(pickup, destination) {
 module.exports.getFare = getFare;
 
 
-module.exports.createRide = async ({ user, pickup, destination, vehicleType }) => {
-
-    if (!user || !pickup || !destination || !vehicleType) {
+module.exports.createRide = async ({ user, pickup, destination, vehicleType, selected_fare }) => {
+    if (!user || !pickup || !destination || !vehicleType || !selected_fare) {
         throw new Error('All fields are required');
     }
 
-    const { fare, distanceTime } = await getFare(pickup, destination);
+    try {
+        const infoResponse = await axios.get(`${process.env.BASE_URL}/maps/traffic?origin=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`);
+        const info = infoResponse.data;
 
-    const ride = rideModel.create({
-        user,
-        pickup,
-        destination,
-        otp: getOtp(6),
-        fare: fare[vehicleType],
-        vehicleType: vehicleType,
-        duration: distanceTime.duration.value,
-        distance: distanceTime.distance.value
-    })
+        const extractNumbers = (str) => {
+            return parseFloat(str.replace(/[^\d.]/g, ""));
+        };
+        
+        
+        const parseDuration = (durationStr) => {
+            const hoursMatch = durationStr.match(/(\d+)\s*hour/);
+            const minutesMatch = durationStr.match(/(\d+)\s*min/);
+            
+            const hours = hoursMatch ? parseInt(hoursMatch[1]) * 60 : 0;
+            const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+        
+            return hours + minutes;
+        };
+        
+        const ride = await rideModel.create({
+            user,
+            pickup,
+            destination,
+            otp: getOtp(6),
+            fare: parseInt(selected_fare),
+            vehicleType: vehicleType,
+            duration: parseDuration(info.duration_in_traffic), // Convert to minutes
+            distance: extractNumbers(info.distance) // Convert "323 km" to 323
+        });
+        
+    
+        return ride;
 
-    return ride;
-}
+    } catch (error) {
+        console.error("Error creating ride:", error);
+        throw new Error("Failed to fetch ride details.");
+    }
+};
+
 
 function getOtp(num) {
     function generateOtp(num) {

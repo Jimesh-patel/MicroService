@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from "react-toastify";
 
 const ConfirmRidePopUp = (props) => {
     const [otp, setOtp] = useState('')
@@ -26,7 +27,8 @@ const ConfirmRidePopUp = (props) => {
                 navigate('/captain-riding', { state: { ride: props.ride } })
             }
         } catch (error) {
-            console.error(error);
+            const message = error.response.data.message;
+            toast.error(message);
         }
     }
 

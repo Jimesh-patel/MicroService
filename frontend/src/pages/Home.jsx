@@ -34,8 +34,11 @@ const Home = () => {
     const [destinationSuggestions, setDestinationSuggestions] = useState([])
     const [activeField, setActiveField] = useState(null)
     const [fare, setFare] = useState({})
+    const [selected_fare, setSelectedFare] = useState({})
     const [vehicleType, setVehicleType] = useState(null)
     const [ride, setRide] = useState(null)
+
+    const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
 
@@ -52,7 +55,7 @@ const Home = () => {
             setWaitingForDriver(false);
             navigate('/riding', { state: { ride } });
         });
-        
+
         const handleRideConfirmed = (ride) => {
             setRide(ride);
             setVehicleFound(false);
@@ -66,7 +69,7 @@ const Home = () => {
         };
     }, [socket]);
 
-    
+
 
 
     const handlePickupChange = async (e) => {
@@ -181,17 +184,28 @@ const Home = () => {
 
 
     async function findTrip() {
-        if (!pickup || !destination) {
-            toast.error('Please enter both pickup and destination')
-            return
-        }
-        setVehiclePanel(true)
-        setPanelOpen(false)
+        
+        try {
+            setLoading(true);
+            if (!pickup || !destination) {
+                toast.error('Please enter both pickup and destination')
+                return
+            }
+            
 
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/rides/get-fare`, {
-            params: { pickup, destination }
-        })
-        setFare(response.data.fare)
+            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/price/fare`, {
+                pickup,
+                destination
+            })
+
+            setFare(response.data)
+            setVehiclePanel(true)
+            setPanelOpen(false)
+            setLoading(false)
+        } catch(error){
+            toast.error(error)
+        }
+        
     }
 
     async function createRide() {
@@ -199,7 +213,8 @@ const Home = () => {
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/create`, {
                 pickup,
                 destination,
-                vehicleType
+                vehicleType,
+                selected_fare
             }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -246,7 +261,7 @@ const Home = () => {
             }
 
             <div className='h-[72%] w-screen'>
-                <LiveTracking />
+                {/* <LiveTracking /> */}
             </div>
             <div className='flex flex-col justify-end h-screen absolute top-0 w-full'>
                 <div ref={suggestionsRef} className='h-[28%] p-6 bg-white relative rounded-t-3xl'>
@@ -288,7 +303,7 @@ const Home = () => {
                     <button
                         onClick={findTrip}
                         className='bg-black text-white px-4 py-2 rounded-lg w-full'>
-                        Find Trip
+                        {loading ? "Loading..." : "Find Trip"}
                     </button>
                 </div>
                 <div ref={panelRef} className='bg-white'>
@@ -303,6 +318,7 @@ const Home = () => {
             <div ref={vehiclePanelRef} className='fixed w-full z-40 bottom-0 translate-y-full bg-white'>
                 <VehiclePanel
                     selectVehicle={setVehicleType}
+                    setSelectedFare={setSelectedFare}
                     fare={fare}
                     setConfirmRidePanel={setConfirmRidePanel}
                     setVehiclePanel={setVehiclePanel}

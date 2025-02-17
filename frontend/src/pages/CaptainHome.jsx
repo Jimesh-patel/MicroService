@@ -117,7 +117,7 @@ const CaptainHome = () => {
             </div>
             
             <div className='h-[55%]'>
-                <LiveTracking />
+                {/* <LiveTracking /> */}
             </div>
             <div className='h-[32%] p-6'>
                 <CaptainDetails />

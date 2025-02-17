@@ -19,6 +19,12 @@ router.get('/get-suggestions',
     mapController.getAutoCompleteSuggestions
 )
 
+router.get('/traffic', 
+    query('origin').isString().isLength({ min: 3 }),
+    query('destination').isString().isLength({ min: 3 }),
+    mapController.getTrafficData
+)
+
 
 
 

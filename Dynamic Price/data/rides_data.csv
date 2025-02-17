@@ -1,0 +1,1001 @@
+ride_id,pickup,destination,date,time,distance,vehicleType,base_fare,traffic,weather,final_fare
+404a3dcd-bf76-459b-a59e-764bc72bb5bf,"Khambhaliya, Jamnagar","Adajan, Surat",2024-04-28,11:25,12.2,auto,183.0,Medium,Clear,201.3
+86c836ac-eb91-42cc-bdf7-2ce8630f57bf,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-05-15,18:59,30.2,auto,453.0,Medium,Rainy,523.22
+d1635a54-1bc0-48a4-8f02-8dc2b66e660e,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-05-24,21:59,35.8,moto,716.0,High,Stormy,945.12
+c48c3862-0e29-425f-9a2b-7cd7915fe608,"Varachha, Surat","Khambhaliya, Jamnagar",2024-08-14,15:23,5.7,bike,57.0,Low,Stormy,62.7
+72e85a03-27da-487b-b831-f4501f5c88e1,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-01-14,11:26,23.6,auto,354.0,Medium,Rainy,408.87
+47dc5b38-917a-4365-9b2a-487bf67bbb96,"Varachha, Surat",Ahmedabad Railway Station,2024-03-07,23:18,23.5,auto,352.5,High,Clear,423.0
+b2bd8f93-a937-4f74-8a53-d6a1523e8032,Nadiad Bus Stand,"Adajan, Surat",2024-03-26,19:40,37.0,auto,555.0,Low,Clear,555.0
+e1475807-81d5-4a78-bed1-b3830cc3dfc8,"Varachha, Surat","Gota, Ahmedabad",2024-08-31,22:51,16.6,auto,249.0,Low,Stormy,273.9
+8b2fac85-c5f3-49ce-9f27-952b28cb28de,Nadiad Bus Stand,Ahmedabad Railway Station,2024-09-13,13:18,23.4,moto,468.0,Low,Clear,468.0
+4ef9d763-c787-4411-90a6-654eebdc6467,Surat Airport,Jamnagar Railway Station,2024-09-15,01:08,1.3,bike,13.0,High,Rainy,16.38
+17831206-5f06-41ae-8295-3ac685fb06ee,"Khambhaliya, Jamnagar","Adajan, Surat",2024-08-19,01:53,6.8,bike,68.0,High,Clear,81.6
+1ff40124-4b4b-4555-ac6a-389eb85edb43,"Varachha, Surat",Jamnagar Railway Station,2024-07-15,12:54,43.3,moto,866.0,High,Rainy,1091.16
+fdbdc72e-32c4-4b92-b1ff-e7e68440832e,Jamnagar Railway Station,Ahmedabad Railway Station,2024-04-01,01:42,30.0,auto,450.0,Medium,Clear,495.0
+d80a06b6-4766-4ba1-9a0c-63f53229d1f0,"Varachha, Surat",Surat Airport,2024-03-04,04:24,2.7,bike,27.0,High,Rainy,34.02
+e53cd578-bbfe-4d8a-8aff-617768e493e2,"Gota, Ahmedabad",Jamnagar Railway Station,2024-02-04,16:50,25.9,auto,388.5,Medium,Stormy,470.09
+ff9d7043-698d-4338-88c3-108b5c684554,Jamnagar Railway Station,"Varachha, Surat",2024-02-18,14:54,13.8,bike,138.0,High,Stormy,182.16
+a6b4bde5-f708-4b82-b2b9-d7308b9ab14b,Nadiad Junction,"Gota, Ahmedabad",2024-08-25,05:32,19.3,bike,193.0,Medium,Rainy,222.92
+4a4dfd91-50c7-4b7a-a719-c832fd32ff8c,"Adajan, Surat","Gota, Ahmedabad",2024-07-31,17:30,48.7,moto,974.0,High,Stormy,1285.68
+e6a3da5c-ba02-437f-9cdf-08539dd22e18,Ahmedabad Railway Station,Jamnagar Railway Station,2024-03-15,18:39,26.2,moto,524.0,High,Rainy,660.24
+18a2b962-8876-4149-81c0-563e516ca315,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-04-15,20:04,8.0,bike,80.0,Medium,Clear,88.0
+c46b221b-1bcf-4237-9926-cac2c7e86352,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-03-17,22:19,41.3,moto,826.0,Medium,Rainy,954.03
+8356fb01-ef69-416f-a6eb-693a16cfd140,"Varachha, Surat",Surat Airport,2024-11-05,18:32,40.4,moto,808.0,Low,Clear,808.0
+9c097c71-dc9e-4f15-924c-cd65d76a5bd3,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-12-24,07:37,15.2,auto,228.0,Medium,Clear,250.8
+bbbf2f26-6576-4377-8424-977b276f0e99,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-09-06,16:49,15.2,bike,152.0,Low,Rainy,159.6
+95ab1d14-9864-4c2b-b25e-3d2c662d37c0,Nadiad Junction,"Varachha, Surat",2024-02-26,08:52,7.9,auto,118.5,High,Clear,142.2
+de88299c-42a0-4ae8-8bef-c4638b368e44,"Adajan, Surat",Nadiad Junction,2024-05-20,22:02,36.9,auto,553.5,High,Rainy,697.41
+8cdd356d-1df7-41fc-acca-81c35c447bb9,"Varachha, Surat",Nadiad Bus Stand,2024-10-15,14:34,18.7,bike,187.0,Low,Rainy,196.35
+d537a5ef-a38e-4b83-97d6-8d186ab6c836,Ahmedabad Railway Station,"Adajan, Surat",2024-12-01,07:55,9.7,auto,145.5,Low,Rainy,152.78
+d7af57de-2734-4c27-9aaa-a946d66a5e38,Jamnagar Railway Station,"Adajan, Surat",2024-04-27,22:49,10.9,bike,109.0,Low,Clear,109.0
+419b13ef-17df-430e-8c41-b07ad84bd117,"Adajan, Surat",Surat Airport,2024-10-05,01:41,23.7,auto,355.5,Medium,Stormy,430.16
+51a6858c-de33-45a8-8c23-3d0eef87d7cd,Nadiad Junction,"CG Road, Ahmedabad",2024-09-21,23:28,34.7,moto,694.0,Medium,Rainy,801.57
+8f855410-3864-4a85-bee0-668e1ee34b18,Ahmedabad Railway Station,Nadiad Bus Stand,2024-09-28,04:27,5.2,auto,78.0,High,Rainy,98.28
+620b5a98-3f54-45f9-b266-e35a616f7be7,Nadiad Bus Stand,"Gota, Ahmedabad",2024-10-07,04:33,14.1,bike,141.0,High,Rainy,177.66
+9c794dd5-c4ec-48de-8ed3-78204afd31fe,Nadiad Junction,Nadiad Bus Stand,2024-08-19,19:05,24.7,auto,370.5,Medium,Rainy,427.93
+575952f7-eda5-4ee0-88ff-721aac80ce27,"CG Road, Ahmedabad",Surat Airport,2024-07-24,15:43,40.2,moto,804.0,Low,Rainy,844.2
+7a750d3c-3420-4d4f-961f-fd1323e1f91f,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-11-24,09:00,32.1,moto,642.0,Medium,Rainy,741.51
+e70cc93b-0d31-4099-ba64-89b05aac9638,"Varachha, Surat",Jamnagar Railway Station,2024-07-03,19:11,6.3,bike,63.0,Low,Rainy,66.15
+5d25d3a1-b96f-457c-891c-098f5d9fd3c7,Jamnagar Railway Station,"Adajan, Surat",2024-08-17,13:09,2.7,bike,27.0,Medium,Rainy,31.19
+2a7ce15a-6883-4933-a9fa-d452764655c4,"Varachha, Surat",Nadiad Junction,2024-03-14,05:21,21.9,moto,438.0,Low,Stormy,481.8
+1867875b-28e6-4cbf-a8c5-21492966a46d,"Gota, Ahmedabad",Nadiad Bus Stand,2024-04-12,13:43,8.2,bike,82.0,Low,Stormy,90.2
+6ccde608-67d2-48c2-804c-8eb64eb40ae3,Surat Airport,Nadiad Junction,2024-08-11,13:43,3.7,bike,37.0,High,Clear,44.4
+737f2bea-a3fe-48c0-9746-70befe14296b,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-12-09,08:51,20.7,moto,414.0,High,Rainy,521.64
+63237e85-416d-4210-a840-09d23d353e7e,Nadiad Junction,Nadiad Bus Stand,2024-03-23,01:00,36.0,auto,540.0,Low,Clear,540.0
+75fb6326-3e0c-4b81-88c8-a5f60002971a,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-06-19,20:41,39.9,moto,798.0,Low,Clear,798.0
+0a31ac42-777b-4f0e-861c-732a3dcac993,Nadiad Junction,"Khambhaliya, Jamnagar",2024-08-03,09:08,10.0,bike,100.0,Medium,Clear,110.0
+bfb50522-f686-426f-89ee-9eb6410d211b,Ahmedabad Railway Station,"Adajan, Surat",2024-08-19,18:52,8.6,bike,86.0,Medium,Stormy,104.06
+94a7fe1a-f8e3-42f0-ad8d-484e23f9da3f,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-12-11,15:07,42.4,moto,848.0,Low,Stormy,932.8
+9a7c47af-a474-4dbe-b30b-702bccd31f22,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-03-19,08:36,9.5,bike,95.0,Low,Stormy,104.5
+1db97893-5537-4557-aa61-31aed7e3c2f5,Nadiad Bus Stand,"Gota, Ahmedabad",2024-09-22,12:35,37.1,moto,742.0,High,Stormy,979.44
+edd1d805-f9da-4897-b576-bbb8049ce70e,Nadiad Junction,"Gota, Ahmedabad",2024-07-11,03:19,43.4,moto,868.0,Medium,Stormy,1050.28
+d83c9273-d563-4747-be74-db3466cd2ef5,"Adajan, Surat",Nadiad Bus Stand,2024-09-25,19:22,2.4,auto,36.0,Low,Clear,36.0
+a8e3d48d-e9fb-4454-9fe0-4f2b641c8436,Nadiad Junction,Ahmedabad Railway Station,2024-03-30,09:36,2.7,bike,27.0,Low,Rainy,28.35
+86cc2e2e-a469-44cd-9f05-818fa0f164c0,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-02-17,22:04,27.6,auto,414.0,Low,Clear,414.0
+f7fba92c-9d18-48ff-9500-dc5cd894965c,Jamnagar Railway Station,Nadiad Bus Stand,2024-04-29,15:47,29.0,auto,435.0,High,Clear,522.0
+246c9e21-5fbd-4592-8893-2cbf34ab273d,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-03-09,15:01,18.9,bike,189.0,Low,Rainy,198.45
+ec2d3510-7f4e-45d9-a69e-1daed8d30e7e,"Adajan, Surat",Surat Airport,2024-05-02,20:10,22.3,auto,334.5,Medium,Rainy,386.35
+e66b3dc4-d480-42e8-9eab-13260fa74775,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-06-22,18:54,37.5,auto,562.5,High,Clear,675.0
+6a907db4-1353-4805-abb5-9d10b677dd11,"Adajan, Surat",Jamnagar Railway Station,2024-05-20,03:25,35.5,auto,532.5,Medium,Rainy,615.04
+c4a27db9-ffe5-4b13-b7de-e6733115e57d,Jamnagar Railway Station,Surat Airport,2024-05-29,10:49,47.8,moto,956.0,Low,Clear,956.0
+5ad0ba36-38ed-4cb0-a3a6-a266cc315674,"Varachha, Surat","Gota, Ahmedabad",2024-03-09,09:20,38.5,moto,770.0,Medium,Stormy,931.7
+90246121-6a6e-4bda-88ea-71fb8a2226e1,"Gota, Ahmedabad",Nadiad Bus Stand,2024-12-30,16:58,5.5,bike,55.0,Low,Clear,55.0
+80769432-b000-4fd2-883c-29dbae0b407c,"Gota, Ahmedabad","Varachha, Surat",2024-08-27,04:56,34.2,auto,513.0,Low,Stormy,564.3
+8e1866aa-6d08-4614-a1cc-d2dfc84156bc,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-08-16,21:55,11.5,bike,115.0,Medium,Clear,126.5
+10749a68-a475-4086-9357-ef91d98bdd2a,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-06-11,18:26,2.3,auto,34.5,Medium,Stormy,41.75
+56f89c93-0569-4673-ba23-53556580fdeb,"Khambhaliya, Jamnagar",Surat Airport,2024-10-24,05:42,18.6,bike,186.0,Medium,Rainy,214.83
+721b573e-60c7-4bc4-9d35-7de2ac7b9cd5,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-04-03,13:15,29.9,moto,598.0,Medium,Rainy,690.69
+d426cc48-31f2-4a19-a979-18900ce1c4bd,"Varachha, Surat","Khambhaliya, Jamnagar",2024-07-31,03:58,17.6,bike,176.0,High,Stormy,232.32
+b84ffa70-4095-4997-98c9-a4453eea4258,Nadiad Junction,Nadiad Bus Stand,2024-01-29,14:55,21.9,moto,438.0,High,Stormy,578.16
+ad427e38-e7b4-4094-aff0-926588cd7b04,Jamnagar Railway Station,"Adajan, Surat",2024-07-23,18:39,21.9,moto,438.0,High,Clear,525.6
+d7d228bd-cb69-44ad-8174-1672375e1a07,Nadiad Junction,"CG Road, Ahmedabad",2024-06-01,16:39,2.6,bike,26.0,Medium,Rainy,30.03
+8027b769-6290-4cd9-a9ec-411460594b84,Nadiad Junction,"Khambhaliya, Jamnagar",2024-08-17,23:05,14.8,auto,222.0,High,Rainy,279.72
+9639dad6-caca-4b98-ab64-4eac71ad6ab4,Jamnagar Railway Station,Nadiad Junction,2024-11-18,17:55,29.9,moto,598.0,High,Clear,717.6
+7f6e31ad-68b8-4cab-a01b-c92ec11a6c83,"Gota, Ahmedabad","Adajan, Surat",2024-07-04,08:13,24.3,moto,486.0,Medium,Rainy,561.33
+66608c1e-a27d-4b74-9b21-870e0bebc205,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-02-15,23:06,15.6,auto,234.0,Low,Rainy,245.7
+dfba9298-3e5e-4046-a5c9-870adc49fbab,Jamnagar Railway Station,Ahmedabad Railway Station,2024-07-27,19:45,12.2,auto,183.0,High,Stormy,241.56
+914ce76e-5e47-4b20-8934-24183ed8e25d,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-07-25,09:21,11.2,bike,112.0,Low,Clear,112.0
+16e16577-86ee-419f-8ee1-0cc818754537,Ahmedabad Railway Station,Jamnagar Railway Station,2024-12-21,16:56,13.8,bike,138.0,High,Stormy,182.16
+cbd8ce74-bc48-46b0-b041-31a431b5032c,Nadiad Junction,Jamnagar Railway Station,2024-05-11,18:39,11.4,bike,114.0,High,Stormy,150.48
+10f2c1b5-5d89-4964-91a2-3e1ad47f7720,"Gota, Ahmedabad","Varachha, Surat",2024-02-03,05:07,15.8,bike,158.0,Low,Stormy,173.8
+dc25f2ca-b6d5-490e-b552-25ee7879cab7,"Adajan, Surat","Gota, Ahmedabad",2024-01-12,18:50,29.9,moto,598.0,High,Stormy,789.36
+13add56c-fe25-4143-8d5f-433f5f38ba1f,"Adajan, Surat",Jamnagar Railway Station,2024-03-28,19:14,38.9,moto,778.0,High,Clear,933.6
+e95fbdb0-e00d-4d1c-bd0f-69d420a9df0f,Nadiad Bus Stand,"Gota, Ahmedabad",2024-01-11,22:02,27.7,auto,415.5,Medium,Rainy,479.9
+d65db265-ab36-412e-9ada-aa806c3539ba,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-05-01,10:01,14.3,auto,214.5,Low,Rainy,225.23
+4e8297ca-3e65-4be7-a16b-3598309d4e91,Surat Airport,"Gota, Ahmedabad",2024-06-19,03:01,27.6,auto,414.0,Low,Rainy,434.7
+9c19f4f1-8449-4c45-a9d9-a81132060b0c,"Varachha, Surat","Khambhaliya, Jamnagar",2024-06-29,19:39,6.5,auto,97.5,Medium,Rainy,112.61
+b61a4129-163c-4d35-ab4e-95f97dbdb39e,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-05-05,09:30,37.6,moto,752.0,Medium,Rainy,868.56
+0fa82ee4-a0de-41ab-8bab-1049cc70ab63,Ahmedabad Railway Station,Nadiad Bus Stand,2024-02-09,20:54,23.0,moto,460.0,High,Clear,552.0
+8818a167-ced8-4d57-bee7-1d6791f0f5e6,Surat Airport,Ahmedabad Railway Station,2024-12-22,18:25,38.7,auto,580.5,Medium,Rainy,670.48
+063ed92d-0b28-4512-8afc-c3cdaafaf4b5,Surat Airport,Jamnagar Railway Station,2024-08-22,22:59,12.3,bike,123.0,Medium,Stormy,148.83
+d7ab2475-f43f-4598-8673-ad0c4b49849f,Nadiad Junction,"CG Road, Ahmedabad",2024-04-20,04:16,2.8,auto,42.0,Medium,Rainy,48.51
+10485dab-53bb-48fb-9737-ef353cad99c4,Nadiad Junction,"Varachha, Surat",2024-05-08,05:16,16.6,bike,166.0,Medium,Rainy,191.73
+df7c1ac3-ff94-476d-a0c0-1203f6c7e51b,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-03-17,07:40,15.6,auto,234.0,High,Rainy,294.84
+a60ade0c-3578-468e-97d3-8927e32c35b0,"Adajan, Surat","CG Road, Ahmedabad",2024-12-16,14:52,24.0,auto,360.0,Medium,Rainy,415.8
+aa21d6d0-1471-4d22-82dc-0f5d003f01eb,"Khambhaliya, Jamnagar","Adajan, Surat",2024-09-18,19:15,1.6,bike,16.0,Medium,Clear,17.6
+4c287e14-f16d-4056-8aaf-3d73f9a3a2d1,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-11-09,19:09,45.9,moto,918.0,Medium,Clear,1009.8
+b2a6c108-aaba-489b-8970-4f138045c367,"Adajan, Surat",Nadiad Bus Stand,2024-07-30,05:39,22.1,auto,331.5,Low,Clear,331.5
+b4f78d26-099d-4b6c-8fcd-9fe7b369b1e3,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-04-08,19:03,35.3,auto,529.5,High,Stormy,698.94
+737a16e0-7de3-4afb-a373-cd63a3500afa,Surat Airport,"Khambhaliya, Jamnagar",2024-08-16,04:09,19.9,auto,298.5,High,Stormy,394.02
+0a8bc885-077f-45f3-bf25-e239321c7fdc,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-07-20,02:11,13.1,auto,196.5,Medium,Clear,216.15
+1f86672c-b8ec-471b-8a1e-929a65a2427f,"Gota, Ahmedabad",Nadiad Junction,2024-08-21,11:22,3.4,bike,34.0,Medium,Clear,37.4
+b4354ac6-61c0-4683-b5f6-2de349fe4ad4,Nadiad Junction,Ahmedabad Railway Station,2024-04-27,21:51,2.8,auto,42.0,Low,Clear,42.0
+3305927f-9e1e-45c3-873e-5257db3bbda1,Jamnagar Railway Station,"Varachha, Surat",2024-08-21,13:19,5.8,bike,58.0,High,Clear,69.6
+34efdd6d-206f-4834-b63b-72f0174de667,Nadiad Junction,"Adajan, Surat",2024-09-26,17:02,41.4,moto,828.0,Medium,Stormy,1001.88
+9c6ad901-c4cf-4b41-a161-8f69627a7e51,Surat Airport,"Varachha, Surat",2024-05-12,10:04,25.7,moto,514.0,Low,Clear,514.0
+ff742e26-2adc-4c30-9358-66773e25ed1e,"Varachha, Surat","Gota, Ahmedabad",2024-05-20,09:36,45.4,moto,908.0,Medium,Stormy,1098.68
+5e54e450-5a6d-40df-af36-45774ce65656,Nadiad Junction,Jamnagar Railway Station,2024-12-19,18:12,24.9,moto,498.0,Low,Stormy,547.8
+5b1289b3-bf81-48b3-b1ed-c82af50b6a10,Nadiad Junction,Nadiad Bus Stand,2024-12-25,10:39,7.4,auto,111.0,Medium,Stormy,134.31
+585a0794-2b87-4b95-90d0-ed8cc5b85b74,"Adajan, Surat",Surat Airport,2024-11-01,12:50,4.9,bike,49.0,Low,Clear,49.0
+92a31dcd-3e9b-4bcb-9d33-e0204eea411b,Jamnagar Railway Station,Nadiad Junction,2024-01-08,04:07,19.1,auto,286.5,Low,Stormy,315.15
+a3815e48-c305-4aff-8a6c-017ee4bb937b,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-04-15,21:19,4.2,auto,63.0,Low,Rainy,66.15
+2e74ffe6-aec3-41a4-b05e-3cededf16ac4,"Gota, Ahmedabad",Surat Airport,2024-07-13,11:26,16.4,bike,164.0,Low,Clear,164.0
+ec65dc8a-ce0d-4e13-80bd-1878e43ce608,Surat Airport,Nadiad Junction,2024-03-19,07:25,24.5,auto,367.5,High,Rainy,463.05
+8d2b5d51-73f7-473a-aadc-8b8c06a93252,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-12-12,12:02,22.4,moto,448.0,Medium,Stormy,542.08
+7a04352a-fa84-4c35-9e9e-3f7b627015a6,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-10-25,12:10,27.6,auto,414.0,High,Rainy,521.64
+b593632b-92b6-4274-abc0-5299cd5a1a4a,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-06-04,07:53,14.1,auto,211.5,Low,Stormy,232.65
+8e10a954-7c31-4478-b480-cc54bdfe9f18,"Varachha, Surat",Nadiad Junction,2024-04-15,12:04,46.5,moto,930.0,High,Clear,1116.0
+985f9758-a695-4822-9de9-6343595a7d73,"CG Road, Ahmedabad",Nadiad Junction,2024-01-08,10:03,9.2,auto,138.0,Low,Rainy,144.9
+e71b1fc4-ad78-4298-8e52-4e9cc0ebd681,"Adajan, Surat","Gota, Ahmedabad",2024-03-29,22:56,10.2,bike,102.0,Low,Rainy,107.1
+812f36a6-5aca-4acd-a981-1b6d0483d7e4,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-11-28,14:09,6.2,bike,62.0,High,Rainy,78.12
+b90d64bc-6733-49dd-8a61-36f4292acc9e,Jamnagar Railway Station,"Varachha, Surat",2024-03-11,18:19,35.2,auto,528.0,High,Stormy,696.96
+351df7d4-a7de-46ea-b608-b6b41b1df735,"Gota, Ahmedabad","Adajan, Surat",2024-05-05,13:35,37.0,auto,555.0,Low,Clear,555.0
+f564b6e1-8c47-4c19-af48-08567813b742,"Gota, Ahmedabad",Nadiad Bus Stand,2024-12-24,20:14,10.9,bike,109.0,Medium,Stormy,131.89
+c02cada5-920f-442c-97c9-9da1d350f65d,Nadiad Bus Stand,"Adajan, Surat",2024-10-30,09:40,19.2,auto,288.0,Medium,Stormy,348.48
+36c82614-324e-4049-bf86-026ecd2b8dd4,"Varachha, Surat",Ahmedabad Railway Station,2024-08-14,19:21,8.1,bike,81.0,Medium,Clear,89.1
+afdb63b3-3767-4821-a893-18d01c3a0a1e,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-04-28,20:09,32.9,auto,493.5,Medium,Stormy,597.14
+89f864ef-9cf1-4e91-bde6-848c44d9907f,"Varachha, Surat","Khambhaliya, Jamnagar",2024-05-09,14:13,24.9,moto,498.0,High,Clear,597.6
+ab90f653-1959-477c-932b-3faddf3e83d2,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-03-07,06:04,36.4,moto,728.0,Low,Rainy,764.4
+2dce8c13-6106-41ff-8729-58276198a3de,Nadiad Bus Stand,Nadiad Junction,2024-03-29,23:58,18.0,bike,180.0,High,Rainy,226.8
+08debeb6-78a1-4d51-aabc-2370fd0289e6,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-12-01,20:28,3.8,auto,57.0,Medium,Clear,62.7
+f85bb6d2-7b12-4fb5-963e-901e47642dd0,"Gota, Ahmedabad","Adajan, Surat",2024-09-11,07:11,16.5,auto,247.5,Low,Stormy,272.25
+fc992d90-1580-407e-8d3e-23f409689805,"Adajan, Surat","Varachha, Surat",2024-03-27,05:27,19.7,bike,197.0,Medium,Stormy,238.37
+c4a64048-3ad9-4910-b298-22049e26f777,Nadiad Junction,"Khambhaliya, Jamnagar",2024-08-20,23:26,2.4,bike,24.0,Medium,Rainy,27.72
+5ac374e8-7efd-4125-ab62-7b7cc2b48a9f,Nadiad Junction,Ahmedabad Railway Station,2024-12-06,13:23,13.7,bike,137.0,Medium,Clear,150.7
+d555e00c-55c9-4cf2-bbe7-c5d35a235fe5,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-03-27,14:19,32.3,auto,484.5,High,Clear,581.4
+5175b9e2-085a-422e-890b-e631adde7bdf,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-08-06,09:03,7.4,bike,74.0,Medium,Rainy,85.47
+9a4695da-fae7-4a0f-b626-4e24bceae1b5,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-01-15,12:33,34.1,auto,511.5,Low,Stormy,562.65
+b798b695-cccb-4714-bbd9-c5283c3d548b,Surat Airport,"Gota, Ahmedabad",2024-10-16,20:12,12.8,bike,128.0,Medium,Stormy,154.88
+aa43ddb9-6ff7-4417-bb00-4913d0c65644,"Gota, Ahmedabad",Jamnagar Railway Station,2024-01-15,16:17,26.9,moto,538.0,High,Stormy,710.16
+441e693d-75d5-4e34-87a6-387148b6c1e6,Nadiad Bus Stand,Jamnagar Railway Station,2024-08-09,17:54,38.0,moto,760.0,High,Rainy,957.6
+0cc12f67-b852-4743-9bdb-76298941b6fa,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-08-10,12:45,16.4,bike,164.0,High,Clear,196.8
+34ba5621-01ea-4ea3-a6d8-d4577c49a9f5,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-04-14,17:11,25.4,auto,381.0,Medium,Stormy,461.01
+8dea359b-b7cd-4d15-9e33-731257612dca,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-12-30,11:18,38.5,moto,770.0,High,Clear,924.0
+a1c1d3ff-34bb-4d34-8dc5-e6bd25314642,"Gota, Ahmedabad",Nadiad Bus Stand,2024-04-05,16:43,9.5,bike,95.0,Low,Stormy,104.5
+2e082165-2109-420d-897c-3e7b8e858824,"CG Road, Ahmedabad","Varachha, Surat",2024-05-24,13:02,18.7,bike,187.0,Medium,Clear,205.7
+56c37cf6-3618-4d33-9dcf-85e2ebf5c07e,Surat Airport,Ahmedabad Railway Station,2024-08-20,07:37,4.7,bike,47.0,Medium,Clear,51.7
+1b9f7f29-c44c-4142-9393-18a60ce3cf74,Surat Airport,"Gota, Ahmedabad",2024-08-10,17:44,8.1,auto,121.5,Low,Stormy,133.65
+b7adf189-3864-4468-bb32-4be23f504cfe,"Adajan, Surat",Ahmedabad Railway Station,2024-04-27,15:41,30.0,moto,600.0,Medium,Clear,660.0
+f73c020e-d76a-4d28-b72c-80d0b3e53a5c,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-07-30,17:03,8.3,auto,124.5,Low,Clear,124.5
+11703330-1272-49c8-aa55-27b9abd524ba,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-02-07,23:51,28.7,moto,574.0,High,Stormy,757.68
+b06ae53f-f588-4b5d-9ca4-d1010f871091,"Adajan, Surat",Surat Airport,2024-01-03,15:38,24.0,auto,360.0,Low,Rainy,378.0
+b0ed4fe2-a9b1-4972-8d0a-d67d2166e40b,"Gota, Ahmedabad",Jamnagar Railway Station,2024-04-25,22:16,31.7,moto,634.0,Low,Rainy,665.7
+dcb9db89-21d4-4498-af65-228b9e1858fa,Ahmedabad Railway Station,Nadiad Junction,2024-09-01,05:25,27.0,moto,540.0,Medium,Rainy,623.7
+5c786aba-a6bf-4f70-95cc-c9691cbd0190,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-06-11,00:22,8.4,bike,84.0,Low,Rainy,88.2
+5603145a-2e04-4b4e-b301-505251147410,Ahmedabad Railway Station,"Adajan, Surat",2024-02-01,13:37,39.7,auto,595.5,High,Rainy,750.33
+16f6b72e-d57a-4481-aa3c-d99606fc855b,"Gota, Ahmedabad",Surat Airport,2024-05-21,23:43,5.9,bike,59.0,High,Clear,70.8
+7df16dd3-5807-4203-bba4-be38b2a9de19,Nadiad Junction,Jamnagar Railway Station,2024-06-22,11:58,21.2,moto,424.0,Medium,Clear,466.4
+dae99df5-0ba4-4760-bea5-79a5ffc0fed0,"Khambhaliya, Jamnagar",Nadiad Junction,2024-05-01,02:45,17.1,bike,171.0,Medium,Rainy,197.51
+15bc38fa-a432-41b7-af19-8c2964ddaf87,Jamnagar Railway Station,"Gota, Ahmedabad",2024-04-25,20:46,43.6,moto,872.0,Medium,Rainy,1007.16
+c831b48f-1e0f-4412-93c5-dc1c2a19e182,Jamnagar Railway Station,"Gota, Ahmedabad",2024-04-12,19:43,3.0,auto,45.0,Low,Clear,45.0
+7aa12a7e-4c68-4deb-a625-e19cb66166d1,Jamnagar Railway Station,"Varachha, Surat",2024-11-21,14:09,26.9,auto,403.5,Medium,Clear,443.85
+1717732a-47ff-475a-a17d-478fa8aa5e4b,"Adajan, Surat",Nadiad Bus Stand,2024-07-02,11:02,10.6,auto,159.0,High,Stormy,209.88
+e849e0ad-4741-4b1e-9fbd-12e015c3d3c0,Nadiad Junction,Surat Airport,2024-02-24,21:59,8.2,auto,123.0,High,Stormy,162.36
+f7d31973-a1de-4230-97b0-0a00e31d05d2,"CG Road, Ahmedabad","Varachha, Surat",2024-12-09,07:09,28.4,auto,426.0,Low,Rainy,447.3
+f28547ad-12e9-4b50-9752-71eb6cfb9ea3,Surat Airport,"Gota, Ahmedabad",2024-12-30,06:52,26.7,moto,534.0,Low,Stormy,587.4
+0b8eeaf3-47c1-4f95-a425-dc5995f9e2fe,Jamnagar Railway Station,Ahmedabad Railway Station,2024-05-13,23:31,24.6,moto,492.0,Low,Stormy,541.2
+ddb852f9-cd57-42ad-beaa-8f055486266f,"Adajan, Surat",Nadiad Bus Stand,2024-11-26,06:01,45.8,moto,916.0,Low,Stormy,1007.6
+fda96f89-92a9-4550-b1bf-9ae426b8e215,Ahmedabad Railway Station,Nadiad Junction,2024-10-24,06:28,27.7,auto,415.5,High,Rainy,523.53
+3235b16f-d025-48fd-82e0-663d824cf0b8,Nadiad Bus Stand,"Gota, Ahmedabad",2024-03-17,17:45,45.7,moto,914.0,Medium,Clear,1005.4
+49fdd7db-c503-400c-a2f1-e900def8c040,"Khambhaliya, Jamnagar","Adajan, Surat",2024-01-16,14:40,2.6,auto,39.0,Medium,Rainy,45.05
+acf9e166-6afd-4916-b699-d27f20ecfcb2,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-11-21,02:47,22.5,auto,337.5,Low,Clear,337.5
+ac715da8-9547-4cc2-a032-4b81f1f137f3,"Gota, Ahmedabad",Nadiad Bus Stand,2024-03-11,03:29,9.4,bike,94.0,High,Rainy,118.44
+9b0ac15c-699a-4014-be2f-6193680b261d,Nadiad Junction,"Gota, Ahmedabad",2024-01-21,03:25,39.2,moto,784.0,Low,Rainy,823.2
+e33aeeba-e06b-4baa-a7e8-15c0b9d5f33d,"Adajan, Surat",Jamnagar Railway Station,2024-04-16,04:41,40.3,moto,806.0,Low,Rainy,846.3
+3a2e00f7-445e-47ff-b7a0-3bcfca2ca721,"Adajan, Surat",Ahmedabad Railway Station,2024-10-05,12:48,28.2,moto,564.0,Medium,Stormy,682.44
+18e9e36e-116c-4d68-a418-a9564bbe7a61,"Varachha, Surat","CG Road, Ahmedabad",2024-02-12,08:04,3.5,bike,35.0,Low,Rainy,36.75
+eeb64b9d-ed5d-4673-b210-896e1a2a927a,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-07-10,19:41,6.2,bike,62.0,Medium,Rainy,71.61
+afa0a503-aec4-4b92-b695-b9f224f9f011,"Gota, Ahmedabad","Varachha, Surat",2024-10-28,02:23,37.7,moto,754.0,High,Stormy,995.28
+0d5d3b6c-7dc2-463f-b52c-95468722c1df,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-03-20,09:58,20.2,moto,404.0,Low,Clear,404.0
+d025fced-742c-4ab3-aa7a-9331d23d06eb,"Adajan, Surat","Varachha, Surat",2024-02-28,12:59,24.1,moto,482.0,Low,Rainy,506.1
+d05ed781-b5dd-44b0-987f-8480e78b3385,"Adajan, Surat",Jamnagar Railway Station,2024-09-16,15:12,11.3,auto,169.5,Medium,Stormy,205.1
+0e267a4d-6f27-4705-9dc6-d8fd6685dc34,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-11-22,00:48,38.6,auto,579.0,Medium,Stormy,700.59
+c9f0363f-be00-42dd-a7d6-bb48a71af059,Nadiad Bus Stand,Jamnagar Railway Station,2024-03-04,05:00,34.3,moto,686.0,Medium,Stormy,830.06
+189a8da2-9a3b-4177-a7dc-b1b1555e7663,"Varachha, Surat","CG Road, Ahmedabad",2024-12-23,21:25,25.3,moto,506.0,Medium,Stormy,612.26
+f7c6f144-3dd4-43fc-8c70-171fd5356b08,Ahmedabad Railway Station,Nadiad Junction,2024-10-17,22:42,24.4,auto,366.0,High,Rainy,461.16
+0cb3b5d3-ba4f-4635-bc53-44941c0ec392,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-10-04,19:56,35.7,auto,535.5,High,Stormy,706.86
+3522cd7e-87d3-46a4-b805-9220b2610e1e,"Adajan, Surat","Khambhaliya, Jamnagar",2024-08-24,18:35,11.5,auto,172.5,High,Clear,207.0
+b2393547-235c-4ce8-a122-62d7862f7950,Jamnagar Railway Station,Nadiad Bus Stand,2024-12-17,12:20,11.9,auto,178.5,Low,Stormy,196.35
+6027ae63-d1ec-4a71-8e90-7a76dc9cb64a,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-06-28,22:07,31.5,moto,630.0,Medium,Clear,693.0
+aae99549-4f94-4919-9a8e-ad2b22fd17a0,Surat Airport,Jamnagar Railway Station,2024-07-14,22:11,17.0,bike,170.0,Medium,Clear,187.0
+e6c14281-cee8-4a6a-8333-71a9abf0dbd3,Surat Airport,"CG Road, Ahmedabad",2024-06-27,17:37,14.1,auto,211.5,Medium,Clear,232.65
+45d61a7a-1ecb-40e8-bf10-d82dca32a22b,Nadiad Bus Stand,Surat Airport,2024-01-04,18:07,25.0,moto,500.0,Medium,Rainy,577.5
+9c7e79ef-a7a5-4deb-b1d2-b4042d1a9ba2,"Adajan, Surat","CG Road, Ahmedabad",2024-05-08,04:58,48.0,moto,960.0,Low,Stormy,1056.0
+e915fa55-7540-47a3-94d5-ac5098ffbeee,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-03-15,07:57,48.7,moto,974.0,Medium,Clear,1071.4
+a9dc6965-527e-4f7f-acd6-694a5f1b8bcc,Surat Airport,"Khambhaliya, Jamnagar",2024-10-02,10:16,31.3,auto,469.5,Medium,Stormy,568.1
+42dadd08-4bc4-454e-b94f-fb5947003105,Ahmedabad Railway Station,Surat Airport,2024-12-02,09:29,34.5,auto,517.5,Medium,Stormy,626.18
+032c382d-d3ed-496d-8699-4c82ea3237a9,Jamnagar Railway Station,"Adajan, Surat",2024-05-03,01:53,20.0,moto,400.0,High,Rainy,504.0
+c642c122-b2a4-47c2-8263-10abe1464313,Nadiad Junction,Surat Airport,2024-01-07,20:06,48.9,moto,978.0,Low,Stormy,1075.8
+b693b181-8619-40ed-8210-ab5d40f18ee2,"Varachha, Surat",Jamnagar Railway Station,2024-05-29,03:27,19.7,bike,197.0,Low,Rainy,206.85
+b63a6185-893f-4f7f-8d6d-b9638001e2ee,"Varachha, Surat","Adajan, Surat",2024-12-02,00:14,3.5,bike,35.0,Medium,Rainy,40.43
+f134da7c-d7a4-4a3c-a331-eb7d20b7ebf0,Nadiad Junction,Nadiad Bus Stand,2024-11-07,19:53,6.9,bike,69.0,Medium,Stormy,83.49
+f7456d97-d4ad-491a-87f4-1b3162515040,Ahmedabad Railway Station,Jamnagar Railway Station,2024-10-14,16:08,6.2,bike,62.0,High,Clear,74.4
+ea34efff-8b41-4451-8a6e-a8c032c788d3,"Khambhaliya, Jamnagar","Varachha, Surat",2024-08-21,08:59,15.4,auto,231.0,High,Rainy,291.06
+59799581-3add-48b6-9219-0f880a1b7238,"Varachha, Surat",Nadiad Junction,2024-07-16,16:24,3.9,auto,58.5,Low,Rainy,61.43
+1dbac73b-a867-4333-ba87-3b567c7cd67c,Nadiad Junction,"Gota, Ahmedabad",2024-11-23,14:40,37.4,auto,561.0,High,Rainy,706.86
+5d3ab7d9-1d87-4748-8836-51d3407fd9bd,Surat Airport,"Khambhaliya, Jamnagar",2024-01-19,03:17,4.2,bike,42.0,Medium,Stormy,50.82
+16a99aa1-534c-4b4c-801a-3ba7f68dff0d,Jamnagar Railway Station,"Adajan, Surat",2024-02-24,16:05,16.8,bike,168.0,High,Rainy,211.68
+fb433e63-5410-43ad-abed-5dceb7eed69f,Nadiad Junction,"Khambhaliya, Jamnagar",2024-10-30,07:07,1.7,auto,25.5,Medium,Rainy,29.45
+ec60f18b-a9bd-465b-9a81-e8b83378d250,Surat Airport,"Gota, Ahmedabad",2024-01-18,18:19,15.4,bike,154.0,High,Stormy,203.28
+7a5a750e-25d8-4468-b682-ebda203b385f,Surat Airport,"CG Road, Ahmedabad",2024-12-16,01:06,25.1,auto,376.5,High,Clear,451.8
+802a1df6-c3d7-4e51-ba86-5ccd9ae3d869,Surat Airport,Ahmedabad Railway Station,2024-04-23,20:20,7.4,auto,111.0,High,Clear,133.2
+656e5b51-17c7-4cc1-92ad-660257e05cf9,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-09-11,14:13,47.1,moto,942.0,High,Rainy,1186.92
+dc37a42a-2213-4e13-9979-e3cb8165b3a0,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-06-28,11:56,21.6,moto,432.0,Low,Rainy,453.6
+734d6fa7-abae-4276-b674-ab4a1e21d2fb,"CG Road, Ahmedabad",Nadiad Junction,2024-12-05,20:25,31.9,auto,478.5,Medium,Stormy,578.99
+c933c870-acb4-4625-a70d-eb8e62d3334f,Ahmedabad Railway Station,Nadiad Bus Stand,2024-09-07,05:41,11.0,auto,165.0,High,Clear,198.0
+06909ca0-09e7-4095-a1f0-c5fd8179278c,"Varachha, Surat","CG Road, Ahmedabad",2024-01-26,03:15,11.8,bike,118.0,Low,Rainy,123.9
+5b5b168a-daa4-4789-b0f9-f3669da7920e,Nadiad Junction,"Khambhaliya, Jamnagar",2024-04-18,17:28,44.7,moto,894.0,High,Stormy,1180.08
+e37d6cb7-6ab1-448a-b626-8da074033402,"Adajan, Surat",Surat Airport,2024-10-03,06:04,3.6,auto,54.0,Medium,Rainy,62.37
+3f388c7a-83c8-4f68-b3fb-43c2b789bc85,Nadiad Junction,"Adajan, Surat",2024-05-15,06:33,7.3,auto,109.5,Medium,Stormy,132.5
+2075c34f-2bcf-4228-b9b9-55f48cacd3dc,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-07-12,10:25,22.4,moto,448.0,High,Stormy,591.36
+9dc15e52-b02b-43fc-9543-a3a13321e5a9,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-05-09,01:43,9.3,auto,139.5,High,Clear,167.4
+4e8425b7-d5f6-4f2d-a262-6b98b4848c9b,Surat Airport,Nadiad Junction,2024-10-15,20:58,28.1,moto,562.0,Low,Rainy,590.1
+6689f185-104f-475b-8949-777d144ad92a,"Khambhaliya, Jamnagar",Surat Airport,2024-08-19,03:27,33.1,moto,662.0,Medium,Rainy,764.61
+2a29c923-38f2-499a-95e1-d7b0678acdcf,Surat Airport,Nadiad Junction,2024-02-27,14:20,10.4,bike,104.0,Low,Stormy,114.4
+92525c9f-2187-42e7-b39e-82c704947ef6,Surat Airport,Ahmedabad Railway Station,2024-03-30,09:51,1.7,bike,17.0,High,Rainy,21.42
+48142a9a-297a-48ee-beea-63a9f4417b2b,"Khambhaliya, Jamnagar",Nadiad Junction,2024-11-04,02:20,25.7,moto,514.0,Low,Clear,514.0
+f74e5b4e-da37-43a1-9501-c628cd7852d0,Ahmedabad Railway Station,Jamnagar Railway Station,2024-12-01,09:50,26.7,moto,534.0,Low,Rainy,560.7
+7a377ed8-ea8b-4bd4-8a3c-d79629722089,"Varachha, Surat",Ahmedabad Railway Station,2024-03-14,19:42,37.8,moto,756.0,Medium,Clear,831.6
+054d2fde-6f22-4108-b435-beded30bc3f1,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-10-28,01:00,21.2,auto,318.0,Medium,Stormy,384.78
+fb016944-3b4f-439a-ac24-38e40e2d29e8,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-06-16,21:47,9.7,bike,97.0,High,Clear,116.4
+d4de9791-9d7a-4b5b-a3b4-3659ee908396,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-05-10,16:52,9.3,bike,93.0,Low,Stormy,102.3
+4e4a9f65-c68c-4787-9eaa-42c584bdd235,Jamnagar Railway Station,"Varachha, Surat",2024-01-19,12:38,33.2,moto,664.0,Low,Stormy,730.4
+fb3e5f3d-7268-49ad-a80a-53cb3bc05465,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-01-15,09:58,44.6,moto,892.0,High,Rainy,1123.92
+a9fc0c5b-a94e-487b-b2f4-d07fbf9faec0,"Varachha, Surat",Jamnagar Railway Station,2024-09-26,03:16,36.2,auto,543.0,Low,Stormy,597.3
+5f108672-acc4-423a-bcbe-bd8f30376147,"Adajan, Surat","Varachha, Surat",2024-03-06,20:10,8.6,auto,129.0,Low,Rainy,135.45
+804331b3-2d32-43c4-bc3b-51996f01e03e,"Varachha, Surat","Gota, Ahmedabad",2024-09-08,20:34,5.6,auto,84.0,High,Rainy,105.84
+074e8dbe-947a-4cd5-bcbe-45ffcbf19e07,Ahmedabad Railway Station,"Adajan, Surat",2024-09-08,08:50,17.6,bike,176.0,High,Clear,211.2
+9d03700c-8183-43ab-90d4-9fd55c63603f,"Varachha, Surat","Adajan, Surat",2024-01-30,02:48,13.6,bike,136.0,High,Stormy,179.52
+64988e21-d30c-4e4d-8357-0d90317230c4,Ahmedabad Railway Station,Nadiad Bus Stand,2024-08-03,01:04,38.3,auto,574.5,Medium,Stormy,695.15
+12fa0be1-84af-4104-b705-2dfe29cdca85,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-11-30,19:09,13.9,bike,139.0,Medium,Stormy,168.19
+8796ff95-5cc5-45fd-a57f-31c6d865525b,Nadiad Junction,Surat Airport,2024-12-11,06:41,4.0,bike,40.0,High,Stormy,52.8
+283c55da-66cf-4586-8179-d87af3b2de9c,Nadiad Bus Stand,Jamnagar Railway Station,2024-08-21,12:42,3.2,bike,32.0,Medium,Rainy,36.96
+5dc8c76e-d7e9-4233-821d-7cdc481cd06e,Surat Airport,Jamnagar Railway Station,2024-04-08,09:35,5.9,auto,88.5,High,Clear,106.2
+d8ca7c76-e2de-4247-9344-1522e8464a83,"Varachha, Surat",Nadiad Bus Stand,2024-04-23,07:49,48.9,moto,978.0,High,Clear,1173.6
+4e1c264e-c86c-499a-badc-baea1411434f,Nadiad Junction,Ahmedabad Railway Station,2024-12-07,04:46,22.2,auto,333.0,Medium,Clear,366.3
+b4b545b0-b135-46fc-8b91-00f97d7741c7,"Adajan, Surat",Ahmedabad Railway Station,2024-12-16,17:15,39.0,auto,585.0,High,Stormy,772.2
+bfec87b2-add2-4d6b-ba1d-4572611db987,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-10-09,02:03,29.6,moto,592.0,Low,Clear,592.0
+14a50b0c-428e-4895-8987-a3e721373bf6,Ahmedabad Railway Station,Surat Airport,2024-02-17,18:03,47.0,moto,940.0,High,Clear,1128.0
+5aaa87ff-e053-47b0-bb15-89311e068de5,"Gota, Ahmedabad",Surat Airport,2024-07-10,08:29,13.9,bike,139.0,Low,Stormy,152.9
+9e5abf7c-6ba6-42d9-92b8-78c50876c38a,Surat Airport,Ahmedabad Railway Station,2024-07-12,03:43,9.6,auto,144.0,Low,Rainy,151.2
+6f8822a7-142f-408b-b89a-5199ac91b765,Surat Airport,"Varachha, Surat",2024-01-10,22:56,11.0,auto,165.0,Low,Rainy,173.25
+8855f2d7-9ca0-4b7b-a323-185563ea3cea,Surat Airport,Ahmedabad Railway Station,2024-05-03,13:48,11.9,bike,119.0,Low,Rainy,124.95
+cd4a144d-0693-4472-b569-dd4d280602bc,Surat Airport,"CG Road, Ahmedabad",2024-06-25,01:30,1.0,bike,10.0,Low,Stormy,11.0
+090fcde6-4723-48c1-b0f1-01d11bac4488,Ahmedabad Railway Station,Jamnagar Railway Station,2024-02-06,12:22,1.9,bike,19.0,High,Clear,22.8
+4ac86b55-d96d-4525-bbb3-2a80e7622a3c,Nadiad Junction,"Varachha, Surat",2024-03-13,03:15,14.8,bike,148.0,Medium,Clear,162.8
+82ca27f8-3cbd-415a-b7cf-18980699153c,Surat Airport,"Gota, Ahmedabad",2024-06-06,05:22,2.7,bike,27.0,Low,Rainy,28.35
+58e31182-318d-4e69-9d47-e47103d01c58,"Varachha, Surat",Ahmedabad Railway Station,2024-05-20,12:43,35.5,moto,710.0,Low,Clear,710.0
+b49831fa-3188-4f35-81b3-6f402ab64585,Surat Airport,"Khambhaliya, Jamnagar",2024-03-02,15:26,5.8,bike,58.0,High,Stormy,76.56
+f2d4d710-0434-4ab8-ac54-c76be6a51fd5,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-05-14,16:34,16.8,auto,252.0,Medium,Stormy,304.92
+1a2ac85e-f45f-4385-897e-f9373a437a77,Nadiad Junction,"Adajan, Surat",2024-06-16,19:24,28.9,moto,578.0,Medium,Rainy,667.59
+4a6feb79-4c3b-4d53-94bd-c8d513a6788e,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-08-10,19:22,1.4,auto,21.0,Low,Clear,21.0
+8da832ed-aaf0-42dd-9980-7fb35e9c3a1a,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-03-28,01:39,31.5,moto,630.0,Medium,Stormy,762.3
+000f6f01-7bc1-4415-93dc-80bca7ecd9e7,Nadiad Junction,Surat Airport,2024-06-29,07:14,12.3,bike,123.0,Low,Rainy,129.15
+ff6fc220-dc81-460e-8270-e8c09044173f,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-03-15,00:44,7.6,auto,114.0,High,Stormy,150.48
+a71270e5-d52b-479a-b419-76559436cd2a,Ahmedabad Railway Station,"Varachha, Surat",2024-10-13,05:28,30.7,moto,614.0,High,Stormy,810.48
+fa65ea30-aaee-4550-a8d6-6e4bdfd27ab5,Nadiad Bus Stand,Jamnagar Railway Station,2024-06-12,22:54,49.6,moto,992.0,Medium,Stormy,1200.32
+a6a6b31f-696c-4989-a6de-c7249cfe360c,Nadiad Junction,Ahmedabad Railway Station,2024-04-25,09:45,38.2,auto,573.0,High,Rainy,721.98
+a0fc7968-9cf1-4040-a140-39b3ad7fe551,Nadiad Junction,"Varachha, Surat",2024-07-31,09:34,38.6,moto,772.0,Low,Stormy,849.2
+4373b178-72ad-44f7-81d5-f7fd65b44b12,Jamnagar Railway Station,Nadiad Junction,2024-04-26,02:12,18.6,bike,186.0,Low,Stormy,204.6
+9c353b05-3a7a-4a19-9d3a-cbe0ecf4ef50,"CG Road, Ahmedabad",Nadiad Junction,2024-05-25,22:07,30.8,moto,616.0,High,Rainy,776.16
+a08869f1-847e-41cf-aa04-f018ae62850f,"Gota, Ahmedabad",Nadiad Junction,2024-02-29,10:45,24.7,moto,494.0,Medium,Clear,543.4
+55b52f9d-779c-480e-9c29-62925f884899,Surat Airport,"Gota, Ahmedabad",2024-01-13,15:31,23.1,moto,462.0,Low,Rainy,485.1
+4c2c4709-fc34-48a6-adc4-19afa0b6cfe9,"Adajan, Surat",Jamnagar Railway Station,2024-06-24,07:42,36.4,auto,546.0,Low,Stormy,600.6
+662307d8-b73e-4900-9754-f3dcd41c6e57,"Adajan, Surat",Jamnagar Railway Station,2024-01-04,05:01,36.9,moto,738.0,Low,Clear,738.0
+b3a81ed4-dbed-4889-8786-4f893a3691e5,"Varachha, Surat","CG Road, Ahmedabad",2024-05-21,04:36,8.1,bike,81.0,Low,Rainy,85.05
+02f2d2a6-c2d6-4fcc-a0cf-172e92aeadf7,"CG Road, Ahmedabad",Nadiad Junction,2024-06-04,23:59,25.2,moto,504.0,Medium,Stormy,609.84
+a74e2e8c-e292-47bd-b23c-ddf68a24c38d,"Varachha, Surat","CG Road, Ahmedabad",2024-06-13,14:15,23.4,moto,468.0,High,Stormy,617.76
+b47be094-59b8-49ef-8181-e0809a7bd84c,"Adajan, Surat","CG Road, Ahmedabad",2024-01-02,16:50,42.3,moto,846.0,High,Stormy,1116.72
+e411aad4-e475-42ba-8ef1-d249dbc74f3a,"CG Road, Ahmedabad",Surat Airport,2024-02-16,22:55,4.7,bike,47.0,Medium,Rainy,54.29
+a59ad71e-2a2d-4e63-bb30-8effa0a62824,"Adajan, Surat",Jamnagar Railway Station,2024-03-16,01:44,34.7,auto,520.5,Low,Clear,520.5
+da154247-720e-4dab-8547-30a24aa8298e,"Varachha, Surat","Adajan, Surat",2024-11-05,17:30,25.1,moto,502.0,High,Stormy,662.64
+f3ff8d2d-fae2-47c8-8b8b-82e61ee96bb2,Nadiad Junction,"CG Road, Ahmedabad",2024-06-07,18:23,17.2,auto,258.0,High,Clear,309.6
+ef558655-d5b8-4671-b738-d2b5811dc39e,Ahmedabad Railway Station,Nadiad Bus Stand,2024-04-25,14:23,36.9,moto,738.0,High,Clear,885.6
+6bc3fc40-e5ab-4fc0-a1dc-d62e9109d725,Ahmedabad Railway Station,Nadiad Junction,2024-10-24,13:20,13.9,bike,139.0,Low,Clear,139.0
+96c12f5d-227d-49fb-be60-fcdb7669e157,"Varachha, Surat","Adajan, Surat",2024-06-02,14:35,7.1,bike,71.0,Medium,Clear,78.1
+d1138beb-afe1-482e-b11a-fce46ab98c95,Jamnagar Railway Station,Ahmedabad Railway Station,2024-04-18,05:45,36.4,moto,728.0,Low,Rainy,764.4
+2d108268-4b7c-4cd6-932a-3eaacdbb6460,"Gota, Ahmedabad",Nadiad Junction,2024-09-28,20:47,40.4,moto,808.0,High,Rainy,1018.08
+5998f919-38b4-4f18-9577-b930062771c9,Nadiad Bus Stand,Surat Airport,2024-03-18,19:50,1.3,auto,19.5,Low,Rainy,20.48
+bb495564-5fdc-4b90-b217-ee92409b2664,Nadiad Junction,Surat Airport,2024-02-16,08:22,13.7,auto,205.5,Low,Clear,205.5
+808c5f19-b958-4103-8d5e-100687d0ac9e,"Gota, Ahmedabad",Surat Airport,2024-06-17,02:48,41.9,moto,838.0,Medium,Stormy,1013.98
+83d44de0-d9ae-4bc1-9f81-a5cc629f84c2,"Gota, Ahmedabad",Surat Airport,2024-05-20,06:16,6.0,bike,60.0,Medium,Rainy,69.3
+ba39a899-cd32-4d0e-b51b-1e5b5597e37d,Nadiad Junction,Ahmedabad Railway Station,2024-05-09,18:50,3.1,auto,46.5,Low,Clear,46.5
+7118b0ad-884f-442c-a2de-93fecb94d611,Surat Airport,Nadiad Junction,2024-05-26,21:17,15.9,auto,238.5,Low,Clear,238.5
+ef81e7a9-e9a5-433b-9ce4-77f7aff2cf17,"CG Road, Ahmedabad","Adajan, Surat",2024-10-31,23:34,11.9,bike,119.0,High,Clear,142.8
+8f9348fa-878f-4c14-ad08-f8450eca43a4,"Adajan, Surat","Varachha, Surat",2024-08-16,15:14,35.5,moto,710.0,Low,Rainy,745.5
+9d8ec820-cae2-4abc-b9b0-70b829a60832,Surat Airport,"CG Road, Ahmedabad",2024-08-22,22:56,18.5,auto,277.5,Medium,Stormy,335.78
+ae2495a6-1e92-4422-abde-7a8055694d84,Nadiad Junction,Nadiad Bus Stand,2024-10-25,13:22,25.7,auto,385.5,Low,Clear,385.5
+5e7713f1-256d-4dd8-8c34-2707aaa49ffd,"Khambhaliya, Jamnagar",Nadiad Junction,2024-07-03,10:10,38.5,moto,770.0,Medium,Clear,847.0
+6ddbd4ef-5c51-4f27-b7e5-6ba1ae1fd0ec,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-08-27,02:11,28.9,moto,578.0,Medium,Clear,635.8
+3c69e88b-a958-4436-b711-036f93259a8c,Nadiad Junction,"Gota, Ahmedabad",2024-04-23,13:32,36.5,moto,730.0,Low,Rainy,766.5
+8dce37b9-23bc-44b0-8419-d95b0c0e93b5,"Gota, Ahmedabad","Varachha, Surat",2024-10-27,09:21,31.3,moto,626.0,High,Clear,751.2
+d6f741e1-743d-488f-9562-218069d5719f,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-02-12,19:52,13.1,bike,131.0,Low,Rainy,137.55
+d44cf79e-b006-48ef-bb2e-70f280e4179a,Surat Airport,Nadiad Bus Stand,2024-09-17,15:12,15.9,auto,238.5,Low,Clear,238.5
+9c20ca69-04c4-4f05-b2ac-0048cb2f457d,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-12-11,04:17,13.0,bike,130.0,High,Rainy,163.8
+3a2d2805-209f-45b7-99a3-2f97203b8dfe,Nadiad Junction,"Gota, Ahmedabad",2024-03-09,20:49,27.8,auto,417.0,High,Rainy,525.42
+af5e9a09-39a6-4c01-8a80-3ab8547eacfd,Surat Airport,Nadiad Junction,2024-08-09,05:22,1.8,bike,18.0,Low,Stormy,19.8
+08e09fd8-096a-484c-9021-2def4b29f2b8,"Adajan, Surat",Nadiad Junction,2024-11-09,10:32,1.2,bike,12.0,Medium,Rainy,13.86
+2b56e7fa-7907-457b-b2ab-c58b2bddbf62,Ahmedabad Railway Station,"Adajan, Surat",2024-04-07,04:19,35.5,moto,710.0,Medium,Rainy,820.05
+44d3ee49-9be3-4329-a0c5-1b32e8f59cda,Surat Airport,"Adajan, Surat",2024-12-09,18:23,2.0,bike,20.0,Medium,Rainy,23.1
+492a2127-6a56-4af6-a374-217eacc46a9b,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-10-03,16:42,7.6,auto,114.0,High,Rainy,143.64
+1eabc774-f1a0-42f0-b10c-28c7c553b201,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-06-16,06:48,1.7,bike,17.0,Medium,Stormy,20.57
+add1b1a1-4121-4cdb-8d98-50af0c24696d,"Varachha, Surat","Adajan, Surat",2024-03-17,15:12,11.4,bike,114.0,High,Stormy,150.48
+d7921599-5615-42b6-b12e-0e3ebb8e668b,"CG Road, Ahmedabad","Adajan, Surat",2024-09-02,11:37,4.2,auto,63.0,High,Rainy,79.38
+53b10be5-7c15-49ea-b193-0bf8d648ebac,Nadiad Junction,Ahmedabad Railway Station,2024-12-18,17:02,15.4,bike,154.0,Low,Stormy,169.4
+05ebb510-4bf8-4f9c-9c0c-3c3e80f4c73d,"Gota, Ahmedabad","Varachha, Surat",2024-12-12,17:50,4.6,auto,69.0,High,Clear,82.8
+f02c07a9-0daa-459b-822a-01f4911028db,"Adajan, Surat","Gota, Ahmedabad",2024-04-27,16:59,27.2,moto,544.0,Low,Rainy,571.2
+f5314783-6c37-40b7-b0cd-d071202a5ccf,Surat Airport,"CG Road, Ahmedabad",2024-01-02,01:06,35.2,moto,704.0,High,Clear,844.8
+1f901da8-8af0-4df7-8253-96e6b64cfc56,Nadiad Junction,Ahmedabad Railway Station,2024-01-05,16:33,5.1,bike,51.0,Low,Stormy,56.1
+778674a5-73c5-4996-b2e8-27afa429b141,Jamnagar Railway Station,"Varachha, Surat",2024-12-26,12:32,3.9,bike,39.0,High,Rainy,49.14
+88130c4d-bd6a-4e75-9392-9c25927c54f2,"Adajan, Surat",Nadiad Junction,2024-12-20,08:00,44.6,moto,892.0,Medium,Rainy,1030.26
+02a3c6b7-b783-4a6b-a801-d61ba8e9d69e,Jamnagar Railway Station,Nadiad Junction,2024-12-24,10:51,6.5,bike,65.0,Medium,Rainy,75.08
+bd439a82-91a1-4778-9612-85e02dc4d6e0,"Varachha, Surat",Ahmedabad Railway Station,2024-11-09,01:41,47.8,moto,956.0,Low,Stormy,1051.6
+0474515a-8e49-4d6f-b05b-efacdd20aace,Jamnagar Railway Station,Nadiad Bus Stand,2024-06-25,15:33,46.8,moto,936.0,Low,Rainy,982.8
+09f042e6-901a-4ed7-873e-28d52d85e876,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-11-08,18:50,10.1,bike,101.0,High,Stormy,133.32
+4f906f10-d3fe-4745-b437-1ab9be718440,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-12-15,13:14,15.9,auto,238.5,High,Rainy,300.51
+38928e88-656e-457b-a2c0-793876023993,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-10-16,22:49,25.8,moto,516.0,Medium,Clear,567.6
+f1cf39e3-cc46-4a5a-b8c1-48507a187e98,Nadiad Bus Stand,"Varachha, Surat",2024-08-16,06:38,24.4,auto,366.0,Low,Stormy,402.6
+66c1845e-cda2-4dd7-908d-357f6ea1aeef,Jamnagar Railway Station,"Adajan, Surat",2024-02-17,08:02,24.2,auto,363.0,Medium,Stormy,439.23
+e9366b96-35f2-4b91-b190-f50b3849b675,"Gota, Ahmedabad",Nadiad Junction,2024-07-06,14:41,12.7,auto,190.5,Low,Rainy,200.03
+d1477ff0-7957-43ce-8396-48b8ea5ed98d,"Varachha, Surat","Khambhaliya, Jamnagar",2024-09-08,17:06,22.0,auto,330.0,Medium,Stormy,399.3
+85d2659e-9d17-4fdb-ac56-741028c07def,"Gota, Ahmedabad",Surat Airport,2024-04-03,12:21,6.0,auto,90.0,Low,Rainy,94.5
+e9f00ba5-535c-4fa9-9dfd-7fe298b24509,"Khambhaliya, Jamnagar","Adajan, Surat",2024-11-11,19:28,28.4,auto,426.0,High,Rainy,536.76
+f9492056-9b5e-43e6-b348-36416b333bde,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-09-06,06:10,46.3,moto,926.0,Medium,Rainy,1069.53
+5500c836-86ae-4eb7-a872-e196fce3eae1,Ahmedabad Railway Station,Surat Airport,2024-02-03,00:48,43.2,moto,864.0,Medium,Stormy,1045.44
+916c98c4-97df-4fd2-9328-9fdabc702b2c,"Adajan, Surat",Surat Airport,2024-09-20,05:56,8.1,auto,121.5,High,Clear,145.8
+80496e23-61c8-4c04-9288-66560686619f,Surat Airport,"Gota, Ahmedabad",2024-02-18,01:52,10.4,bike,104.0,High,Clear,124.8
+916c11ba-134d-45d2-8d14-426de45a656f,"Gota, Ahmedabad","Varachha, Surat",2024-09-23,23:14,42.4,moto,848.0,High,Rainy,1068.48
+3de22a28-b99e-4569-88bb-ac63081f2701,Surat Airport,"Khambhaliya, Jamnagar",2024-09-25,02:40,48.9,moto,978.0,High,Clear,1173.6
+8f9e6a22-fb29-47f3-a14f-eae31ec8dbb5,"Khambhaliya, Jamnagar",Surat Airport,2024-10-01,21:15,25.8,auto,387.0,High,Rainy,487.62
+062a4ee2-365f-4086-8547-b383e2853584,Ahmedabad Railway Station,"Varachha, Surat",2024-09-01,19:25,17.1,bike,171.0,Medium,Rainy,197.51
+ffa6ab2f-627f-4bc4-a309-3983019dcfa1,"CG Road, Ahmedabad","Adajan, Surat",2024-01-20,22:35,48.1,moto,962.0,High,Stormy,1269.84
+4352f202-4000-4176-8440-1f00e557317b,"Adajan, Surat","CG Road, Ahmedabad",2024-07-13,22:32,8.0,bike,80.0,Low,Stormy,88.0
+34d5035d-3167-49dd-9507-385cd10d5822,Surat Airport,Ahmedabad Railway Station,2024-06-09,00:04,24.4,auto,366.0,High,Rainy,461.16
+c2f53a7c-f989-4204-bb2f-104d8a49d0db,Nadiad Bus Stand,"Adajan, Surat",2024-01-24,21:51,6.4,auto,96.0,High,Clear,115.2
+029c7b92-7828-4216-8c90-464846e3dd28,Jamnagar Railway Station,Nadiad Junction,2024-04-29,22:37,1.5,bike,15.0,High,Stormy,19.8
+167b68d1-560f-4049-b4de-401ba3cafd5f,Surat Airport,"Khambhaliya, Jamnagar",2024-08-11,17:41,34.9,moto,698.0,Low,Rainy,732.9
+056f6802-3b83-4e39-9260-89fb4df9177b,Nadiad Junction,"CG Road, Ahmedabad",2024-09-16,14:11,25.3,moto,506.0,High,Rainy,637.56
+f7fce76d-4a18-43e5-ac9b-cfcfe493d563,"Varachha, Surat",Nadiad Junction,2024-12-15,14:45,30.2,auto,453.0,Low,Rainy,475.65
+6c8e5b11-beba-476c-bc3d-91c5aaf13a9b,"Varachha, Surat","Adajan, Surat",2024-10-07,03:07,26.2,moto,524.0,Medium,Stormy,634.04
+57a8bef2-da5b-4833-8db9-1e740b5b9e07,"CG Road, Ahmedabad",Surat Airport,2024-02-17,13:06,39.7,auto,595.5,Medium,Stormy,720.56
+dc8a2c80-f7f2-4ef4-bc8b-5b210fc98b9b,"Adajan, Surat",Jamnagar Railway Station,2024-07-29,09:59,1.1,bike,11.0,High,Rainy,13.86
+17b149a4-c7db-40a7-9dfb-a52c1a20665f,Surat Airport,"Varachha, Surat",2024-06-11,12:48,10.5,bike,105.0,High,Rainy,132.3
+c8d75e60-87ca-43b6-92e1-f0f38ced14be,Surat Airport,"Gota, Ahmedabad",2024-09-18,22:06,43.8,moto,876.0,High,Rainy,1103.76
+81eec9a2-fa07-4314-939a-04564d48fe12,Nadiad Bus Stand,"Adajan, Surat",2024-04-03,11:41,26.6,moto,532.0,High,Rainy,670.32
+80274664-601a-4c26-9e3e-2242b4740b65,Nadiad Bus Stand,"Adajan, Surat",2024-03-18,12:02,24.2,moto,484.0,High,Rainy,609.84
+a58a8ced-1373-44ec-837b-d747dcd92219,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-04-17,22:59,9.3,bike,93.0,Low,Rainy,97.65
+e0d29f52-a778-497a-9b42-c269ee36bd63,Surat Airport,"Varachha, Surat",2024-08-26,03:10,10.4,auto,156.0,High,Clear,187.2
+de675af3-6fee-45fd-8b8b-0af20bb17731,"Gota, Ahmedabad",Nadiad Bus Stand,2024-03-24,08:00,12.8,auto,192.0,Low,Rainy,201.6
+8fd80685-83f8-4f65-a789-8c6a87af6601,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-02-25,08:26,24.2,moto,484.0,Medium,Stormy,585.64
+3d0eba8b-6936-45ad-8fab-93c7702ebebe,Nadiad Junction,Ahmedabad Railway Station,2024-02-19,16:37,11.8,bike,118.0,Medium,Clear,129.8
+c65835c4-e770-4ad7-ab16-b1e252de31a6,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-12-21,21:20,12.2,auto,183.0,High,Stormy,241.56
+9fa5e515-eca7-4313-a511-ed044a49deff,Jamnagar Railway Station,Ahmedabad Railway Station,2024-03-15,08:36,26.9,auto,403.5,Medium,Clear,443.85
+6223495f-2849-4eeb-8e6a-cc719f7c7235,"Varachha, Surat",Nadiad Bus Stand,2024-06-26,06:48,30.7,moto,614.0,Medium,Rainy,709.17
+636bea6f-83ca-4d04-bafe-7ed8c09327eb,Nadiad Bus Stand,"Adajan, Surat",2024-01-13,17:03,12.4,bike,124.0,High,Clear,148.8
+1bb0f584-c17e-475f-a169-46348e8cfb94,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-08-05,19:26,30.3,moto,606.0,High,Rainy,763.56
+949c5956-eb4c-41d6-8a30-3d6732783d68,Surat Airport,Jamnagar Railway Station,2024-12-30,08:36,6.1,bike,61.0,High,Rainy,76.86
+ab1f71d6-27a5-4439-8ea9-c8efb8a1b833,"Adajan, Surat","CG Road, Ahmedabad",2024-03-09,15:55,48.6,moto,972.0,Low,Rainy,1020.6
+5214600f-c7aa-4a84-a06d-19aaf6e4dfc9,Nadiad Bus Stand,Surat Airport,2024-06-22,02:53,3.3,auto,49.5,Medium,Stormy,59.9
+285fc27e-2630-4dff-a867-cfe9cefb6052,Surat Airport,Nadiad Bus Stand,2024-11-20,03:35,28.3,moto,566.0,High,Stormy,747.12
+248834a5-6430-4e3a-a8ef-07146ce21feb,Surat Airport,"Adajan, Surat",2024-03-17,08:34,12.2,auto,183.0,Low,Clear,183.0
+026a769e-6da0-416a-8da2-921ab3a31d6c,Nadiad Junction,Surat Airport,2024-10-01,13:50,9.6,bike,96.0,Low,Clear,96.0
+0c773689-7978-4c91-93c6-587c9900db0d,Ahmedabad Railway Station,"Varachha, Surat",2024-11-20,06:52,10.4,bike,104.0,High,Rainy,131.04
+44e2cf9c-0b2f-487b-a7e4-278de2dbe8e6,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-07-18,20:35,31.9,auto,478.5,Low,Clear,478.5
+14567c36-b5f5-4b54-9fd7-ff61ae7429ff,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-10-24,13:49,15.6,bike,156.0,High,Stormy,205.92
+7de9a840-efb0-4810-893e-b3fe8301f09c,"Varachha, Surat","Khambhaliya, Jamnagar",2024-09-10,06:29,32.3,moto,646.0,Low,Clear,646.0
+42467343-e1fa-4fd5-9df2-60eb784053df,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-08-23,03:53,37.3,moto,746.0,High,Rainy,939.96
+9b22df5e-d2a7-4dc9-9ef3-20346796f4c7,Nadiad Bus Stand,Jamnagar Railway Station,2024-08-27,09:55,35.9,auto,538.5,Medium,Rainy,621.97
+450f0e9d-0cb8-4176-9385-1955fb7a8169,Jamnagar Railway Station,Nadiad Bus Stand,2024-09-01,20:20,14.7,auto,220.5,High,Clear,264.6
+98fc870e-d48b-4c24-9353-3c586a0870e9,"Varachha, Surat","CG Road, Ahmedabad",2024-11-07,12:57,32.5,auto,487.5,Medium,Clear,536.25
+461447a4-4078-410b-8ab6-b3d3f3563858,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-03-12,00:21,4.4,auto,66.0,Medium,Clear,72.6
+22328c5e-9a74-4eda-a876-f95265fa6d7f,Nadiad Junction,Ahmedabad Railway Station,2024-07-28,20:53,1.4,auto,21.0,Low,Stormy,23.1
+9fd9c0c7-4b1e-43d5-b4dc-313759a3f2c9,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-11-09,01:17,20.9,moto,418.0,Low,Rainy,438.9
+1e04dbd0-d899-412f-be78-5b4e4b10a7b7,Ahmedabad Railway Station,Surat Airport,2024-11-10,00:23,17.3,bike,173.0,High,Clear,207.6
+eaecf882-5919-42b4-a6a8-78f81c4c03e7,"Varachha, Surat","CG Road, Ahmedabad",2024-09-30,03:16,18.3,bike,183.0,High,Stormy,241.56
+95d97270-828b-460d-bd45-0191023a2d22,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-12-29,10:06,11.4,bike,114.0,Medium,Rainy,131.67
+a6254a1a-45d7-49f4-b2d6-d4191fa10c46,"Adajan, Surat",Ahmedabad Railway Station,2024-07-10,17:48,14.2,bike,142.0,Medium,Rainy,164.01
+2be4f4c4-aa9e-4a2b-ae35-895a536924bd,Nadiad Junction,Surat Airport,2024-05-13,19:48,4.7,auto,70.5,Low,Stormy,77.55
+3ed7397c-642e-40e7-8265-4b17bf8f94cc,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-03-18,19:53,14.4,auto,216.0,Low,Rainy,226.8
+317764ca-f845-49ce-821c-8d6738b5f684,"Khambhaliya, Jamnagar",Surat Airport,2024-05-17,22:03,39.3,moto,786.0,High,Clear,943.2
+99e08961-0ce6-47e0-893d-4e8ee104c87d,Jamnagar Railway Station,Nadiad Junction,2024-08-28,10:41,38.9,auto,583.5,Medium,Clear,641.85
+e3c47720-4423-4fe9-b083-387c75635f7a,"Gota, Ahmedabad",Nadiad Junction,2024-07-19,18:17,25.7,auto,385.5,High,Stormy,508.86
+a5954fa3-8f1e-46d3-8b7c-a3a2c7c22be6,Nadiad Bus Stand,Nadiad Junction,2024-06-26,09:17,29.4,moto,588.0,Medium,Rainy,679.14
+dd9cbda5-c3fd-45fa-afc4-5ce90f3a0912,Jamnagar Railway Station,Nadiad Junction,2024-11-24,17:08,41.1,moto,822.0,High,Stormy,1085.04
+8105c2af-fcda-4986-ae18-a9e928fd429f,"CG Road, Ahmedabad",Nadiad Junction,2024-03-01,19:06,34.2,auto,513.0,Low,Clear,513.0
+9c06bac1-0e52-4e93-987b-2a2825980d44,"Adajan, Surat",Nadiad Bus Stand,2024-03-23,23:15,25.0,auto,375.0,High,Stormy,495.0
+d1c52408-20bc-4e28-868a-7adbcc775f40,Ahmedabad Railway Station,Surat Airport,2024-06-14,11:23,13.7,bike,137.0,Medium,Rainy,158.24
+2548468d-4ef0-434b-8cff-9b8b8b4c29be,"Varachha, Surat","CG Road, Ahmedabad",2024-10-23,13:48,12.3,bike,123.0,High,Clear,147.6
+fb593cc1-9407-4eef-b94c-af99be089867,"Adajan, Surat",Ahmedabad Railway Station,2024-01-21,03:28,33.9,moto,678.0,High,Clear,813.6
+eb65ec2b-d84a-4dbd-8889-5504b19dd1df,Surat Airport,Nadiad Junction,2024-06-18,09:24,34.5,moto,690.0,High,Clear,828.0
+98ca5095-c376-40a1-96b4-76e940529b23,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-02-02,09:55,18.3,auto,274.5,Medium,Clear,301.95
+d23b3e03-2a3e-4e13-80ae-7e8b68bbcc0e,"Adajan, Surat",Nadiad Bus Stand,2024-02-08,04:31,27.5,auto,412.5,Low,Stormy,453.75
+cf94259f-dcdd-4557-a08b-036411108796,"Adajan, Surat",Nadiad Bus Stand,2024-04-16,03:07,14.4,bike,144.0,Medium,Clear,158.4
+2e21f045-b1ef-4bda-a63e-f1173b6baa3c,"Varachha, Surat",Surat Airport,2024-10-05,20:36,6.3,bike,63.0,High,Rainy,79.38
+5c192527-16ee-4d91-b9ff-e4ecc06b0e9b,Nadiad Junction,"Gota, Ahmedabad",2024-12-01,20:04,7.0,auto,105.0,High,Clear,126.0
+0873f12f-5621-4b58-a35f-eeeef3287e5a,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-09-04,16:02,11.9,bike,119.0,High,Stormy,157.08
+adebdd07-3166-4bc9-b865-fbd065cc216e,"Adajan, Surat",Nadiad Junction,2024-04-01,02:21,2.7,bike,27.0,High,Stormy,35.64
+c7edb138-e9b0-477d-835d-784735b39acd,Nadiad Junction,"Khambhaliya, Jamnagar",2024-09-19,18:11,11.7,bike,117.0,Low,Rainy,122.85
+fa8a1a81-68eb-4735-b48b-d34f0aabe3f4,Nadiad Junction,"CG Road, Ahmedabad",2024-04-10,06:57,49.2,moto,984.0,High,Stormy,1298.88
+1c8c8954-d0e6-4a76-a35b-d43c9b01e99c,Nadiad Bus Stand,"Varachha, Surat",2024-09-11,08:01,15.2,auto,228.0,Low,Clear,228.0
+fc59ed06-4047-4858-92dc-ebc9f9acc533,"CG Road, Ahmedabad","Varachha, Surat",2024-03-19,10:45,12.9,auto,193.5,Low,Stormy,212.85
+b8c5e053-655c-4255-9dd3-16e21f25c15c,"Gota, Ahmedabad","Varachha, Surat",2024-11-28,04:06,5.3,bike,53.0,High,Clear,63.6
+1ff532c7-53c7-4d59-884a-3073a4c251f1,"Adajan, Surat",Surat Airport,2024-02-09,22:25,27.4,auto,411.0,Low,Rainy,431.55
+c851b6b2-15e4-4951-8d59-393fee75d377,"Adajan, Surat","Khambhaliya, Jamnagar",2024-03-09,14:18,18.4,auto,276.0,High,Stormy,364.32
+cdfdb472-13a9-421f-a42a-60b4cb0cef7e,Jamnagar Railway Station,Surat Airport,2024-10-28,15:41,27.5,auto,412.5,Medium,Rainy,476.44
+4e0e7ba6-292b-425e-8241-3322a76b8ebb,"CG Road, Ahmedabad",Surat Airport,2024-11-27,01:02,29.5,moto,590.0,Medium,Rainy,681.45
+275b4547-578d-4399-802d-3c56f9c8f80a,Surat Airport,"Varachha, Surat",2024-11-21,03:52,7.1,bike,71.0,Medium,Rainy,82.01
+90abe3ae-a105-4f83-bbf7-894d138384cc,"Khambhaliya, Jamnagar","Adajan, Surat",2024-09-09,04:06,5.1,auto,76.5,High,Rainy,96.39
+ea101d98-3102-4917-8b48-0cac923c5023,Surat Airport,Nadiad Junction,2024-01-06,17:13,1.9,auto,28.5,Medium,Stormy,34.49
+5817b5b0-d215-4b06-a18e-5e20927f33f3,"Gota, Ahmedabad",Nadiad Bus Stand,2024-03-10,09:04,21.3,auto,319.5,Low,Clear,319.5
+4d3bfde2-1214-4af2-b5ca-27867a493298,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-07-08,04:46,43.5,moto,870.0,Low,Rainy,913.5
+e7041634-401f-4b9f-a523-8755438987e9,"CG Road, Ahmedabad","Adajan, Surat",2024-05-10,03:34,30.0,auto,450.0,High,Stormy,594.0
+1a0c79ec-fab2-461d-8360-40ee4b488724,Surat Airport,"Varachha, Surat",2024-02-15,17:42,44.8,moto,896.0,High,Rainy,1128.96
+8bb9da10-7f65-48af-bf8b-484b359fba1e,"Adajan, Surat","Varachha, Surat",2024-12-14,17:16,15.8,auto,237.0,High,Stormy,312.84
+a10c5e29-dcc7-4a3a-b5c7-1ef5e4348752,Surat Airport,"Varachha, Surat",2024-04-11,06:37,17.5,bike,175.0,High,Stormy,231.0
+cbd22603-13be-4c87-bb9d-ad686f52ad39,Nadiad Bus Stand,"Varachha, Surat",2024-02-25,08:31,47.0,moto,940.0,Medium,Stormy,1137.4
+c4b91557-183e-49b0-99b6-1f81831c08b5,"Varachha, Surat",Nadiad Junction,2024-09-12,09:37,19.2,bike,192.0,High,Rainy,241.92
+d6e4ddb1-2b59-4605-9b9f-3160640788d1,"Varachha, Surat",Jamnagar Railway Station,2024-03-18,04:25,27.7,moto,554.0,Low,Rainy,581.7
+792aa23b-31a2-4337-a505-a7d141abec9b,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-12-15,06:32,25.6,auto,384.0,Medium,Stormy,464.64
+4889103a-e89d-4d07-bd7d-9c4094f0a0d8,Nadiad Junction,"Adajan, Surat",2024-04-06,06:32,6.2,bike,62.0,Medium,Clear,68.2
+3fa5693d-a6d1-4245-911b-30c3236be879,Nadiad Junction,"Khambhaliya, Jamnagar",2024-01-05,10:00,24.8,moto,496.0,Medium,Rainy,572.88
+27f24ee3-74be-4e2c-bfb2-bfa57d996581,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-10-22,15:50,27.2,moto,544.0,High,Rainy,685.44
+b553924a-e732-4214-8484-b1d3a555d32d,Jamnagar Railway Station,"Adajan, Surat",2024-12-11,22:00,4.5,bike,45.0,High,Clear,54.0
+93dfab77-a81b-4f26-b3ed-bf653b743ada,Ahmedabad Railway Station,Surat Airport,2024-12-19,04:44,22.6,moto,452.0,Low,Clear,452.0
+d0a788d2-b903-4386-b355-d309f594c6f7,Nadiad Junction,Jamnagar Railway Station,2024-11-23,18:57,14.0,bike,140.0,Medium,Clear,154.0
+53ed5b4c-99d4-434e-a1eb-1d2708460d23,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-06-20,20:33,10.4,bike,104.0,High,Clear,124.8
+e7d656bf-7ee9-404d-b545-ead888b47598,Surat Airport,"Varachha, Surat",2024-04-20,09:45,31.4,moto,628.0,Medium,Clear,690.8
+9ca8f102-96f4-4c97-8ff0-0792633ca367,"Gota, Ahmedabad",Nadiad Junction,2024-04-18,06:48,35.0,moto,700.0,Low,Rainy,735.0
+4711e784-3dfe-4f91-9ee6-5bd762737854,"Adajan, Surat",Surat Airport,2024-02-04,07:34,15.1,bike,151.0,Low,Clear,151.0
+3acc8eb2-a866-48bf-b53f-ee507540f02a,Jamnagar Railway Station,"Varachha, Surat",2024-08-13,05:04,17.5,auto,262.5,High,Clear,315.0
+ce075b12-a4a1-4588-97f6-83086c42c909,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-12-09,22:05,46.7,moto,934.0,Low,Stormy,1027.4
+d9f478e5-98b5-4f47-92a0-ae3e197e2e97,"CG Road, Ahmedabad",Nadiad Junction,2024-06-20,19:52,23.2,auto,348.0,Medium,Rainy,401.94
+3f47545b-b891-4169-b617-48e8f46f7619,Nadiad Bus Stand,"Adajan, Surat",2024-11-14,12:41,24.7,auto,370.5,High,Rainy,466.83
+041e5a39-3a59-4106-a8aa-0d2a59526f90,"Khambhaliya, Jamnagar",Nadiad Junction,2024-12-12,08:37,3.9,bike,39.0,High,Stormy,51.48
+527e7dc5-ed28-4c1d-93ca-143398d2b43e,Surat Airport,Ahmedabad Railway Station,2024-12-21,07:50,36.6,moto,732.0,High,Rainy,922.32
+e7ac4772-619e-436d-93c8-92237242586a,Jamnagar Railway Station,Nadiad Bus Stand,2024-07-29,17:26,6.7,bike,67.0,Low,Stormy,73.7
+e3b03908-bc92-4864-820e-f6c3f52d66d4,"Gota, Ahmedabad","Varachha, Surat",2024-12-15,07:06,11.4,bike,114.0,Medium,Clear,125.4
+604f9117-541b-4200-aa79-dfeaf6c82aa0,"Varachha, Surat","Adajan, Surat",2024-01-20,22:51,46.5,moto,930.0,High,Rainy,1171.8
+abda6309-b64c-4b0e-9c4f-93f0c7a7c30d,Nadiad Junction,"Varachha, Surat",2024-11-06,03:34,16.4,auto,246.0,High,Stormy,324.72
+0b89a4b5-2ec9-47d1-94a3-8d39b39e18aa,Jamnagar Railway Station,"Adajan, Surat",2024-09-26,11:01,19.3,bike,193.0,Low,Stormy,212.3
+f1af7155-6fa4-4e5c-909b-07a136893831,"Khambhaliya, Jamnagar","Adajan, Surat",2024-11-19,20:36,34.7,auto,520.5,Medium,Stormy,629.81
+7a9711ba-f8ae-45b8-8431-621d31d74e69,"CG Road, Ahmedabad","Varachha, Surat",2024-07-31,01:52,46.6,moto,932.0,High,Rainy,1174.32
+5e7c0022-6dab-4c0c-9ee4-a9d2e8cbafa9,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-04-26,22:07,26.6,auto,399.0,Medium,Stormy,482.79
+42be391d-f886-4e8e-9393-106e12d335b5,"Adajan, Surat","CG Road, Ahmedabad",2024-10-22,19:48,29.3,moto,586.0,Medium,Stormy,709.06
+2dd6bf62-f297-4542-97b2-0155614298c9,Ahmedabad Railway Station,Jamnagar Railway Station,2024-05-07,13:46,20.2,auto,303.0,High,Stormy,399.96
+ab766900-4ff8-4878-9ed7-efe8faaeeee0,Surat Airport,Jamnagar Railway Station,2024-03-05,09:21,5.0,bike,50.0,High,Rainy,63.0
+1615105d-5a84-4e86-b53c-58ae35ce8fc0,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-10-11,03:14,11.4,bike,114.0,Low,Stormy,125.4
+2b324535-639d-4bb1-81ee-9c7b8d29ed53,"Gota, Ahmedabad",Jamnagar Railway Station,2024-04-05,22:19,16.0,auto,240.0,High,Rainy,302.4
+c8fe6321-c628-4089-82c8-1d86a2672761,"Varachha, Surat",Jamnagar Railway Station,2024-07-25,21:20,25.4,auto,381.0,Low,Rainy,400.05
+202ceb5a-bc7a-4b88-819c-183fbcf10ce9,"CG Road, Ahmedabad",Nadiad Junction,2024-09-16,19:43,2.5,bike,25.0,Low,Rainy,26.25
+47d6b923-2943-48b7-9f67-435d679cf5d1,Surat Airport,"Gota, Ahmedabad",2024-02-10,08:57,28.3,auto,424.5,High,Stormy,560.34
+e5df402f-1686-4277-9429-e47fd822eec9,Jamnagar Railway Station,"Varachha, Surat",2024-07-23,15:47,8.1,auto,121.5,Low,Rainy,127.58
+db67c474-b6a8-4ab6-8b59-2922f3eacd61,Ahmedabad Railway Station,Nadiad Junction,2024-03-16,05:35,18.9,bike,189.0,High,Stormy,249.48
+6dfa17e6-f0b3-4bba-b7a9-e0ed98dc1b73,Nadiad Junction,"Varachha, Surat",2024-11-30,17:00,37.9,moto,758.0,Medium,Clear,833.8
+c714825a-53b8-4d8d-ad8f-fc9f501b7b97,Nadiad Junction,Jamnagar Railway Station,2024-04-18,04:35,9.8,bike,98.0,High,Rainy,123.48
+f22974f6-f3f9-4473-b2cc-9548ba92b5fe,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-12-01,05:06,37.5,auto,562.5,High,Clear,675.0
+421dbcef-78ca-4773-9e7d-ba2d521744f9,Nadiad Junction,"Gota, Ahmedabad",2024-06-25,03:04,22.9,moto,458.0,Medium,Clear,503.8
+5349b9c2-f1a2-48ed-9fe9-0444e343ab6f,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-01-21,16:54,8.4,bike,84.0,Medium,Rainy,97.02
+33e0477e-7abb-4925-a458-c6e3595086b6,Nadiad Bus Stand,Jamnagar Railway Station,2024-05-06,13:48,12.5,bike,125.0,High,Stormy,165.0
+0d00306d-08bb-424a-a1dc-0cfd931b4e55,"Gota, Ahmedabad",Nadiad Bus Stand,2024-12-22,10:02,28.4,auto,426.0,Low,Rainy,447.3
+74eae7aa-c211-4d70-a771-0f779c26161f,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-06-13,16:07,22.6,moto,452.0,Medium,Clear,497.2
+a600639f-bdcb-493a-b0af-fa064fad68a7,"Varachha, Surat","CG Road, Ahmedabad",2024-05-25,20:26,12.8,auto,192.0,Medium,Clear,211.2
+a17e7c55-ce94-4a73-b350-c70a6ff531fd,Nadiad Junction,Ahmedabad Railway Station,2024-12-29,19:43,6.4,bike,64.0,High,Clear,76.8
+f53c5dc9-6f61-456a-af99-025ef1ca822b,Ahmedabad Railway Station,Jamnagar Railway Station,2024-10-22,03:29,45.1,moto,902.0,High,Clear,1082.4
+345b15c7-9829-4daa-821f-500d2f493520,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-09-09,11:44,19.4,auto,291.0,Low,Clear,291.0
+53822d17-7b13-43c3-bbe5-93802e8df2d6,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-11-07,00:52,35.8,auto,537.0,Medium,Clear,590.7
+ab3debb4-9a67-4f5a-b1fb-10a02e685128,"Khambhaliya, Jamnagar",Surat Airport,2024-06-08,20:38,21.3,moto,426.0,High,Rainy,536.76
+0056c292-05a1-4122-a8f8-70f576d38965,Ahmedabad Railway Station,Nadiad Junction,2024-03-29,13:45,1.9,bike,19.0,High,Stormy,25.08
+50aa2d63-a930-40c8-8ce9-130a47976982,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-05-26,12:57,3.5,bike,35.0,Low,Stormy,38.5
+8b4ddd06-8f41-46a7-ae96-5334ec27944c,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-04-28,21:39,9.9,bike,99.0,Low,Rainy,103.95
+c930e084-b17b-4760-8db2-dcd205af448d,Nadiad Bus Stand,"Gota, Ahmedabad",2024-09-27,11:18,8.3,bike,83.0,High,Clear,99.6
+5a7ee201-6cf1-4491-815e-836ae3898335,"Adajan, Surat","Khambhaliya, Jamnagar",2024-06-21,01:10,20.7,moto,414.0,Medium,Clear,455.4
+b77cfb1b-6bf1-410f-b5bb-c8f6c2b0b0d0,"Adajan, Surat","CG Road, Ahmedabad",2024-08-16,19:54,35.3,moto,706.0,Medium,Clear,776.6
+6135444a-eb40-41e5-a76e-1d761e8ce549,Nadiad Junction,"Adajan, Surat",2024-02-17,02:52,9.0,bike,90.0,High,Stormy,118.8
+49198376-bae9-4835-9f8e-cc4b620f9275,"Adajan, Surat",Surat Airport,2024-02-17,04:16,19.6,bike,196.0,Medium,Clear,215.6
+7472cf47-60f2-4722-a852-2ae0da48e15f,Ahmedabad Railway Station,Nadiad Bus Stand,2024-11-08,19:54,30.1,moto,602.0,High,Clear,722.4
+b0a9f5f5-f7de-4713-8d4a-6ab13c9da84a,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-05-15,13:27,18.1,bike,181.0,Medium,Rainy,209.06
+ce5e9fe4-e3e5-4c59-9f48-799dc48578f1,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-01-10,00:02,23.5,moto,470.0,Medium,Clear,517.0
+90a1cce9-3284-43dd-844f-1f2ec32bdf79,"Gota, Ahmedabad","Varachha, Surat",2024-06-22,18:14,6.1,bike,61.0,High,Rainy,76.86
+c74e700f-4cf3-431c-8d82-a2a818149e22,"Varachha, Surat",Nadiad Junction,2024-10-06,13:13,16.2,auto,243.0,Low,Clear,243.0
+19876ac4-fd53-4af5-8a47-7692f00fe371,Surat Airport,"Khambhaliya, Jamnagar",2024-02-22,16:00,28.5,moto,570.0,Medium,Stormy,689.7
+837a435e-38ae-4dba-a464-e6d7074ea84c,"Varachha, Surat",Surat Airport,2024-09-08,23:41,45.5,moto,910.0,Medium,Clear,1001.0
+325fb003-16a8-4fad-bfa1-3d2f936e208c,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-06-13,04:48,48.4,moto,968.0,Low,Clear,968.0
+d4d0ca44-2c72-4978-ad60-06b87eadeac6,"Adajan, Surat",Nadiad Junction,2024-10-12,19:16,1.9,bike,19.0,High,Stormy,25.08
+ba865a83-61f7-4b4d-94ce-f5d40f5bdfe0,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-11-17,19:42,4.1,auto,61.5,High,Rainy,77.49
+cd46b9cb-74d2-43e7-b944-21295f43cfab,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-11-11,11:35,20.7,moto,414.0,High,Clear,496.8
+8823c197-1b6f-4719-bdf0-4a1157a62079,"Gota, Ahmedabad",Surat Airport,2024-10-12,13:04,15.4,bike,154.0,Low,Rainy,161.7
+c80a95a9-b208-42a2-a218-54767e13dbce,Nadiad Bus Stand,"Adajan, Surat",2024-08-13,08:55,34.3,moto,686.0,Medium,Clear,754.6
+822d96a1-afb0-4b9c-a6d1-ff4557cc821c,Ahmedabad Railway Station,"Varachha, Surat",2024-09-04,02:26,5.0,bike,50.0,High,Rainy,63.0
+f3147388-de5b-48f1-bab2-3bbb9f251cf4,Nadiad Junction,"Adajan, Surat",2024-04-22,19:04,19.7,auto,295.5,Medium,Rainy,341.3
+6f99b233-879e-4057-8ded-7cb2ae44a798,"Adajan, Surat","CG Road, Ahmedabad",2024-02-24,13:56,31.8,auto,477.0,Medium,Stormy,577.17
+63b4d129-6aa3-4976-9750-45bfd24ce21b,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-01-26,09:35,4.5,bike,45.0,High,Stormy,59.4
+c5576c05-9eb8-42e7-8a91-41825c6523c5,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-08-05,18:24,24.4,moto,488.0,Medium,Stormy,590.48
+511254c5-63c1-4ca0-b537-509b4b88483f,Nadiad Bus Stand,Jamnagar Railway Station,2024-06-04,10:47,27.0,moto,540.0,High,Clear,648.0
+7a14aec2-b160-4624-a11c-dd1720f74f03,Nadiad Bus Stand,Surat Airport,2024-02-10,23:12,27.7,moto,554.0,High,Clear,664.8
+e3998599-01e2-4740-b59d-9a547c40adf5,Surat Airport,Jamnagar Railway Station,2024-04-10,18:00,11.7,bike,117.0,Medium,Clear,128.7
+9b4de355-8832-4c0b-9695-6402290c8a78,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-05-18,07:00,11.1,bike,111.0,Low,Clear,111.0
+287229b7-d0a8-44df-b481-150df4a27e69,"Gota, Ahmedabad","Adajan, Surat",2024-09-08,00:41,24.9,moto,498.0,Medium,Stormy,602.58
+17f4b913-72d9-4ebc-aee1-d358daf4d410,Nadiad Bus Stand,Surat Airport,2024-02-03,17:42,1.5,bike,15.0,Medium,Stormy,18.15
+6182a413-3de8-4c0d-b051-a2f42591602e,Jamnagar Railway Station,Ahmedabad Railway Station,2024-03-21,16:51,35.1,moto,702.0,Low,Clear,702.0
+f140331c-3f0d-4306-a58e-bf57752ff0a0,Ahmedabad Railway Station,Jamnagar Railway Station,2024-08-16,07:45,23.1,auto,346.5,Medium,Rainy,400.21
+476eca9d-9496-42a4-bd11-2057c1fe4a35,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-06-09,06:58,38.6,auto,579.0,Medium,Stormy,700.59
+d395955b-497f-43bb-a7cb-bc3d35ad9f95,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-10-26,10:28,38.3,auto,574.5,Low,Stormy,631.95
+7d0bfec0-2fa2-4715-b56f-b7d397a1dfe2,"Khambhaliya, Jamnagar","Adajan, Surat",2024-04-08,16:32,6.7,bike,67.0,Low,Rainy,70.35
+3fcfb0b0-f1a4-40e7-9c4b-63cd357e5fbb,"Adajan, Surat",Nadiad Junction,2024-11-26,21:34,32.2,moto,644.0,Medium,Stormy,779.24
+27041d65-5d4b-46a9-8fb9-d9555dda4ba1,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-12-10,21:07,1.5,bike,15.0,Low,Stormy,16.5
+121815c1-178d-4028-9b07-43fe69809101,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-08-25,04:06,14.4,bike,144.0,Low,Clear,144.0
+a3a7e987-a04c-4e56-9102-9ee2de1e9cc8,"Varachha, Surat",Ahmedabad Railway Station,2024-09-03,22:59,24.6,moto,492.0,Low,Stormy,541.2
+d755ab55-62c5-4452-bc17-ced4654c65f2,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-12-26,19:44,11.8,bike,118.0,High,Clear,141.6
+d8bb36d6-49c6-4840-a43b-364c4ac05dcd,"Varachha, Surat","Gota, Ahmedabad",2024-09-04,21:08,29.7,moto,594.0,High,Rainy,748.44
+d9d762eb-dee4-43cb-8575-3c7a3be27fb6,Nadiad Junction,"Adajan, Surat",2024-06-03,22:52,7.7,auto,115.5,Low,Clear,115.5
+d5d08a49-0531-4bc3-9240-b8b757bc9bec,"Varachha, Surat",Nadiad Junction,2024-11-06,23:16,1.7,bike,17.0,Low,Rainy,17.85
+23184b02-bbcb-4375-9e9f-057922f686e5,Jamnagar Railway Station,Nadiad Junction,2024-02-22,09:25,36.8,auto,552.0,High,Clear,662.4
+e9d20ec1-e2df-4747-969c-c721764072e0,Surat Airport,Nadiad Bus Stand,2024-09-30,07:17,49.0,moto,980.0,Low,Rainy,1029.0
+3492fed9-899b-4480-9fdb-5361933b34fa,"Khambhaliya, Jamnagar","Varachha, Surat",2024-02-01,13:21,9.1,bike,91.0,High,Stormy,120.12
+7990d218-0809-4d47-b681-02468856c03c,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-03-08,12:03,14.8,bike,148.0,High,Rainy,186.48
+0ea3c8b8-a718-47a7-a67b-1cb1cd49ea7c,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-07-15,07:03,33.9,auto,508.5,Low,Rainy,533.93
+e175506b-d8f5-4916-a517-dfbe8b4fbd8e,Jamnagar Railway Station,"Varachha, Surat",2024-10-04,20:21,13.8,auto,207.0,Low,Clear,207.0
+e2655075-4270-494a-bf09-90ee30e70d4f,"Adajan, Surat",Ahmedabad Railway Station,2024-03-25,08:38,1.3,bike,13.0,Medium,Clear,14.3
+7ab73053-c858-4aff-8746-06eead926ea5,"CG Road, Ahmedabad",Surat Airport,2024-08-14,03:35,17.1,bike,171.0,Medium,Rainy,197.51
+e08e3358-c414-4a74-9679-eb1dfdc132d5,"Khambhaliya, Jamnagar","Adajan, Surat",2024-01-13,18:19,3.4,bike,34.0,Low,Rainy,35.7
+ffc296a2-303a-4c23-8909-2591db808fa2,"Varachha, Surat",Jamnagar Railway Station,2024-01-01,18:40,24.2,auto,363.0,High,Clear,435.6
+1edf698a-c11d-4e78-b0ee-88c906ef6ae6,"Varachha, Surat",Nadiad Bus Stand,2024-09-24,13:56,37.9,auto,568.5,High,Rainy,716.31
+a8a6b688-a630-47f7-b4fb-16c39167cf65,Nadiad Junction,"Varachha, Surat",2024-11-12,07:01,18.8,auto,282.0,Medium,Rainy,325.71
+286aadf1-e594-4332-b119-010fe359594d,Ahmedabad Railway Station,"Adajan, Surat",2024-03-04,00:35,1.2,bike,12.0,High,Rainy,15.12
+8201b8a0-4845-45ab-a707-5ba151238814,"Gota, Ahmedabad",Nadiad Bus Stand,2024-04-21,14:17,4.1,bike,41.0,High,Rainy,51.66
+14986136-6915-4ab9-8eb3-f1cc9748f8b4,"CG Road, Ahmedabad","Varachha, Surat",2024-04-27,06:55,35.3,moto,706.0,Medium,Rainy,815.43
+94eeac72-f828-451a-8619-4a6908c4b783,"CG Road, Ahmedabad","Varachha, Surat",2024-05-15,13:44,40.1,moto,802.0,High,Stormy,1058.64
+d32093d7-2374-4f42-9e8b-09d416c16887,"Varachha, Surat",Surat Airport,2024-08-26,13:26,29.2,moto,584.0,Medium,Clear,642.4
+3077ff03-59b1-4e3a-a020-4353ee372a37,Ahmedabad Railway Station,"Adajan, Surat",2024-04-03,10:57,28.6,auto,429.0,Low,Stormy,471.9
+4830a318-a9c2-45a6-a9d6-24c2c879d6e5,"CG Road, Ahmedabad","Adajan, Surat",2024-11-15,04:47,32.5,moto,650.0,High,Clear,780.0
+ed0b6f83-e7e0-4331-b504-0a4523eab615,"Khambhaliya, Jamnagar","Varachha, Surat",2024-03-18,21:47,23.5,moto,470.0,Low,Clear,470.0
+4e014d7c-61be-40a0-893f-1014ebbae789,"Khambhaliya, Jamnagar",Nadiad Junction,2024-03-17,11:17,10.8,bike,108.0,Medium,Stormy,130.68
+ed2b6ce7-1dfd-4ebe-86f8-54544383c481,Nadiad Bus Stand,Nadiad Junction,2024-03-11,10:12,6.6,bike,66.0,High,Clear,79.2
+b4c8071f-d7aa-478c-986b-3ff7a3c97a4e,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-10-30,20:42,43.2,moto,864.0,Low,Rainy,907.2
+01a897ea-5ab0-48b9-ab0f-956ca5a3a107,Jamnagar Railway Station,"Gota, Ahmedabad",2024-11-20,11:17,15.1,bike,151.0,Low,Rainy,158.55
+4fea0d46-5a5c-4b0e-a7c3-770089fc7738,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-05-19,03:24,27.6,auto,414.0,High,Rainy,521.64
+f33e3909-1dba-4899-8771-40e7b269fc84,Nadiad Junction,"Varachha, Surat",2024-08-10,06:03,5.9,bike,59.0,Medium,Clear,64.9
+d4f8acd5-8111-41e9-a691-6e2e501533a3,"Varachha, Surat","CG Road, Ahmedabad",2024-05-26,19:23,40.1,moto,802.0,High,Clear,962.4
+a66a6fd4-2f2f-4d37-99ba-2ffc062e8a54,"Varachha, Surat","Khambhaliya, Jamnagar",2024-10-20,00:25,32.6,auto,489.0,Medium,Clear,537.9
+4a6e56c6-542f-4327-92a0-82308d4870c4,Ahmedabad Railway Station,"Varachha, Surat",2024-09-25,20:12,21.1,auto,316.5,High,Rainy,398.79
+d668ad76-282d-403f-8be8-1b018f70313f,"Adajan, Surat","Gota, Ahmedabad",2024-07-28,23:09,31.3,auto,469.5,Medium,Stormy,568.1
+58787843-ae0c-4e07-8aa8-1b45cfb0582e,Nadiad Bus Stand,Surat Airport,2024-06-09,18:08,2.6,bike,26.0,Medium,Rainy,30.03
+a97314ea-8971-4b91-8968-dce34cd03e24,"Adajan, Surat","Gota, Ahmedabad",2024-01-06,02:38,26.5,moto,530.0,Low,Clear,530.0
+8ca852c8-74a2-4a9a-bc2e-43ef31a97f02,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-11-20,16:23,35.1,auto,526.5,High,Clear,631.8
+6966981c-051f-4795-bd32-e58a796bceb7,Nadiad Bus Stand,Ahmedabad Railway Station,2024-02-22,19:29,4.4,bike,44.0,Medium,Rainy,50.82
+840c00d8-70bb-4a5d-81aa-50bff1f33654,"Varachha, Surat",Jamnagar Railway Station,2024-04-14,01:08,47.6,moto,952.0,High,Clear,1142.4
+5c373707-b858-4bd9-b1fa-dae065f34a5d,"Khambhaliya, Jamnagar",Nadiad Junction,2024-06-03,04:45,25.8,moto,516.0,Medium,Rainy,595.98
+df6befff-9ca8-44a6-92e8-91347ece57ea,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-05-07,07:01,39.5,auto,592.5,High,Rainy,746.55
+596d5657-7a3e-41e7-8cab-42d3a1cbcd7c,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-12-23,23:46,12.4,bike,124.0,Medium,Rainy,143.22
+2dccf726-43da-44c8-a2b1-f6f827d4a90b,"CG Road, Ahmedabad",Surat Airport,2024-09-14,23:47,12.8,bike,128.0,High,Rainy,161.28
+7678442d-7710-4624-a374-d44e22ef5960,"Adajan, Surat","Varachha, Surat",2024-04-30,02:25,45.7,moto,914.0,Low,Stormy,1005.4
+cd293585-5cec-4e9f-b96c-0f7309633c23,Nadiad Bus Stand,Jamnagar Railway Station,2024-03-21,17:14,7.8,bike,78.0,Low,Rainy,81.9
+1bd183eb-2a8e-42ed-887e-e53f8a3d3d97,Nadiad Bus Stand,Nadiad Junction,2024-10-29,19:36,9.0,bike,90.0,Low,Clear,90.0
+a1faff1e-02f8-4d62-8acd-ab0723db8453,"Adajan, Surat",Nadiad Bus Stand,2024-11-21,01:54,23.9,auto,358.5,Medium,Stormy,433.79
+88643d89-2c66-4bae-b6aa-8e4137957bd8,"Varachha, Surat",Ahmedabad Railway Station,2024-05-10,06:19,15.7,auto,235.5,Medium,Rainy,272.0
+134104e3-7474-48e0-9a1c-b284092cde3b,"Adajan, Surat",Nadiad Bus Stand,2024-06-20,16:21,13.1,bike,131.0,Medium,Stormy,158.51
+b792630d-8042-45c4-ae83-ff58714e8288,"Gota, Ahmedabad",Nadiad Bus Stand,2024-11-15,22:47,28.5,moto,570.0,Low,Stormy,627.0
+f1a2c414-d3de-41b1-9309-577d9003f82a,Jamnagar Railway Station,Nadiad Bus Stand,2024-04-04,06:55,46.1,moto,922.0,High,Clear,1106.4
+354947ed-96d8-4303-998a-1996aa212af1,"Khambhaliya, Jamnagar","Varachha, Surat",2024-08-07,14:43,21.1,moto,422.0,Low,Rainy,443.1
+2af6434a-e7ae-4305-9178-7e4448a802a8,Jamnagar Railway Station,"Adajan, Surat",2024-10-27,01:13,42.9,moto,858.0,Medium,Rainy,990.99
+fdb67f1f-27b3-4087-ab55-b7c8338b39c5,Ahmedabad Railway Station,Surat Airport,2024-06-20,21:25,10.8,auto,162.0,Low,Stormy,178.2
+4747617e-5855-4720-ab29-20dbcb0fc45e,"Adajan, Surat",Nadiad Bus Stand,2024-02-16,08:38,33.0,auto,495.0,Low,Stormy,544.5
+25c6608e-ac2a-4b23-aa11-913669e4ece0,Surat Airport,Nadiad Junction,2024-04-28,12:22,23.4,auto,351.0,Low,Stormy,386.1
+ae081ecd-577a-4c85-8f7e-fc7b8d476859,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-04-30,14:43,50.0,moto,1000.0,Medium,Stormy,1210.0
+30fc779a-9d23-462a-b1ad-e4e5431cc60b,Nadiad Bus Stand,Ahmedabad Railway Station,2024-08-13,03:00,37.4,auto,561.0,Medium,Rainy,647.96
+c008f127-32ce-457f-a47e-d9d7f6b46dfb,"Varachha, Surat","Khambhaliya, Jamnagar",2024-11-24,22:52,23.9,moto,478.0,Low,Stormy,525.8
+dc877758-f515-4d46-bdb4-17675ff04c3e,"Adajan, Surat",Jamnagar Railway Station,2024-07-18,09:31,14.8,bike,148.0,Medium,Stormy,179.08
+4fca5117-93da-4631-83a1-b127b03a209b,Ahmedabad Railway Station,Jamnagar Railway Station,2024-03-13,17:07,18.3,auto,274.5,High,Rainy,345.87
+4d31e111-d372-4b80-bf4a-9ff9916e00fc,"Varachha, Surat",Nadiad Junction,2024-12-17,21:43,8.0,auto,120.0,Medium,Rainy,138.6
+40d7a004-9557-4f0f-bf98-ad39c0152835,"CG Road, Ahmedabad",Nadiad Junction,2024-06-18,10:29,43.8,moto,876.0,High,Stormy,1156.32
+4835ce50-c862-4b39-8f90-c913651a89ab,Nadiad Junction,"Varachha, Surat",2024-03-28,06:17,36.0,moto,720.0,Medium,Clear,792.0
+5ee7f71d-5910-48e8-b142-585ce0357873,Nadiad Junction,Surat Airport,2024-03-12,01:33,22.4,auto,336.0,Medium,Clear,369.6
+8ba5a760-9bb5-4e7e-b4ae-7728140213b8,Surat Airport,Nadiad Bus Stand,2024-11-05,10:30,15.9,bike,159.0,Medium,Clear,174.9
+e3204750-a443-4a2c-9585-1df8c9c380a6,Surat Airport,Ahmedabad Railway Station,2024-11-24,09:58,26.7,moto,534.0,Medium,Clear,587.4
+21d0027a-1b0b-4c42-a494-c5ccc487ae73,"Adajan, Surat",Ahmedabad Railway Station,2024-11-14,22:41,31.4,moto,628.0,Medium,Clear,690.8
+b77105fc-ccfa-4258-84a8-538d5592df09,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-04-17,02:56,32.4,moto,648.0,Medium,Clear,712.8
+401c9e2a-e847-4d74-bbfe-eb17319af277,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-07-07,17:44,38.1,auto,571.5,High,Clear,685.8
+996bcbc1-a98f-49c9-beca-a1c841b1ac52,Nadiad Junction,"Khambhaliya, Jamnagar",2024-11-10,00:19,40.5,moto,810.0,High,Rainy,1020.6
+b1faee2b-a36f-49c2-a5bd-79b60181cff2,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-12-14,08:18,47.7,moto,954.0,High,Rainy,1202.04
+54a7b500-a931-4693-9fa9-fefc8165701a,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-05-10,09:06,7.5,bike,75.0,Medium,Clear,82.5
+15059d19-f50c-4439-ac4d-aaf2c1493d4f,Nadiad Bus Stand,Jamnagar Railway Station,2024-08-26,13:00,14.8,bike,148.0,Low,Stormy,162.8
+8263f296-413d-4fed-a0c2-0b2f4eadb665,Nadiad Bus Stand,Nadiad Junction,2024-04-22,11:48,29.6,auto,444.0,Medium,Stormy,537.24
+0d694160-a2d9-47f1-ab38-b1bd67f5b72e,Jamnagar Railway Station,Ahmedabad Railway Station,2024-08-21,13:18,18.4,bike,184.0,Low,Clear,184.0
+d4e87d00-4fb6-4710-ad57-1acdf67b754d,Jamnagar Railway Station,"Adajan, Surat",2024-08-26,22:55,14.1,auto,211.5,Medium,Clear,232.65
+038a5669-63bb-4835-828d-573d2a812a10,"CG Road, Ahmedabad",Nadiad Junction,2024-07-16,13:28,37.1,auto,556.5,Medium,Clear,612.15
+3652d0d3-f230-4549-82d5-74d741d83b9f,Jamnagar Railway Station,Ahmedabad Railway Station,2024-01-25,02:28,11.6,bike,116.0,Medium,Stormy,140.36
+91c5e29f-f30e-4184-a1e1-2921c0f7b575,"Adajan, Surat","CG Road, Ahmedabad",2024-05-23,06:00,3.9,auto,58.5,High,Stormy,77.22
+f16b0555-23e2-4f1b-a23e-8e9cfe21e3c7,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-03-25,17:29,46.1,moto,922.0,Medium,Rainy,1064.91
+8a282e96-0fbd-4442-a3da-110ef4572d08,Surat Airport,Nadiad Bus Stand,2024-06-22,06:13,17.6,bike,176.0,Medium,Clear,193.6
+e30bc6d3-58c2-47e8-86f9-ba20e6c83c7f,"Varachha, Surat",Jamnagar Railway Station,2024-06-20,08:07,24.8,auto,372.0,High,Stormy,491.04
+5ae63432-62c5-4619-9c60-fd79401adbc5,Nadiad Junction,"Khambhaliya, Jamnagar",2024-01-19,06:56,39.4,auto,591.0,Medium,Rainy,682.61
+2c2067ae-a872-4abf-bc55-9db987d8b0e0,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-10-04,10:46,16.4,bike,164.0,Medium,Rainy,189.42
+c80a9c6b-6e71-40d5-a7ed-55edbec73486,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-12-16,05:33,28.6,moto,572.0,Medium,Stormy,692.12
+a918ee77-03af-4ed1-b4b6-ed8accfba55d,"Khambhaliya, Jamnagar",Nadiad Junction,2024-01-04,09:50,24.4,moto,488.0,Medium,Stormy,590.48
+9c530fd2-9c00-4e65-a01c-45875fe64d31,"Adajan, Surat","Khambhaliya, Jamnagar",2024-07-07,21:50,9.2,auto,138.0,Low,Stormy,151.8
+2c03fba6-1fe6-4a72-ac21-2e43015c5e88,Surat Airport,"Varachha, Surat",2024-11-30,01:11,29.2,auto,438.0,Medium,Rainy,505.89
+d5035ee3-4e7c-49af-b5c9-267e067bac7f,Surat Airport,"Gota, Ahmedabad",2024-12-18,11:04,3.7,auto,55.5,High,Clear,66.6
+42925686-8435-45c0-ab36-30912cef91ef,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-03-10,01:03,25.0,moto,500.0,High,Clear,600.0
+cf307f4a-c872-4a1f-a79d-22d590a7aa5e,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-02-04,14:56,10.8,bike,108.0,Medium,Clear,118.8
+5ec8e028-1bf4-4e07-a6df-d4d57c4ce32d,Surat Airport,"CG Road, Ahmedabad",2024-08-07,18:45,33.3,moto,666.0,High,Stormy,879.12
+31f55c8e-37c1-4221-a931-48e2d12b65e9,"Khambhaliya, Jamnagar","Varachha, Surat",2024-09-13,02:27,29.9,auto,448.5,Low,Stormy,493.35
+be7ba057-4ea9-4866-961e-d8c32831fa7e,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-02-07,02:50,47.2,moto,944.0,Low,Rainy,991.2
+709cca46-9233-4a21-8d38-cb8598cac4e2,Surat Airport,Nadiad Junction,2024-07-20,17:38,6.2,auto,93.0,Low,Rainy,97.65
+d712acbc-acbc-49c5-b986-eb1479fbe4ab,Nadiad Junction,Nadiad Bus Stand,2024-08-18,15:47,13.9,bike,139.0,High,Clear,166.8
+f99b5093-7ce2-4849-99f3-9f2fedb24d9d,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-02-24,14:20,12.4,auto,186.0,Low,Rainy,195.3
+7c6dab54-446d-43e4-a166-d31c6342ba5f,Ahmedabad Railway Station,Surat Airport,2024-09-09,23:04,17.6,bike,176.0,High,Rainy,221.76
+ddf1209b-fabd-4aa9-a344-6dc20c1f4096,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-07-25,15:45,37.2,auto,558.0,Low,Rainy,585.9
+a7688691-ab0c-4a3d-94e4-d37d4b5ad9aa,"Gota, Ahmedabad",Nadiad Junction,2024-06-29,04:20,21.3,moto,426.0,Low,Rainy,447.3
+e49c7d52-7f63-41b4-a799-9b9d16e66046,"CG Road, Ahmedabad","Adajan, Surat",2024-07-28,07:55,12.9,bike,129.0,Low,Stormy,141.9
+68e29dd3-4913-49ef-8d80-4a4110b4681f,"Gota, Ahmedabad",Jamnagar Railway Station,2024-10-25,15:43,26.4,moto,528.0,Low,Rainy,554.4
+993fc893-8683-4402-b49a-e73049bf56cf,"Adajan, Surat","Varachha, Surat",2024-01-30,03:25,15.8,auto,237.0,High,Rainy,298.62
+902b5feb-fac7-48ac-97f8-eaadbcef5777,Nadiad Junction,Jamnagar Railway Station,2024-12-07,06:18,1.8,bike,18.0,Low,Stormy,19.8
+45a4c7f0-384c-4f8d-b9e4-48275315adea,"Varachha, Surat",Surat Airport,2024-06-09,08:16,4.2,auto,63.0,Medium,Rainy,72.77
+02d9fd95-d8b6-47bc-b4a2-52c921929742,"Gota, Ahmedabad","Varachha, Surat",2024-06-03,06:25,22.5,moto,450.0,Low,Stormy,495.0
+de741f96-9509-4d0d-8e51-90aaa49974d3,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-04-16,12:03,19.6,bike,196.0,High,Rainy,246.96
+a2c20b95-0914-41ab-9e95-e6fccf906af5,"Varachha, Surat","Gota, Ahmedabad",2024-02-07,20:32,45.0,moto,900.0,High,Clear,1080.0
+3f235def-7d87-4f29-ac9e-c451893fc52b,"Khambhaliya, Jamnagar","Varachha, Surat",2024-05-21,09:28,41.5,moto,830.0,Low,Rainy,871.5
+7a196fea-2429-421d-b3cb-5bb481a9ecfe,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-03-26,02:57,4.7,bike,47.0,Low,Rainy,49.35
+dd54f6ae-90dd-4447-bc6a-21b6f04bc346,Jamnagar Railway Station,"Adajan, Surat",2024-09-30,06:56,23.4,auto,351.0,High,Clear,421.2
+fe8fda3b-c3d6-474e-ae8c-20067174b1ef,Ahmedabad Railway Station,Surat Airport,2024-07-17,12:16,2.8,bike,28.0,Medium,Clear,30.8
+7949b8f8-1518-4c8a-9775-615814762247,Nadiad Junction,"Gota, Ahmedabad",2024-11-12,21:36,10.7,bike,107.0,Low,Stormy,117.7
+37024e6a-d6e0-4f05-b155-77c122137fd2,Nadiad Junction,"Varachha, Surat",2024-07-28,05:29,23.6,auto,354.0,Medium,Clear,389.4
+b81d622f-0495-46fc-92dc-3c63ffd8f8ac,Ahmedabad Railway Station,Jamnagar Railway Station,2024-09-17,14:34,20.2,auto,303.0,High,Stormy,399.96
+1b16e73e-7fb5-4fff-9aa1-c624c0df9b4b,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-05-04,10:18,33.6,moto,672.0,High,Rainy,846.72
+b6d08d33-dba1-4a76-8109-043d85fc470c,"Adajan, Surat",Nadiad Bus Stand,2024-02-05,21:42,43.6,moto,872.0,Medium,Rainy,1007.16
+28eb1db4-ff17-463a-8033-c2479094e2ab,Surat Airport,Jamnagar Railway Station,2024-06-24,16:55,40.1,moto,802.0,High,Rainy,1010.52
+89990386-49f9-4279-94d9-1a91a6f30869,Ahmedabad Railway Station,Nadiad Junction,2024-08-16,14:10,5.9,bike,59.0,High,Stormy,77.88
+0378f916-3107-4792-87b0-e48d9c034a2b,"Varachha, Surat",Ahmedabad Railway Station,2024-10-27,20:07,46.3,moto,926.0,Medium,Rainy,1069.53
+b459f390-39a0-4c23-8ffc-7a2312465d72,Ahmedabad Railway Station,Nadiad Junction,2024-12-25,12:25,14.5,bike,145.0,Low,Clear,145.0
+7743150e-66bc-4581-b79b-7bebcbb79387,Surat Airport,"Adajan, Surat",2024-03-03,11:42,35.7,auto,535.5,Low,Stormy,589.05
+5493287b-bda8-4059-b5f9-d734fabc1479,"Gota, Ahmedabad","Adajan, Surat",2024-05-26,06:08,11.1,auto,166.5,Medium,Clear,183.15
+0a8f6fbd-e6a4-45f9-b2fe-408fd4c2bb80,Surat Airport,Nadiad Bus Stand,2024-09-21,12:56,3.5,bike,35.0,High,Clear,42.0
+73c282da-191d-4034-8cca-19dd9122ee5a,Ahmedabad Railway Station,Nadiad Junction,2024-07-15,01:25,11.6,bike,116.0,Low,Stormy,127.6
+eb4c24a8-65a8-482b-a726-0acf21c4c109,Nadiad Bus Stand,"Adajan, Surat",2024-05-31,10:48,14.2,bike,142.0,Low,Stormy,156.2
+41d2e938-c3aa-4931-82ad-adc34c9ba052,Nadiad Bus Stand,Ahmedabad Railway Station,2024-12-20,20:07,27.3,moto,546.0,Low,Stormy,600.6
+3ec937eb-1c33-44db-9c32-2cad8da71ee5,Nadiad Junction,"Gota, Ahmedabad",2024-11-16,18:34,37.2,moto,744.0,High,Stormy,982.08
+60cf39eb-2014-4f4e-9264-4225fb7e1233,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-06-29,21:41,47.0,moto,940.0,High,Rainy,1184.4
+f03b1aaf-2015-40e6-a223-2a2c04fd65d9,"Varachha, Surat","Adajan, Surat",2024-09-01,03:06,31.5,moto,630.0,Medium,Clear,693.0
+4d06d823-1efc-4f9c-a409-7c3388a42173,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-03-14,09:05,6.9,bike,69.0,High,Clear,82.8
+09d9b195-385d-4c21-9cb3-52d41dd0f20e,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-06-28,20:39,9.3,auto,139.5,High,Clear,167.4
+a26e5518-929a-408a-a913-e06fcd4e0687,Surat Airport,Nadiad Junction,2024-07-03,09:42,49.4,moto,988.0,Medium,Rainy,1141.14
+c14981dd-a1ce-43ab-a00e-1e9e50989a3f,Nadiad Junction,Surat Airport,2024-09-12,08:17,6.2,bike,62.0,Medium,Stormy,75.02
+34595d0d-5d95-48d2-9d28-eae53cb938f2,Jamnagar Railway Station,Surat Airport,2024-04-29,10:37,37.7,auto,565.5,High,Clear,678.6
+29d5bfb6-9a7b-4d3e-b5ce-1cebe8ce0d54,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-06-12,05:31,15.5,auto,232.5,Low,Rainy,244.12
+52b61654-06c4-429a-a458-87d03692394a,"Khambhaliya, Jamnagar",Surat Airport,2024-05-20,23:12,18.8,bike,188.0,Medium,Clear,206.8
+83466cf5-d405-4c7a-a27f-54850aef21d2,"Gota, Ahmedabad",Nadiad Junction,2024-01-31,12:51,19.7,auto,295.5,Low,Clear,295.5
+16f4e4a0-bdd3-4225-aa74-5f576cc0e544,Jamnagar Railway Station,Nadiad Junction,2024-06-10,17:47,1.3,bike,13.0,Low,Rainy,13.65
+c4b5fb26-4b4f-49fd-bb8f-bb63a12af3ce,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-06-25,21:09,44.9,moto,898.0,High,Clear,1077.6
+8ca21b8a-9089-420d-8f4d-fc66eaaa182d,Nadiad Junction,"Gota, Ahmedabad",2024-07-21,17:07,27.9,auto,418.5,High,Rainy,527.31
+449f40f2-9678-49e9-a2ef-1be1fbe4c59f,"Varachha, Surat",Nadiad Junction,2024-06-26,16:15,27.0,auto,405.0,Medium,Stormy,490.05
+545979c0-6271-4773-a5e1-787607e148b1,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-09-24,16:15,33.7,moto,674.0,Low,Clear,674.0
+91a61a6c-c970-4eef-a3e6-a657cb7faf25,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-12-09,11:27,38.6,auto,579.0,Low,Clear,579.0
+1e24a580-4f02-4300-92a8-e9aed5deb415,"Gota, Ahmedabad",Nadiad Bus Stand,2024-03-30,09:38,20.8,auto,312.0,Low,Stormy,343.2
+31a07251-a4f4-4ff3-907d-e79e1778cf74,Nadiad Bus Stand,"Varachha, Surat",2024-01-26,17:25,21.1,moto,422.0,High,Clear,506.4
+bf718384-37da-4469-a686-f87d5060e3b1,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-09-09,10:02,4.6,bike,46.0,Low,Stormy,50.6
+8cc32288-05e0-4a2b-82cc-d568a55bdc89,Surat Airport,"Khambhaliya, Jamnagar",2024-08-15,22:28,42.5,moto,850.0,Medium,Stormy,1028.5
+dd402599-2a7b-411a-ae68-9679407424c5,"Khambhaliya, Jamnagar","Adajan, Surat",2024-06-11,18:11,10.0,auto,150.0,High,Stormy,198.0
+16d46b97-ecc9-4066-9f22-45e8b1140c5c,"Adajan, Surat","Khambhaliya, Jamnagar",2024-04-10,18:17,25.6,moto,512.0,Low,Rainy,537.6
+0887046f-89df-412f-b246-932f6cbf0587,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-02-17,06:54,13.9,bike,139.0,Medium,Stormy,168.19
+a2daf44c-ab61-44c9-8f6a-d6c08b668d71,"Adajan, Surat","Gota, Ahmedabad",2024-11-23,12:08,47.7,moto,954.0,Low,Clear,954.0
+c7ddf976-6230-4f3d-87d1-579904cb723e,"Varachha, Surat","Adajan, Surat",2024-07-24,12:54,3.6,bike,36.0,High,Rainy,45.36
+eb84f5db-57bf-49c9-9aa2-d549b6917ff7,"Varachha, Surat","Adajan, Surat",2024-04-08,19:25,8.8,bike,88.0,High,Rainy,110.88
+d3d9359f-f436-4673-af3b-5058ba58b7c4,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-03-30,04:53,15.2,bike,152.0,Low,Rainy,159.6
+18496907-c246-483b-8717-1ca2f9f11086,Surat Airport,Nadiad Junction,2024-07-13,01:34,12.6,auto,189.0,High,Stormy,249.48
+6facc48a-92e0-42fb-820b-0c5cbdc9cfb8,Nadiad Junction,"Adajan, Surat",2024-12-24,12:17,16.8,bike,168.0,Medium,Stormy,203.28
+b750d010-7d6f-42e5-9867-6e3b18c67d7e,Nadiad Junction,"Varachha, Surat",2024-02-23,05:49,13.3,auto,199.5,Medium,Clear,219.45
+ab6bfd5b-75ce-486e-a39b-5db264135b97,"Khambhaliya, Jamnagar",Surat Airport,2024-04-25,02:52,24.4,moto,488.0,High,Clear,585.6
+4405689d-1c92-4487-9c4e-058b44e2f3d0,"Varachha, Surat","Khambhaliya, Jamnagar",2024-10-14,00:21,33.8,moto,676.0,Medium,Clear,743.6
+d56aea8e-c45a-4a38-b5fa-6ce07ca5076e,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-08-25,17:32,6.3,auto,94.5,Low,Stormy,103.95
+010db0ec-bf5b-44b2-8428-adc1a4ba6e78,Nadiad Junction,Ahmedabad Railway Station,2024-10-15,04:05,4.8,auto,72.0,Medium,Stormy,87.12
+40188f52-3fd3-4493-acb7-b185303c86b3,"Varachha, Surat",Jamnagar Railway Station,2024-05-22,17:08,43.3,moto,866.0,High,Clear,1039.2
+db0ad548-493a-4ce1-8598-e5b821ece2c6,"Varachha, Surat",Ahmedabad Railway Station,2024-08-05,02:00,49.9,moto,998.0,High,Rainy,1257.48
+d727eec4-32c5-4c14-a4f7-351f164837e8,"Khambhaliya, Jamnagar",Nadiad Junction,2024-09-16,02:52,42.8,moto,856.0,High,Clear,1027.2
+1799fcba-5a16-42c0-b936-7c38506ef655,Nadiad Bus Stand,Ahmedabad Railway Station,2024-05-06,18:03,31.4,moto,628.0,Low,Stormy,690.8
+81d1b0cd-1836-44e5-8181-1e7bc987585f,Ahmedabad Railway Station,"Adajan, Surat",2024-08-25,12:33,12.7,bike,127.0,Medium,Stormy,153.67
+fb31e4d7-8d77-4c70-9047-5a4739cd5106,Surat Airport,"Varachha, Surat",2024-05-23,17:46,4.5,auto,67.5,Low,Clear,67.5
+96614c21-0e9a-472c-b0d6-cd88f96e2238,Ahmedabad Railway Station,Nadiad Junction,2024-04-05,21:35,41.4,moto,828.0,High,Stormy,1092.96
+14640e70-6f6c-42f4-b7e6-d24e58fc9748,Nadiad Junction,"Gota, Ahmedabad",2024-05-07,07:49,29.8,auto,447.0,Medium,Rainy,516.29
+130618ac-7dce-44b5-8ad7-120a3be3f878,"Adajan, Surat",Nadiad Junction,2024-05-02,07:48,15.2,auto,228.0,Medium,Stormy,275.88
+dd87714f-89b3-433c-bf3b-8b26a210af12,Surat Airport,Nadiad Bus Stand,2024-10-05,20:32,21.4,moto,428.0,Medium,Clear,470.8
+566c43fd-65ef-4226-98fe-035c1c16cf1e,"Gota, Ahmedabad",Surat Airport,2024-09-03,07:11,13.1,auto,196.5,Medium,Clear,216.15
+3f069de8-5faf-44fb-97f6-68ee40dc32af,Ahmedabad Railway Station,"Varachha, Surat",2024-04-24,01:46,15.8,auto,237.0,High,Rainy,298.62
+e6bc6a2b-b51a-4b5f-8fb4-0458706009e2,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-08-15,15:28,14.5,bike,145.0,High,Clear,174.0
+2f59f2ca-ea50-4990-94fe-0eab31eff48e,"Adajan, Surat",Ahmedabad Railway Station,2024-10-14,15:22,27.8,auto,417.0,High,Clear,500.4
+9fc51846-bec4-4ab8-8f84-a963586a0489,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-01-24,19:57,9.3,auto,139.5,Medium,Clear,153.45
+61ab8c2e-fc7f-48a6-8e18-e5b5315b9cd5,"Adajan, Surat",Surat Airport,2024-04-12,20:36,6.6,bike,66.0,Medium,Clear,72.6
+10f0f4e8-a67a-4d03-9740-6b15f733e1c5,"Adajan, Surat","Varachha, Surat",2024-06-01,17:59,22.1,moto,442.0,High,Clear,530.4
+da29ef22-c0ac-4a61-b7ec-8dd0fa9c5fcb,"Adajan, Surat","CG Road, Ahmedabad",2024-02-22,09:53,2.1,bike,21.0,Low,Stormy,23.1
+6f67987c-288a-4491-8e8f-c9b023c02a6d,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-09-22,10:20,11.0,bike,110.0,Medium,Rainy,127.05
+7713b0d5-38cc-4fc2-928b-c22523c7b8aa,"Adajan, Surat",Nadiad Junction,2024-04-21,13:51,39.7,moto,794.0,Medium,Stormy,960.74
+2ac91a74-f1af-4490-93ad-7fb472290e5d,"Varachha, Surat",Jamnagar Railway Station,2024-04-13,07:59,15.3,bike,153.0,Medium,Clear,168.3
+9f0d4129-0399-4d4d-a85d-bac1b45f24da,"Gota, Ahmedabad",Nadiad Junction,2024-09-04,05:22,2.0,auto,30.0,High,Clear,36.0
+4e1bbfcd-9818-4be8-bfff-414e66bf3e86,Nadiad Junction,Jamnagar Railway Station,2024-11-27,21:12,39.6,moto,792.0,Low,Rainy,831.6
+ce1b8b5d-91f0-4725-af59-dad6b16fd571,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-02-18,14:58,2.1,bike,21.0,Medium,Stormy,25.41
+bfeee02d-93ba-4c9e-a9a7-9fd0a940ee9e,Nadiad Bus Stand,Jamnagar Railway Station,2024-10-01,21:10,11.1,bike,111.0,Low,Rainy,116.55
+2feecd01-d906-4259-9255-7c0e315179ba,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-01-21,21:20,36.9,auto,553.5,Low,Rainy,581.18
+ef482030-25fb-4e4b-87fd-4f805c0445f2,"CG Road, Ahmedabad","Varachha, Surat",2024-01-16,15:12,3.8,auto,57.0,High,Clear,68.4
+bf00318e-cd19-4828-bb4c-1673ad8833ca,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-10-27,23:03,1.3,auto,19.5,Medium,Clear,21.45
+747a268f-ab6c-4596-aab8-6ff8da5c48ef,"CG Road, Ahmedabad",Nadiad Junction,2024-06-08,14:08,17.1,bike,171.0,Low,Stormy,188.1
+39c2f281-c9b5-4d34-a7a3-5a934d397a2a,"Gota, Ahmedabad",Surat Airport,2024-07-19,18:46,1.1,bike,11.0,Medium,Rainy,12.71
+fd865791-ac9e-4ec3-a39d-308947142a20,"Adajan, Surat",Ahmedabad Railway Station,2024-02-23,11:18,3.6,bike,36.0,High,Stormy,47.52
+67fca768-8bda-4ec5-8873-6d16b905ed1e,"Adajan, Surat","CG Road, Ahmedabad",2024-11-16,18:59,35.3,moto,706.0,High,Stormy,931.92
+a8b67027-e496-468b-8cb6-f6c5621d4997,"Khambhaliya, Jamnagar","Adajan, Surat",2024-02-08,03:11,2.7,auto,40.5,Low,Clear,40.5
+d852a5b4-e7fa-4b1b-a6cd-fe0acd9044a8,"Adajan, Surat",Surat Airport,2024-05-11,17:34,12.2,bike,122.0,High,Rainy,153.72
+165fe78d-12a5-48e3-b620-c4b35b072b24,Jamnagar Railway Station,"Adajan, Surat",2024-01-30,08:47,48.3,moto,966.0,Low,Stormy,1062.6
+033d8f95-0a49-403c-9835-7e9090805001,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-11-02,13:06,49.3,moto,986.0,Medium,Rainy,1138.83
+78c72184-1844-42d6-b991-2417008c2c9e,Jamnagar Railway Station,Nadiad Junction,2024-09-09,23:50,22.5,moto,450.0,Medium,Clear,495.0
+3dc511d8-42c7-49b5-8362-afce121e6dc4,"Varachha, Surat",Jamnagar Railway Station,2024-11-03,21:57,12.9,auto,193.5,High,Stormy,255.42
+82c09b21-fca1-4b72-82fa-81dd4c5308dc,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-05-22,07:10,10.9,bike,109.0,Medium,Stormy,131.89
+ccdb1ee3-6865-42a1-ade5-da744ca88fa1,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-05-02,02:55,13.5,auto,202.5,Low,Clear,202.5
+14f78de6-64bb-4bed-9cda-0c61bdb95d41,"Khambhaliya, Jamnagar",Nadiad Junction,2024-07-03,06:48,12.0,auto,180.0,High,Stormy,237.6
+34537437-2c39-469c-af82-f6d981ff0a56,Ahmedabad Railway Station,Jamnagar Railway Station,2024-01-29,19:51,38.6,auto,579.0,Medium,Stormy,700.59
+6edf355a-a662-4156-aa9b-66005a5052ec,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-11-05,23:49,22.8,auto,342.0,High,Rainy,430.92
+983b1f03-f586-40e7-ab9f-154c31986840,"Varachha, Surat",Jamnagar Railway Station,2024-02-23,02:20,9.7,auto,145.5,High,Rainy,183.33
+a4d1b330-c420-438c-8cf1-746dbf746c5b,"Adajan, Surat","Gota, Ahmedabad",2024-09-20,18:34,23.8,auto,357.0,High,Rainy,449.82
+20bcdb44-11bf-491a-8002-57cbbfc1a544,"Adajan, Surat","Varachha, Surat",2024-10-31,06:26,19.6,bike,196.0,High,Stormy,258.72
+1e5c76a5-0e10-477b-85f6-e1798909be53,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-11-01,08:35,7.1,auto,106.5,Low,Rainy,111.83
+00ca0a27-a694-4598-b229-2def6249298e,Nadiad Bus Stand,Nadiad Junction,2024-01-23,02:45,43.5,moto,870.0,High,Clear,1044.0
+8d72bbeb-8748-4e2c-92d5-d20919e9893f,Nadiad Junction,"CG Road, Ahmedabad",2024-08-07,11:33,5.4,bike,54.0,High,Rainy,68.04
+b649df2b-29ee-425d-87e9-28fd8ef94d00,Jamnagar Railway Station,"Adajan, Surat",2024-09-26,04:52,21.3,auto,319.5,Low,Clear,319.5
+f968d9f8-bd48-47bc-9ef8-12b53dab0fbb,"Varachha, Surat",Surat Airport,2024-01-10,07:28,3.5,bike,35.0,High,Rainy,44.1
+1874eaf1-eac9-4efb-80aa-846e41fa1e79,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-02-05,04:51,28.8,moto,576.0,High,Stormy,760.32
+599a47ea-eb02-43fc-a517-5bb79da0e2db,"CG Road, Ahmedabad","Varachha, Surat",2024-09-04,00:06,25.1,auto,376.5,Medium,Stormy,455.57
+50bb1ef6-ea51-4863-8d85-83433510afa9,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-04-13,22:32,33.4,moto,668.0,High,Clear,801.6
+8836e644-fbbf-4a70-bb45-fb7dc50c639e,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-07-21,13:03,2.4,auto,36.0,Low,Clear,36.0
+3096d7f2-bd5d-4d2a-a8cd-0173ae5c19db,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-02-20,07:29,8.6,bike,86.0,High,Stormy,113.52
+8aaf2a93-25a7-4f6f-a79c-79485ead0f3c,Surat Airport,"Adajan, Surat",2024-11-23,18:47,16.5,bike,165.0,Low,Stormy,181.5
+2630f39b-df48-4099-8c2c-1ad8d1b81ea0,"Khambhaliya, Jamnagar",Nadiad Junction,2024-01-27,15:04,24.4,moto,488.0,Low,Rainy,512.4
+171137ab-1540-4f0a-8d32-ad46459e91c0,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-07-22,19:11,11.5,auto,172.5,High,Rainy,217.35
+da203706-d16a-40ef-9665-1a4ac5fc3a47,Jamnagar Railway Station,Nadiad Junction,2024-07-23,18:55,12.5,bike,125.0,Low,Rainy,131.25
+1840c620-2079-49eb-946b-c29314ce5673,"Varachha, Surat","Khambhaliya, Jamnagar",2024-10-29,20:37,39.5,moto,790.0,High,Rainy,995.4
+6a1b4670-8233-489d-bf75-c8035e24a349,Ahmedabad Railway Station,"Adajan, Surat",2024-01-03,20:21,39.6,moto,792.0,High,Clear,950.4
+23ba9dd3-9f56-43b7-8bc5-15e028030ada,Nadiad Bus Stand,Ahmedabad Railway Station,2024-03-24,00:23,41.7,moto,834.0,Low,Rainy,875.7
+2d93337c-e2fc-4d07-974f-3d6ea693fad0,Jamnagar Railway Station,Surat Airport,2024-03-08,05:09,21.3,moto,426.0,High,Clear,511.2
+71d4d273-c74d-4651-8303-7203216ecfa7,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-12-28,10:10,30.0,moto,600.0,Low,Clear,600.0
+91347623-d5c3-42e7-b07e-8286d90d3a45,"Adajan, Surat",Jamnagar Railway Station,2024-04-22,18:27,28.5,auto,427.5,High,Clear,513.0
+51cf5bbf-1d58-4341-bfe1-d05ebfd67b47,"Adajan, Surat",Nadiad Junction,2024-04-05,23:42,9.0,auto,135.0,Low,Stormy,148.5
+d3ab1d2f-fb60-42ca-9f6c-d81014da66f0,Ahmedabad Railway Station,"Varachha, Surat",2024-06-09,23:29,7.1,auto,106.5,Low,Rainy,111.83
+746dcba8-573a-4260-a26b-5041b938e2a8,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-12-25,15:27,17.1,bike,171.0,Low,Stormy,188.1
+790a30f0-2213-439d-82d8-8d55ea1cc33d,"Gota, Ahmedabad",Surat Airport,2024-07-04,13:45,39.6,auto,594.0,Medium,Clear,653.4
+2f517c4b-e1b0-428b-964b-651129758da3,Surat Airport,"Varachha, Surat",2024-07-01,10:14,38.9,auto,583.5,Medium,Clear,641.85
+854b8983-f8d9-491b-9bd7-18995358e26b,"Gota, Ahmedabad",Nadiad Junction,2024-02-15,19:35,29.5,moto,590.0,High,Rainy,743.4
+9f98b706-7bb1-4098-974a-8c03384956dc,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-09-21,22:19,41.3,moto,826.0,Low,Clear,826.0
+f381222e-ef1d-4a92-a1a8-4cf8204636c0,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-12-13,09:45,19.9,bike,199.0,Medium,Clear,218.9
+a3b5b371-0411-45e1-901a-78a0050c9816,"Varachha, Surat","Khambhaliya, Jamnagar",2024-04-03,20:42,15.9,bike,159.0,Low,Stormy,174.9
+8c28f07f-6e3c-4437-b43b-0d06a6bfa1e2,"Gota, Ahmedabad",Surat Airport,2024-02-06,15:12,33.4,auto,501.0,High,Clear,601.2
+3b055455-472a-4de7-8fae-860518187a26,"Gota, Ahmedabad",Jamnagar Railway Station,2024-07-25,11:49,3.6,bike,36.0,High,Clear,43.2
+e227fa70-0dd8-4332-a810-dad5cdc51235,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-06-29,17:18,7.3,bike,73.0,High,Clear,87.6
+f25e3924-9e5b-49a6-8ef4-c191c5e07df3,Nadiad Bus Stand,Jamnagar Railway Station,2024-12-06,13:00,13.8,bike,138.0,Medium,Stormy,166.98
+9b72da6a-44de-4de8-bc20-aa1aae8b3dde,Nadiad Bus Stand,"Adajan, Surat",2024-01-26,11:28,11.9,bike,119.0,Medium,Stormy,143.99
+cdf54c01-13ea-41b0-9c8a-13a620fe63b8,Surat Airport,Nadiad Junction,2024-04-09,21:31,11.6,bike,116.0,High,Rainy,146.16
+a1c3b8eb-efbd-4b0c-a388-223775684f85,Jamnagar Railway Station,"Adajan, Surat",2024-04-07,22:18,6.9,auto,103.5,Medium,Stormy,125.24
+206f8f70-e538-45fa-a1da-7c4f39447cf7,"Khambhaliya, Jamnagar","Varachha, Surat",2024-10-12,20:14,5.0,auto,75.0,High,Stormy,99.0
+4daa3957-d6c0-462e-9f54-2541f906452c,"Adajan, Surat","Khambhaliya, Jamnagar",2024-01-12,23:32,48.3,moto,966.0,High,Rainy,1217.16
+52b02a73-6179-4c99-aada-60f8d67a838d,"Varachha, Surat",Nadiad Junction,2024-01-07,23:46,4.1,bike,41.0,High,Stormy,54.12
+e4414bc8-885e-41e1-a67f-c9470c37a893,Surat Airport,"Gota, Ahmedabad",2024-05-09,05:56,24.9,auto,373.5,High,Clear,448.2
+93eb2ea1-6d52-46fa-91a5-9e4ed82c08d0,"Varachha, Surat",Ahmedabad Railway Station,2024-02-14,02:15,16.8,auto,252.0,Low,Rainy,264.6
+c88a8466-f9ab-4971-b992-bc35cd2dc658,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-09-19,14:45,23.8,moto,476.0,High,Stormy,628.32
+449fe370-d2be-4fe8-afc9-c654496291b5,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-12-27,17:17,3.2,bike,32.0,Low,Rainy,33.6
+99e05fbd-f353-49b0-a525-0a2a1b9abfbf,Nadiad Bus Stand,Surat Airport,2024-04-08,03:16,44.5,moto,890.0,High,Stormy,1174.8
+be8e1b15-f5fd-4d2e-b764-b7819f7f6a71,"Adajan, Surat","Gota, Ahmedabad",2024-06-18,21:32,28.2,moto,564.0,High,Stormy,744.48
+8ddc06f5-4453-43e3-a398-914419f0479b,Ahmedabad Railway Station,Nadiad Junction,2024-12-03,12:35,2.9,bike,29.0,Low,Rainy,30.45
+297b47aa-931b-476b-9aeb-0f114393e060,"Adajan, Surat","Varachha, Surat",2024-05-14,16:50,29.0,moto,580.0,Medium,Clear,638.0
+61fb8d30-12b6-4f85-8761-a974b2136e83,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-06-09,22:41,17.5,bike,175.0,Low,Clear,175.0
+5cd6f7bd-256c-4664-b008-c3b771349119,"Khambhaliya, Jamnagar",Surat Airport,2024-02-12,10:14,37.0,auto,555.0,High,Rainy,699.3
+5c78b4d7-f90a-4e58-a225-b82c6a342a23,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-01-04,04:38,2.4,bike,24.0,High,Stormy,31.68
+37ad3ac9-7a95-4ac5-a5cf-12ae1581c02b,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-11-15,09:22,36.0,moto,720.0,High,Stormy,950.4
+1abf5f85-d998-430e-85ed-3016109bc215,"Adajan, Surat","CG Road, Ahmedabad",2024-02-16,04:00,28.5,moto,570.0,Low,Rainy,598.5
+723c14b9-fee6-40c9-b3e6-4a048cf52569,"Adajan, Surat",Surat Airport,2024-02-15,16:13,27.0,moto,540.0,Low,Rainy,567.0
+4a126039-eb47-4e51-a718-f61d2aaa77fe,"CG Road, Ahmedabad",Nadiad Junction,2024-01-01,13:46,40.6,moto,812.0,High,Clear,974.4
+c331644c-62fa-4de6-aff1-049449a80e85,"Gota, Ahmedabad",Nadiad Bus Stand,2024-01-26,12:57,17.2,bike,172.0,Low,Stormy,189.2
+2d33e3d5-b4f0-4d17-affa-870dbdb689ea,"Gota, Ahmedabad",Surat Airport,2024-05-04,08:58,40.5,moto,810.0,Low,Stormy,891.0
+afd928e8-c6de-4684-a397-a89cea344606,Nadiad Junction,"CG Road, Ahmedabad",2024-05-02,09:05,10.6,bike,106.0,Low,Stormy,116.6
+c785ffa1-9ead-4c02-8e0e-836681cf68cf,"Gota, Ahmedabad","Adajan, Surat",2024-06-23,02:48,18.3,bike,183.0,Low,Clear,183.0
+48edfade-c09a-49e5-8129-75849c75f22a,Jamnagar Railway Station,"Gota, Ahmedabad",2024-05-23,00:07,43.0,moto,860.0,Low,Rainy,903.0
+cc01ce42-7c92-4edc-882b-2f9dc3e2df34,"Varachha, Surat","CG Road, Ahmedabad",2024-06-15,18:16,32.2,auto,483.0,High,Rainy,608.58
+67759983-0988-477a-8f03-16d9a18b541f,"Varachha, Surat",Ahmedabad Railway Station,2024-01-25,01:53,41.5,moto,830.0,Low,Stormy,913.0
+9451e71e-020e-489e-94cc-86d8874c04aa,"Gota, Ahmedabad",Nadiad Junction,2024-12-02,17:45,27.9,auto,418.5,Medium,Rainy,483.37
+c0afd702-02f2-4da8-8053-07272becfe04,Surat Airport,"Khambhaliya, Jamnagar",2024-10-09,09:00,31.2,auto,468.0,Medium,Clear,514.8
+dff28eef-0658-46c5-ae51-10286f5f6374,"Gota, Ahmedabad","Adajan, Surat",2024-04-09,10:19,6.5,auto,97.5,Medium,Stormy,117.98
+f533e083-5e6e-46aa-b111-2ea399becc93,"Gota, Ahmedabad","Varachha, Surat",2024-04-13,11:55,5.1,bike,51.0,Medium,Stormy,61.71
+938f5410-1321-48de-a222-59e8182d5b80,Jamnagar Railway Station,"Adajan, Surat",2024-07-13,03:37,1.2,bike,12.0,High,Stormy,15.84
+b303d725-5f2e-4681-8ec7-27a041b602fd,"Adajan, Surat","Varachha, Surat",2024-03-04,23:18,2.2,bike,22.0,High,Rainy,27.72
+fea2f113-2602-4737-9800-ed09a4f78b53,"Varachha, Surat","Khambhaliya, Jamnagar",2024-04-13,09:17,15.2,bike,152.0,High,Stormy,200.64
+4975c0ff-64b3-438c-8753-bdbed5173006,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-11-23,23:56,22.5,moto,450.0,Low,Clear,450.0
+33f9a83d-1686-4bae-b7a5-ab63c95d5b58,"CG Road, Ahmedabad",Surat Airport,2024-06-02,02:30,4.2,auto,63.0,Medium,Stormy,76.23
+5116bb39-6106-4a72-b0cb-f83b1f7e8402,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-02-06,03:25,14.9,bike,149.0,Medium,Rainy,172.1
+35b56108-176c-4dfb-8dbd-0f8c67700f92,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-06-03,09:55,39.6,moto,792.0,High,Rainy,997.92
+3a47d4fc-fb7e-4680-bb0b-19ef211ba90d,"Varachha, Surat","Gota, Ahmedabad",2024-01-21,21:08,15.4,bike,154.0,Medium,Rainy,177.87
+8f5723ae-2f08-4c44-87ee-20123cc548d3,"Khambhaliya, Jamnagar",Surat Airport,2024-01-05,08:15,24.9,moto,498.0,Medium,Stormy,602.58
+9e0912b3-951c-4848-8217-ddb068de1089,Nadiad Junction,"Adajan, Surat",2024-05-26,18:53,4.0,auto,60.0,Low,Rainy,63.0
+70c34d89-7d21-4d27-9e25-717c6f35d409,"Gota, Ahmedabad","Khambhaliya, Jamnagar",2024-02-16,02:07,2.2,auto,33.0,Medium,Clear,36.3
+93995288-0345-486f-8404-355ee101e62e,Nadiad Bus Stand,"Gota, Ahmedabad",2024-06-04,02:44,31.3,moto,626.0,Medium,Stormy,757.46
+b36061e0-fe00-47c3-87b4-3aa47035c021,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-02-22,12:41,11.4,auto,171.0,Medium,Clear,188.1
+5d50ec0d-3c60-40a4-ae60-55cbda6c816e,"Adajan, Surat","Gota, Ahmedabad",2024-12-03,06:22,12.3,bike,123.0,Medium,Stormy,148.83
+8dc8de70-d949-4fe6-8c3e-2b1b6e1f3295,"Gota, Ahmedabad",Nadiad Bus Stand,2024-04-04,11:45,33.1,moto,662.0,Low,Rainy,695.1
+8e298b35-f637-473b-b24e-08bb311c989b,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-09-19,00:28,1.8,bike,18.0,High,Clear,21.6
+4025f4d5-cea2-465b-a74c-7bc71c7f410c,Ahmedabad Railway Station,Jamnagar Railway Station,2024-01-20,23:51,18.0,bike,180.0,High,Stormy,237.6
+3f6d8afc-6f2e-4f2d-8f9e-d46b5ba1810b,"Gota, Ahmedabad",Jamnagar Railway Station,2024-07-17,15:33,11.8,auto,177.0,Medium,Rainy,204.44
+ea74a07e-3ad9-48a4-8b02-9f5448e892fe,Ahmedabad Railway Station,Nadiad Junction,2024-02-19,08:03,11.2,bike,112.0,High,Stormy,147.84
+8f3fc89b-8ac9-4265-b338-7ff30955c229,Jamnagar Railway Station,Surat Airport,2024-10-03,17:24,6.7,bike,67.0,Low,Stormy,73.7
+dd0f185f-a5c9-4c81-9dc1-e1d03a197dd3,Surat Airport,Ahmedabad Railway Station,2024-07-28,15:40,4.6,auto,69.0,Medium,Clear,75.9
+12b5e84c-3ff0-4afe-8a90-27250d0d042e,Jamnagar Railway Station,Surat Airport,2024-07-23,17:22,10.1,bike,101.0,Medium,Stormy,122.21
+dcc14779-14b2-448b-bc6e-29603a0c8d73,"Varachha, Surat","Adajan, Surat",2024-10-04,16:22,35.6,moto,712.0,Low,Rainy,747.6
+533e32a6-c9c0-4ed6-92fd-e83967101742,"Gota, Ahmedabad",Ahmedabad Railway Station,2024-09-09,05:54,26.9,moto,538.0,High,Clear,645.6
+3de5541d-2a59-4875-890d-5f85b6bb40c2,"Khambhaliya, Jamnagar","Varachha, Surat",2024-11-14,16:42,11.9,bike,119.0,Low,Clear,119.0
+c846f5df-3590-4ef3-b6d1-b138006dc5ae,Nadiad Bus Stand,Nadiad Junction,2024-06-06,15:28,14.9,bike,149.0,High,Rainy,187.74
+32cf1bc3-bf9d-4755-af7f-f03b0c8e7103,"Gota, Ahmedabad",Surat Airport,2024-11-16,12:19,9.2,bike,92.0,High,Clear,110.4
+f440988f-37d5-48cc-b361-29beeff94bfb,Nadiad Bus Stand,Surat Airport,2024-10-30,09:17,18.0,bike,180.0,High,Rainy,226.8
+acf3a6a7-1d94-491e-ab68-3dbc4c2c2430,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-12-24,12:05,28.6,auto,429.0,High,Rainy,540.54
+484e52cc-0442-45b5-b0b6-7c0a945c7658,Nadiad Junction,Nadiad Bus Stand,2024-02-06,12:53,5.3,bike,53.0,High,Stormy,69.96
+5998734b-ca08-4e2c-8b52-0d6255c02740,Nadiad Bus Stand,"Gota, Ahmedabad",2024-06-30,20:03,25.8,auto,387.0,High,Stormy,510.84
+274074fe-de0b-439a-b5fa-44d4e0a4892f,Surat Airport,"Khambhaliya, Jamnagar",2024-05-02,03:27,3.9,auto,58.5,High,Clear,70.2
+531dd4fe-2182-4b1c-85c5-caab7cb2362b,Jamnagar Railway Station,"Gota, Ahmedabad",2024-09-21,06:16,26.5,moto,530.0,Low,Stormy,583.0
+c0403223-5c47-4770-8164-5430b8f05836,"Adajan, Surat",Ahmedabad Railway Station,2024-05-01,16:15,23.4,moto,468.0,Low,Clear,468.0
+da0eb4c0-2bfc-4dc0-a84c-f11517fb0a4c,Ahmedabad Railway Station,"Varachha, Surat",2024-01-03,03:44,7.3,bike,73.0,Medium,Clear,80.3
+4d62a8fa-e7ef-42c3-a0b9-ba2712cc72aa,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-06-21,02:09,5.8,bike,58.0,Medium,Stormy,70.18
+a95378fb-0c0c-4519-9113-6fcacc3b5aca,"Varachha, Surat","Gota, Ahmedabad",2024-10-28,17:19,31.4,moto,628.0,Medium,Clear,690.8
+6166a2b7-9999-40fe-99ef-61f7b323e6b1,Nadiad Junction,"Adajan, Surat",2024-04-12,13:25,23.3,moto,466.0,Medium,Stormy,563.86
+3e04add5-f811-4062-b17a-4dde02702a4c,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-02-07,17:38,39.0,moto,780.0,Low,Rainy,819.0
+3b09d38b-a227-416a-9464-ffb87163595e,Jamnagar Railway Station,Nadiad Bus Stand,2024-05-25,10:36,38.3,auto,574.5,Low,Rainy,603.23
+2b66f6d1-047c-456d-a8d0-87e8330df831,Jamnagar Railway Station,Nadiad Bus Stand,2024-02-14,18:16,28.5,moto,570.0,High,Rainy,718.2
+29c0c344-6eaf-4053-91ca-fda3cb68f677,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-08-21,14:39,3.8,auto,57.0,Medium,Stormy,68.97
+ae260673-e9b3-4fcb-b3a7-66e665cce14e,"Varachha, Surat","Adajan, Surat",2024-06-02,12:09,18.3,auto,274.5,Medium,Clear,301.95
+a05a5179-0ac8-4f6d-b1d7-5d0db13256e5,Ahmedabad Railway Station,"CG Road, Ahmedabad",2024-06-05,17:51,38.6,auto,579.0,Medium,Stormy,700.59
+b2b749c8-5143-41b5-b19a-97c75ccb62bf,Nadiad Bus Stand,"Gota, Ahmedabad",2024-02-05,19:39,10.5,auto,157.5,High,Clear,189.0
+adfce873-f455-4c46-9df2-525427d9aae8,Surat Airport,"Adajan, Surat",2024-03-12,03:34,36.1,moto,722.0,Medium,Clear,794.2
+36723b75-53ad-4ba5-98dd-7fbc2b425f4a,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-09-25,07:49,21.7,moto,434.0,Medium,Stormy,525.14
+d1bca55e-cc08-46ad-863a-5599b7b815e1,Nadiad Bus Stand,Nadiad Junction,2024-07-12,22:35,20.3,auto,304.5,Low,Rainy,319.73
+637ad7b0-ac34-4118-a80a-c7fe5fa2abbc,Nadiad Junction,"CG Road, Ahmedabad",2024-03-24,12:13,13.9,bike,139.0,Low,Rainy,145.95
+6cdb4787-1129-4184-b206-6b16612ef6c7,"Varachha, Surat","Adajan, Surat",2024-12-02,14:57,11.1,bike,111.0,Low,Rainy,116.55
+b7e804bf-ec87-4673-8650-c52085915f7d,"Varachha, Surat",Nadiad Bus Stand,2024-10-31,17:30,37.9,auto,568.5,High,Clear,682.2
+63cefc3b-6535-4abd-a827-72f1a12b97da,Jamnagar Railway Station,"Varachha, Surat",2024-11-13,16:07,37.4,moto,748.0,Low,Clear,748.0
+4be33172-ee51-469c-b6c8-cde3972c5cf2,"Varachha, Surat","Adajan, Surat",2024-11-23,15:15,19.8,bike,198.0,Medium,Stormy,239.58
+4016eb91-febc-4f84-b24a-59906a919f1a,Nadiad Bus Stand,Jamnagar Railway Station,2024-05-10,22:48,27.1,moto,542.0,High,Clear,650.4
+4b625e49-b2b3-404e-907f-1b00d5bc557e,"Varachha, Surat",Jamnagar Railway Station,2024-09-20,11:39,33.9,auto,508.5,Medium,Rainy,587.32
+f1b05fff-846d-49b4-a877-a92dd15208a3,"Adajan, Surat",Surat Airport,2024-08-20,16:37,16.6,auto,249.0,Medium,Rainy,287.6
+95c5f699-4370-44c2-b56d-80d4142c8720,Nadiad Bus Stand,Jamnagar Railway Station,2024-02-13,02:52,9.6,bike,96.0,Low,Rainy,100.8
+985e9294-f9cf-4d2d-957c-e120939e7fc2,"Varachha, Surat","CG Road, Ahmedabad",2024-03-15,12:17,22.8,auto,342.0,Medium,Rainy,395.01
+d5a08ff7-4e53-42ce-9fec-699422b18974,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-01-27,13:00,10.2,auto,153.0,Low,Clear,153.0
+fd2572a2-e8ee-41f6-a356-cce21951d784,"Adajan, Surat",Ahmedabad Railway Station,2024-01-21,04:21,23.8,moto,476.0,Low,Stormy,523.6
+889fb2ba-c746-4e4d-9e7a-793f2e17a237,Jamnagar Railway Station,"Varachha, Surat",2024-12-30,04:14,9.1,bike,91.0,Medium,Stormy,110.11
+9cbe1899-3302-47bd-b3bf-4be801ab4c00,"CG Road, Ahmedabad",Jamnagar Railway Station,2024-04-05,21:58,16.3,bike,163.0,High,Stormy,215.16
+041864d0-7c81-48fe-bfe3-f378581d1281,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-09-11,06:17,29.1,moto,582.0,High,Rainy,733.32
+d933cbb6-d1b1-43aa-bcdc-6df83c5d9e98,"Varachha, Surat","Gota, Ahmedabad",2024-02-19,12:53,37.6,moto,752.0,Low,Rainy,789.6
+77f734d5-f64b-4256-a58b-17d43e1f41ef,Nadiad Bus Stand,Ahmedabad Railway Station,2024-08-13,11:01,24.5,auto,367.5,Low,Rainy,385.88
+69983f81-d1ef-435e-8af2-00af2db4a3c6,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-03-13,10:53,35.0,auto,525.0,Medium,Clear,577.5
+9529057d-a8db-40ac-94ac-99e4cd9107ce,"Gota, Ahmedabad",Surat Airport,2024-01-24,15:11,30.3,auto,454.5,High,Rainy,572.67
+3f922dcb-2151-4a6c-a4fb-157657784cf5,Ahmedabad Railway Station,"Adajan, Surat",2024-02-02,21:37,4.1,auto,61.5,Low,Clear,61.5
+0b7be03d-0d49-400e-9f8a-4bb3f5e0ee21,Surat Airport,"Adajan, Surat",2024-11-24,05:12,20.5,auto,307.5,Low,Clear,307.5
+a396acae-7f5d-4ea3-8958-d0cc2c6af02c,"Gota, Ahmedabad",Jamnagar Railway Station,2024-08-15,10:25,2.7,bike,27.0,Medium,Stormy,32.67
+0596ca07-d5e6-4df7-91fc-5659685fcfe9,"Gota, Ahmedabad","Adajan, Surat",2024-10-20,00:43,40.8,moto,816.0,High,Stormy,1077.12
+0ed8b440-36c4-43de-a13a-405d5b1ecc98,"Varachha, Surat",Jamnagar Railway Station,2024-04-02,20:24,8.5,bike,85.0,Low,Stormy,93.5
+176a1961-edb2-4986-8b3c-99bfd2238317,Jamnagar Railway Station,Surat Airport,2024-07-13,19:18,23.7,auto,355.5,High,Clear,426.6
+163b87a5-3565-4993-acca-f99c855d8025,Nadiad Junction,Jamnagar Railway Station,2024-11-28,01:43,32.0,moto,640.0,Low,Stormy,704.0
+081cdf72-988f-4dbd-9700-e9a301ce1118,Nadiad Junction,Ahmedabad Railway Station,2024-12-25,16:09,26.9,auto,403.5,Low,Rainy,423.68
+2939f928-c556-46d9-a1f9-ddcf259d3077,Surat Airport,Ahmedabad Railway Station,2024-07-30,16:46,14.7,bike,147.0,Medium,Stormy,177.87
+4e4a8226-6bf5-4a5f-9413-d5fb57a426d4,Ahmedabad Railway Station,Nadiad Junction,2024-04-19,00:22,8.5,auto,127.5,High,Stormy,168.3
+1b8e9a9e-6f42-4991-8e21-9769721dff61,"Gota, Ahmedabad",Nadiad Bus Stand,2024-01-02,22:49,9.4,bike,94.0,Low,Clear,94.0
+372fb0f1-c7da-4832-9771-91d7c42f7e85,Ahmedabad Railway Station,"Adajan, Surat",2024-04-19,13:59,19.4,bike,194.0,Low,Clear,194.0
+8c905ce0-ce13-409a-8d88-598cbe8643f0,Jamnagar Railway Station,Nadiad Junction,2024-08-12,07:07,20.7,moto,414.0,Medium,Stormy,500.94
+70a2dd49-cce1-45e1-996d-8e009b7cf1b5,Jamnagar Railway Station,Nadiad Bus Stand,2024-10-21,06:50,46.2,moto,924.0,Low,Clear,924.0
+4e3b569e-694c-4039-9580-d1e55829e554,Jamnagar Railway Station,Nadiad Bus Stand,2024-09-17,21:56,46.8,moto,936.0,Medium,Stormy,1132.56
+b061f5d3-e914-41f3-97ca-4e2528aad95e,"CG Road, Ahmedabad",Nadiad Bus Stand,2024-08-23,21:23,40.9,moto,818.0,Medium,Stormy,989.78
+b1d0eb3d-6b09-4e1e-a2b7-7d76d41462a7,"Gota, Ahmedabad","Varachha, Surat",2024-12-13,04:51,33.0,auto,495.0,Medium,Stormy,598.95
+d9d99120-4f9c-462d-b783-dfbacca5a56c,Ahmedabad Railway Station,"Adajan, Surat",2024-03-20,04:33,25.3,moto,506.0,Medium,Clear,556.6
+51867d55-e249-420d-802c-956ad553b471,Surat Airport,Ahmedabad Railway Station,2024-04-08,20:52,12.6,bike,126.0,Medium,Clear,138.6
+9de3bdbd-2b55-4f8e-b780-aebfda610943,"Varachha, Surat","Adajan, Surat",2024-02-04,04:57,18.5,auto,277.5,Low,Rainy,291.38
+4dce444e-db51-4ac6-93da-c5e3c79f72bd,Jamnagar Railway Station,Ahmedabad Railway Station,2024-06-30,19:52,4.1,bike,41.0,Medium,Stormy,49.61
+a51a097a-4af4-4774-ad6f-c97b935a964a,"CG Road, Ahmedabad",Nadiad Junction,2024-09-29,22:16,35.8,moto,716.0,Low,Stormy,787.6
+d3bc16bb-3711-4742-94a9-e28d5ce48c3c,"Gota, Ahmedabad","Adajan, Surat",2024-02-12,19:10,1.4,bike,14.0,High,Clear,16.8
+a82d97de-0040-4b5b-bb2b-627c638ed7ae,"Adajan, Surat","Varachha, Surat",2024-10-15,03:00,1.6,bike,16.0,Low,Clear,16.0
+ba8eb9ac-1769-419f-a7b2-7f48347f9f60,"Gota, Ahmedabad","Adajan, Surat",2024-01-19,07:58,12.7,bike,127.0,High,Clear,152.4
+9cf325ab-c8da-4fa5-996a-827e4c65dfa4,"Khambhaliya, Jamnagar",Jamnagar Railway Station,2024-06-26,16:26,19.3,auto,289.5,Low,Rainy,303.98
+98e812a4-c019-439e-8e3f-56f270cf689f,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-01-28,07:24,22.2,auto,333.0,Low,Rainy,349.65
+f3bf5a88-ed0b-4eb5-9f87-a1649c90c2a4,Jamnagar Railway Station,"Gota, Ahmedabad",2024-08-06,21:20,44.5,moto,890.0,High,Stormy,1174.8
+d9e393a5-cc60-4192-9d72-5d0f12fd81ef,"Varachha, Surat","Khambhaliya, Jamnagar",2024-04-23,23:22,12.7,bike,127.0,High,Rainy,160.02
+f52c04a0-8464-4b22-8d7d-a85052153002,"Varachha, Surat",Nadiad Junction,2024-07-08,21:02,25.5,moto,510.0,High,Rainy,642.6
+313677ec-0d37-488f-b35f-d1697b36ec21,Surat Airport,Ahmedabad Railway Station,2024-10-10,07:37,46.1,moto,922.0,Low,Stormy,1014.2
+0282496c-2a0b-4416-9e78-c7b8980191e1,Ahmedabad Railway Station,"Varachha, Surat",2024-07-18,15:11,34.2,moto,684.0,High,Rainy,861.84
+2c87fe04-41a3-4b26-98c6-2ece18aa996e,"Adajan, Surat","Varachha, Surat",2024-05-03,06:51,5.6,bike,56.0,Low,Rainy,58.8
+8456347e-b879-407a-9de9-a4548062fc55,Nadiad Bus Stand,Jamnagar Railway Station,2024-05-22,22:37,39.4,moto,788.0,High,Clear,945.6
+f0340360-d127-488e-b73a-bc6613b2fa34,Nadiad Junction,Jamnagar Railway Station,2024-07-24,09:52,14.6,auto,219.0,High,Stormy,289.08
+4cfe9b02-34e5-46a6-baac-2a838c0f44c1,Nadiad Bus Stand,Jamnagar Railway Station,2024-03-10,12:50,22.6,moto,452.0,High,Clear,542.4
+01d7040f-469c-45b6-bf26-acdca7730d4c,Surat Airport,Jamnagar Railway Station,2024-10-15,13:39,2.9,auto,43.5,High,Stormy,57.42
+81ed50ad-ebe2-4d45-b368-29cbdbb6e457,"Varachha, Surat","CG Road, Ahmedabad",2024-10-29,18:34,49.0,moto,980.0,Medium,Stormy,1185.8
+2251e411-a7b8-4a5a-bf5d-d74ffc2f7d51,"Varachha, Surat","Khambhaliya, Jamnagar",2024-08-21,07:24,9.7,bike,97.0,Medium,Clear,106.7
+49638adc-234e-4da5-845d-73c661cf99de,"Khambhaliya, Jamnagar",Nadiad Junction,2024-02-17,23:46,6.7,auto,100.5,Medium,Clear,110.55
+3548a019-203c-4ae3-8e77-4b8e7c5c1370,Nadiad Bus Stand,Nadiad Junction,2024-01-04,08:08,37.8,auto,567.0,High,Rainy,714.42
+caae675c-1bc0-49a6-9727-48cc64ff67e0,Jamnagar Railway Station,"Adajan, Surat",2024-06-19,16:48,47.1,moto,942.0,Low,Stormy,1036.2
+2f789848-e1aa-49a8-b906-d5bd50682b57,Nadiad Bus Stand,Jamnagar Railway Station,2024-05-28,00:53,8.0,bike,80.0,Medium,Rainy,92.4
+0753115e-94cd-4593-8a56-d06149bdd32e,Surat Airport,Nadiad Junction,2024-12-24,18:45,17.7,bike,177.0,High,Clear,212.4
+02795939-4d5a-4746-a4ff-6de0ba3c3681,Surat Airport,"CG Road, Ahmedabad",2024-12-20,05:58,33.9,moto,678.0,High,Stormy,894.96
+08b594de-bd03-4c8a-bb26-24aa82827158,"Adajan, Surat","Gota, Ahmedabad",2024-06-21,16:35,19.3,auto,289.5,Low,Stormy,318.45
+36dfd2e5-bd7e-43a0-9127-d157a9bae3a5,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-07-25,04:54,21.3,moto,426.0,Low,Clear,426.0
+469f99e4-1261-4cf5-b9e5-47018a4c54df,Surat Airport,Ahmedabad Railway Station,2024-06-16,12:18,27.9,moto,558.0,Low,Rainy,585.9
+585b99d3-6a3d-4d1c-a145-14566a3c6569,Jamnagar Railway Station,Ahmedabad Railway Station,2024-05-31,22:50,10.6,bike,106.0,Medium,Stormy,128.26
+478b2bcf-7a21-4951-b1df-7fc54f48f62f,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-05-17,17:18,17.3,bike,173.0,Low,Rainy,181.65
+44585f9a-e143-4d6e-9464-49a3a8e2b584,"Gota, Ahmedabad",Jamnagar Railway Station,2024-08-09,22:48,34.2,auto,513.0,High,Stormy,677.16
+822a446a-d93c-48a9-b068-c6afadda826b,"CG Road, Ahmedabad","Adajan, Surat",2024-10-19,14:25,21.6,moto,432.0,Low,Stormy,475.2
+d6541a67-bd39-4efe-982c-b81d21f5bf7f,"CG Road, Ahmedabad",Surat Airport,2024-03-15,12:47,33.1,auto,496.5,Medium,Clear,546.15
+42c45dcf-c997-4e66-b05b-f0e1987b3d0e,Jamnagar Railway Station,Nadiad Junction,2024-09-08,09:04,17.4,auto,261.0,Medium,Clear,287.1
+586fd98b-8513-4b36-9c0f-25f7f3454475,"Khambhaliya, Jamnagar",Nadiad Bus Stand,2024-09-15,11:26,45.1,moto,902.0,Low,Clear,902.0
+12f4995b-3646-4662-bc12-5e0cc27590a5,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-02-24,00:00,10.6,auto,159.0,Low,Rainy,166.95
+5db3f817-10f8-4331-94fb-75c1b2960e7e,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-04-13,04:33,19.2,bike,192.0,High,Rainy,241.92
+6dd70767-83c1-46d7-a30e-1326e5ab7aa0,Nadiad Bus Stand,Nadiad Junction,2024-03-01,11:26,45.9,moto,918.0,Low,Stormy,1009.8
+05b795aa-72c1-4042-8e7e-da1fdee05435,"Khambhaliya, Jamnagar","Gota, Ahmedabad",2024-09-25,16:37,18.2,bike,182.0,Low,Clear,182.0
+356dd12a-2930-4cc8-961e-369c1d1c800b,"Gota, Ahmedabad",Nadiad Junction,2024-03-20,21:41,12.1,auto,181.5,High,Rainy,228.69
+2e6dabaf-71c9-48f1-9a18-5da382516a77,Jamnagar Railway Station,"Khambhaliya, Jamnagar",2024-12-05,09:42,7.2,bike,72.0,High,Stormy,95.04
+1de69c68-947d-497f-b0ef-0104eb2de1ed,Jamnagar Railway Station,Nadiad Bus Stand,2024-06-23,04:51,33.3,auto,499.5,High,Clear,599.4
+dd851071-a61c-404e-afa8-5f8817980071,Nadiad Bus Stand,"Varachha, Surat",2024-08-28,01:01,25.8,moto,516.0,Medium,Stormy,624.36
+e67bc960-399c-4186-b816-cfac24dd2cc9,"Adajan, Surat","Khambhaliya, Jamnagar",2024-01-03,17:56,24.6,moto,492.0,Medium,Clear,541.2
+6321f828-66c3-4cbf-940f-391b1c214787,Nadiad Junction,"Adajan, Surat",2024-09-20,16:51,39.9,auto,598.5,Low,Rainy,628.43
+6e50964a-ffa5-4400-aa95-264ad30fa7dc,"Adajan, Surat",Surat Airport,2024-10-15,05:46,14.9,bike,149.0,High,Rainy,187.74
+d7897cb3-b966-46ce-bb32-701c058f6dee,Nadiad Bus Stand,Nadiad Junction,2024-07-23,14:13,7.1,bike,71.0,Medium,Stormy,85.91
+2e965858-0e1c-4877-ba56-dd3833070acf,Jamnagar Railway Station,"CG Road, Ahmedabad",2024-01-09,01:17,33.2,moto,664.0,Low,Stormy,730.4
+a7c38836-2b93-4754-aae0-07ef90cc9e17,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-08-17,11:56,6.0,bike,60.0,High,Clear,72.0
+dd64c5d2-83b6-43fb-b3ea-90425ebb2147,"Khambhaliya, Jamnagar","Adajan, Surat",2024-06-02,12:10,41.0,moto,820.0,Medium,Rainy,947.1
+9203bb84-5389-44ea-aea0-e3ce77f8f865,Nadiad Junction,"CG Road, Ahmedabad",2024-12-06,16:52,5.8,bike,58.0,High,Clear,69.6
+cb576e9a-c610-4ed4-a989-c345679d23ec,Ahmedabad Railway Station,"Varachha, Surat",2024-11-29,13:24,14.9,bike,149.0,Medium,Stormy,180.29
+229a05b0-9ff0-44e0-b274-3a1fed93d587,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-10-10,17:57,23.5,moto,470.0,Low,Rainy,493.5
+6a0064ab-8e46-44ed-8056-de582fc32af5,Jamnagar Railway Station,"Adajan, Surat",2024-12-11,20:36,39.7,auto,595.5,Medium,Clear,655.05
+4270468a-c655-4292-9fb7-dd9e0dfcec30,Surat Airport,Ahmedabad Railway Station,2024-06-06,06:23,38.8,moto,776.0,Low,Clear,776.0
+f3c9a09a-eb86-4fad-bbea-453933fb91b0,"Khambhaliya, Jamnagar",Ahmedabad Railway Station,2024-12-01,22:26,39.2,auto,588.0,Low,Clear,588.0
+23b0016d-db47-4646-bb2a-dd9f758989d8,"Varachha, Surat",Ahmedabad Railway Station,2024-04-21,23:49,42.6,moto,852.0,Medium,Rainy,984.06
+f582b679-30d1-4d05-80dc-fba4b2bab088,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-07-21,13:21,29.3,moto,586.0,Medium,Rainy,676.83
+928e6f29-9b28-4320-af80-e1b702ed2201,Nadiad Junction,"Adajan, Surat",2024-05-20,18:59,46.0,moto,920.0,High,Rainy,1159.2
+46503a9b-f196-4e1e-b3a6-9b3bc88b9906,"Gota, Ahmedabad",Nadiad Bus Stand,2024-03-19,00:25,27.8,auto,417.0,High,Rainy,525.42
+af81d970-9479-4bc1-9d4e-1d7b998fd99d,"Khambhaliya, Jamnagar",Nadiad Junction,2024-07-19,14:12,44.0,moto,880.0,Low,Rainy,924.0
+f0c82ade-7ebd-4853-b992-7428fcab2e61,Nadiad Bus Stand,"Varachha, Surat",2024-06-21,01:11,29.5,moto,590.0,Low,Stormy,649.0
+21bce07b-d505-4071-ac64-fd97873d9245,Surat Airport,Jamnagar Railway Station,2024-11-25,07:13,15.8,auto,237.0,Medium,Clear,260.7
+97566a6b-b3ba-405b-9238-b0a5f06ca7cc,"Gota, Ahmedabad",Nadiad Bus Stand,2024-08-25,10:37,10.5,bike,105.0,High,Rainy,132.3
+a312ab2a-ce5a-4dcc-ba09-becb90083f27,"Adajan, Surat",Ahmedabad Railway Station,2024-04-17,02:38,18.6,bike,186.0,Low,Clear,186.0
+2c414b8c-86cf-4142-997f-b7af7b923a72,Surat Airport,"Khambhaliya, Jamnagar",2024-05-26,17:16,15.3,bike,153.0,High,Clear,183.6
+0e7c68eb-4216-4bca-8e44-984e8ca25d98,"Varachha, Surat",Surat Airport,2024-01-06,04:31,25.9,auto,388.5,Low,Clear,388.5
+b13d004c-c0f8-4ddf-af32-edbc506b27d0,Jamnagar Railway Station,Ahmedabad Railway Station,2024-12-11,19:22,5.0,bike,50.0,Medium,Clear,55.0
+67dbc174-5fed-49e9-bd3c-1b758969eaa9,"CG Road, Ahmedabad","Khambhaliya, Jamnagar",2024-01-17,18:58,3.5,bike,35.0,Low,Rainy,36.75
+c93fb339-2ff3-4c43-8618-66ffd36db45e,Jamnagar Railway Station,Nadiad Junction,2024-12-18,00:53,2.1,bike,21.0,Medium,Rainy,24.26
+d4fb9060-3d31-454b-9418-e93de92f6f60,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-04-07,12:20,5.6,bike,56.0,Low,Stormy,61.6
+9d2853e3-2417-496a-9f46-9989cf036f56,"CG Road, Ahmedabad","Gota, Ahmedabad",2024-03-10,09:06,21.0,auto,315.0,Low,Rainy,330.75
+9519207c-5f77-458a-8e19-07f1eb3bfbe2,"Adajan, Surat",Ahmedabad Railway Station,2024-12-06,20:31,37.0,moto,740.0,Medium,Rainy,854.7
+0a8e1a1d-2dc4-451b-87b4-6c251b9306a7,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-03-29,01:39,6.6,bike,66.0,High,Clear,79.2
+e99eefe8-cbb6-473d-8bb9-9f0e964a88a7,"Adajan, Surat",Jamnagar Railway Station,2024-07-15,05:20,22.1,auto,331.5,Low,Rainy,348.07
+0b118732-312d-4c78-b660-5cfdce6cc46f,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-02-14,05:41,17.5,auto,262.5,Low,Stormy,288.75
+f5b69cba-55d3-4f78-bd60-de6433c8394c,Jamnagar Railway Station,"Varachha, Surat",2024-03-29,22:07,20.5,auto,307.5,High,Clear,369.0
+a67de061-4048-4ce5-93a3-eaebea3e8c87,"Gota, Ahmedabad",Nadiad Bus Stand,2024-08-04,05:47,6.2,auto,93.0,Low,Stormy,102.3
+087ecd18-65d4-403e-ba47-9b7378441183,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-09-09,11:32,13.1,auto,196.5,High,Clear,235.8
+0dcea35e-6f88-45d2-bf60-3e73a100a07e,Nadiad Bus Stand,Jamnagar Railway Station,2024-02-16,12:41,11.4,auto,171.0,Low,Stormy,188.1
+69090963-cda9-4745-a74e-cd60bc6ea9f5,Ahmedabad Railway Station,"Khambhaliya, Jamnagar",2024-01-17,01:46,32.5,auto,487.5,High,Rainy,614.25
+1f0bcb88-2d3a-4554-9475-0d4d416f1289,Jamnagar Railway Station,"Adajan, Surat",2024-06-21,02:45,23.4,auto,351.0,High,Rainy,442.26
+3fc87a4b-07e6-4196-a99e-abbdca4ba944,"Khambhaliya, Jamnagar",Nadiad Junction,2024-03-08,17:21,26.6,auto,399.0,Low,Stormy,438.9
+3ac2e1d2-958e-4c2c-8e17-47da7c2cfd4d,"Varachha, Surat",Ahmedabad Railway Station,2024-01-17,20:36,47.5,moto,950.0,Low,Rainy,997.5
+111ead5f-011a-474c-9555-297cc31c7615,Nadiad Bus Stand,Ahmedabad Railway Station,2024-05-01,15:17,5.5,auto,82.5,Medium,Rainy,95.29
+a59ea38d-367e-4dbc-b933-25d4e0cb6432,"Adajan, Surat",Ahmedabad Railway Station,2024-10-12,00:06,17.9,bike,179.0,High,Rainy,225.54
+e0e1b5f4-372c-4899-9aeb-459899079c15,Ahmedabad Railway Station,"Adajan, Surat",2024-05-23,18:59,11.7,bike,117.0,High,Rainy,147.42
+02a3604a-694e-4461-a6d5-09aff2ea8403,"Gota, Ahmedabad","CG Road, Ahmedabad",2024-04-29,09:16,16.7,bike,167.0,Low,Rainy,175.35
+76a7ef18-6ceb-4173-adc7-449b72bb4639,"Khambhaliya, Jamnagar",Surat Airport,2024-03-14,17:37,27.6,auto,414.0,High,Rainy,521.64
+4bf915a8-fb82-4534-9e7b-2b9788d003eb,"Gota, Ahmedabad",Nadiad Bus Stand,2024-01-27,03:24,8.4,bike,84.0,Medium,Rainy,97.02
+3899ecb1-1fa6-4d07-a9f1-dc1d8fc5b416,Jamnagar Railway Station,Surat Airport,2024-06-09,09:27,39.2,moto,784.0,Medium,Stormy,948.64
+a21e5749-3ec2-4072-ba9d-3db5d325f043,"Varachha, Surat","Khambhaliya, Jamnagar",2024-04-26,21:09,33.4,moto,668.0,Low,Clear,668.0
+51299319-1abd-47dc-bc3a-21ab6a64b706,Jamnagar Railway Station,Surat Airport,2024-10-05,03:15,38.6,moto,772.0,High,Stormy,1019.04
+1170d6a4-01bc-43b7-81e5-c6aefb29da6e,Ahmedabad Railway Station,Nadiad Bus Stand,2024-02-08,19:53,29.6,auto,444.0,Medium,Rainy,512.82
+ca40166f-4bd9-49c2-ac32-1d2d7a107a18,"Gota, Ahmedabad",Jamnagar Railway Station,2024-02-22,06:21,23.4,moto,468.0,High,Clear,561.6
+c6a0d555-8cfb-4b0c-93dc-787b8777058d,"CG Road, Ahmedabad","Adajan, Surat",2024-07-27,20:45,12.5,bike,125.0,Medium,Stormy,151.25
+6c5fedc0-03cd-42e2-93a7-e1a67ee47b30,Nadiad Bus Stand,"Adajan, Surat",2024-02-21,12:34,16.5,bike,165.0,Medium,Stormy,199.65
+1c9662dd-f1e1-4fb7-9004-b81e712d0fe7,"Adajan, Surat",Nadiad Bus Stand,2024-05-29,06:26,7.6,auto,114.0,Medium,Clear,125.4
+47c9183b-2283-4ea9-92ab-ae5c4eee9f29,Nadiad Bus Stand,"CG Road, Ahmedabad",2024-05-17,06:52,22.0,moto,440.0,Low,Stormy,484.0
+10ec77ab-3b62-4488-87e1-54f5dc7df274,Jamnagar Railway Station,"Gota, Ahmedabad",2024-11-07,11:11,17.9,bike,179.0,High,Rainy,225.54
+376d2efb-851d-4775-b318-c3dce3ff3c77,"Gota, Ahmedabad",Nadiad Bus Stand,2024-07-30,07:37,3.7,bike,37.0,Low,Stormy,40.7
+14de5c0f-a9ea-42d7-87f1-e2605aa6895d,Ahmedabad Railway Station,"Gota, Ahmedabad",2024-12-14,09:03,16.1,bike,161.0,High,Stormy,212.52
+8f98943a-9478-49bc-bdef-b1f8e8538e54,Ahmedabad Railway Station,"Adajan, Surat",2024-01-15,08:56,30.6,auto,459.0,Low,Clear,459.0
+9dba24e8-d949-452c-acbf-36f553486893,"Adajan, Surat","Khambhaliya, Jamnagar",2024-10-29,17:45,12.3,bike,123.0,Low,Clear,123.0
+1b86257e-973b-4fbb-8935-f7191a94b62a,Nadiad Junction,"Gota, Ahmedabad",2024-05-21,13:31,29.2,moto,584.0,High,Clear,700.8
+5fe4f50a-1c8c-4b54-9530-846e69c5d9f8,Nadiad Bus Stand,"Khambhaliya, Jamnagar",2024-10-24,22:19,28.1,auto,421.5,Low,Clear,421.5
+8068628d-0796-4edb-ac76-929ebd430efd,"Khambhaliya, Jamnagar","CG Road, Ahmedabad",2024-12-26,20:18,1.2,auto,18.0,Medium,Clear,19.8
+806811fb-f414-471c-aa69-644d1931723e,Nadiad Junction,Ahmedabad Railway Station,2024-04-03,19:34,5.9,bike,59.0,Low,Stormy,64.9
+9974e333-4342-486a-8635-f82d1d12310a,"Gota, Ahmedabad",Nadiad Bus Stand,2024-09-29,11:42,48.1,moto,962.0,Medium,Clear,1058.2
+b4cd4cc5-b8ed-484f-b090-28ef39cc085b,"CG Road, Ahmedabad",Surat Airport,2024-01-24,04:40,6.3,bike,63.0,Medium,Clear,69.3
+dc4d5311-89b5-4c21-a61c-35406aff056d,"Varachha, Surat",Nadiad Bus Stand,2024-08-17,14:13,15.7,bike,157.0,High,Rainy,197.82
+28934356-b2f0-42cd-b511-10374e9c0f1e,Ahmedabad Railway Station,Nadiad Bus Stand,2024-06-08,00:32,23.7,moto,474.0,Low,Stormy,521.4
+7c6b892f-3520-4a8f-8fe8-6068f82540e8,"Varachha, Surat",Nadiad Bus Stand,2024-05-04,14:15,14.6,auto,219.0,Low,Rainy,229.95
+04387823-155d-47b9-90ab-efb37f1457ce,Ahmedabad Railway Station,Surat Airport,2024-01-23,17:33,34.9,moto,698.0,Low,Rainy,732.9
+562fa86f-87ba-4ec7-abc8-16a977b645ec,Surat Airport,"Khambhaliya, Jamnagar",2024-04-02,14:40,33.4,auto,501.0,High,Clear,601.2
+ee5e9e6d-78c0-4e82-9b03-5722faf71ef5,"CG Road, Ahmedabad",Ahmedabad Railway Station,2024-11-09,15:47,26.2,auto,393.0,Low,Clear,393.0
+612188bf-28c1-4cb2-9e97-ffdce7c4ad5a,Nadiad Junction,"Adajan, Surat",2024-08-21,00:18,34.7,moto,694.0,Low,Rainy,728.7
+f35cc3ca-1f33-44da-9f5e-d8ef859cda50,Surat Airport,Ahmedabad Railway Station,2024-08-01,02:56,10.5,bike,105.0,Low,Stormy,115.5
+437c97d4-d8b4-4b73-9a67-e0b0f7d014b5,Nadiad Junction,Nadiad Bus Stand,2024-09-05,02:23,11.0,bike,110.0,Low,Stormy,121.0
+245fc25e-b072-449e-b926-25087e152089,Surat Airport,Ahmedabad Railway Station,2024-01-19,06:43,35.4,moto,708.0,Low,Stormy,778.8
+5f06c79b-cb00-480d-b504-83d08211a182,"Adajan, Surat",Jamnagar Railway Station,2024-09-24,16:31,24.2,moto,484.0,High,Clear,580.8
+0eec5be3-f2a8-4d20-a798-1ed327304427,Nadiad Junction,"Gota, Ahmedabad",2024-06-10,14:24,22.1,moto,442.0,Low,Stormy,486.2
+62e843df-844e-43ef-929f-2f7e596fc739,"Adajan, Surat","Khambhaliya, Jamnagar",2024-11-28,20:04,5.0,bike,50.0,Low,Clear,50.0
