@@ -261,7 +261,7 @@ const Home = () => {
             }
 
             <div className='h-[72%] w-screen'>
-                {/* <LiveTracking /> */}
+                <LiveTracking />
             </div>
             <div className='flex flex-col justify-end h-screen absolute top-0 w-full'>
                 <div ref={suggestionsRef} className='h-[28%] p-6 bg-white relative rounded-t-3xl'>

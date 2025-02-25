@@ -33,14 +33,8 @@ const UserLogin = () => {
         navigate("/home");
       }
     } catch (error) {
-      if (error.response.status === 401) {
         const message = error.response.data.message;
         toast.error(message);
-      } else if (error.response.status === 400) {
-        toast.error(error.response.data.errors[0].msg);
-      } else {
-        toast.error('Internal server error');
-      }
     } finally {
       setLoading(false);
     }

@@ -1,20 +1,80 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { useContext } from 'react'
-import { SocketContext } from '../context/SocketContext'
-import { useNavigate } from 'react-router-dom'
-import LiveRouteTracking from '../components/LiveRouteTracking'
-import LiveDistanceTime from '../components/LiveDistanceTime'
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { SocketContext } from '../context/SocketContext';
+import LiveRouteTracking from '../components/LiveRouteTracking';
+import LiveDistanceTime from '../components/LiveDistanceTime';
+import axios from 'axios';
 
 const Riding = () => {
-    const location = useLocation()
-    const { ride } = location.state || {}
-    const { socket } = useContext(SocketContext)
-    const navigate = useNavigate()
+    const location = useLocation();
+    const { ride } = location.state || {};
+    const { socket } = useContext(SocketContext);
+    const navigate = useNavigate();
+    const [payment, setPayment] = useState(false);
 
     socket.on("ride-ended", () => {
-        navigate('/home')
-    })
+        navigate('/home');
+    });
+
+    const handlePayment = async () => {
+        try {
+            // Step 1: Request an order from backend
+            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/payment/create-order`, {
+                amount: ride?.fare,
+                currency: "INR"
+            });
+           
+            const data = response.data;
+            if (!data.orderId) throw new Error("Order creation failed");
+
+            console.log(data.orderId);
+            // Step 2: Open Razorpay Checkout
+            const options = {
+                key: import.meta.env.RAZORPAY_KEY_ID,
+                amount: ride?.fare * 100, 
+                currency: "INR",
+                name: "GoCab",
+                description: "Ride Payment",
+                order_id: data.orderId,
+                handler: async function (response) {
+                    // Step 3: Verify payment
+                    const verifyRes = await fetch("http://localhost:5000/verify-payment", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_signature: response.razorpay_signature,
+                            amount: ride?.fare,
+                            driverId: "acc_PzVOH41SwZJaw6"
+                        })
+                    });
+
+                    const verifyData = await verifyRes.json();
+                    if (verifyData.success) {
+                        alert("Payment Successful!");
+                        // navigate("/home");
+                    } else {
+                        alert("Payment verification failed");
+                    }
+                },
+                prefill: {
+                    name: ride?.driver?.name || "Driver",
+                    email: "user@example.com",
+                    contact: "9999999999",
+                },
+                theme: { color: "#3399cc" }
+            };
+
+            const razorpay = new window.Razorpay(options);
+            razorpay.open();
+            setPayment(true);
+
+        } catch (error) {
+            console.error("Payment Error:", error);
+            alert("Payment failed. Try again.");
+        }
+    };
 
     return (
         <div className='h-screen'>
@@ -22,14 +82,11 @@ const Riding = () => {
                 <i className="text-lg font-medium ri-home-5-line"></i>
             </Link>
             <div className='h-1/2'>
-                <LiveRouteTracking
-                    ride={ride}
-                />
+                <LiveRouteTracking ride={ride} />
             </div>
             <div className='h-1/2 p-4'>
                 <div className='flex flex-col items-center gap-4'>
                     <div className='w-full'>
-                        
                         <div className='flex items-center gap-5 p-4 border-b-2'>
                             <i className="ri-map-pin-user-fill text-2xl"></i>
                             <div>
@@ -37,7 +94,7 @@ const Riding = () => {
                                 <p className='text-sm -mt-1 text-gray-600'>{ride?.pickup?.split(' ').slice(1).join(' ')}</p>
                             </div>
                         </div>
-                        
+
                         <div className='flex items-center gap-5 p-4 border-b-2 mb-8'>
                             <i className="ri-map-pin-2-fill text-2xl"></i>
                             <div>
@@ -50,16 +107,16 @@ const Riding = () => {
                     </div>
                 </div>
 
-                <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
-                    onClick={() => {
-                        navigate('/home')
-                    }}>
+                
+                {payment ? <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
+                    onClick={handlePayment}>
                     Pay ₹ {ride?.fare || "N/A"}
-                </button>
+                </button> : <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
+                    >Payment Successful!
+                </button> }
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Riding
+export default Riding;

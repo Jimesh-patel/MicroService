@@ -20,7 +20,8 @@ app.use('/users', expressProxy('http://localhost:3001'));
 app.use('/captains', expressProxy('http://localhost:3002'));
 app.use('/rides', expressProxy('http://localhost:3003'));
 app.use('/maps', expressProxy('http://localhost:3004'));
-app.use('/price', expressProxy('http://localhost:3005'))
+app.use('/price', expressProxy('http://localhost:3005'));
+app.use('/payment', expressProxy('http://localhost:3006'));
 
 // Connect to the Captain Server
 const captainSocket = Client('http://localhost:3002');
@@ -63,6 +64,10 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${socket.id}`);
     });
+});
+
+app.get('/', (req, res) => {
+    res.send('Welcome to GoCab Gateway Service');
 });
 
 server.listen(3000, () => {

@@ -17,14 +17,14 @@ df['hour_of_day'] = pd.to_datetime(df['time'], format='%H:%M').dt.hour
 
 # Encode categorical variables
 label_encoders = {}
-categorical_cols = ["vehicleType", "traffic", "weather"]
+categorical_cols = ["traffic", "weather"]
 for col in categorical_cols:
     le = LabelEncoder()
     df[col] = le.fit_transform(df[col])
     label_encoders[col] = le  # Save encoders
 
 # Select features for training
-X = df[["day_of_week", "hour_of_day", "distance", "vehicleType", "traffic", "weather", "base_fare"]]
+X = df[["day_of_week", "hour_of_day", "distance", "traffic", "weather", "base_fare"]]
 y = df["final_fare"]
 
 # Split data into train & test sets

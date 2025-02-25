@@ -9,8 +9,8 @@ module.exports.getFare = async (req, res, next) => {
         const info = infoResponse.data;
 
         const baseFare = {
-            auto: 3,
-            moto: 5,
+            auto: 2,
+            moto: 4,
             bike: 1
         };
 

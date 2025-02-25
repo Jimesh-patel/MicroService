@@ -11,5 +11,13 @@ npm i express-http-proxy
 npm i axios 
 
 
+frontend : npm run dev
+backendd : npx nodemon
 
-npx nodemon
+for Ml Model : pip i xgboost sklearn
+
+
+for payment : 
+
+npm init -y
+npm install express cors dotenv mongoose razorpay body-parser crypto axios
