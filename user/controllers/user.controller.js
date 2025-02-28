@@ -5,66 +5,69 @@ const blackListTokenModel = require('../models/blackListToken.model');
 
 module.exports.registerUser = async (req, res, next) => {
 
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ message: errors[0] });
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ message: errors.array()[0].msg });
+        }
+
+        const { fullname, email, password } = req.body;
+
+        const isUserAlready = await userModel.findOne({ email });
+
+        if (isUserAlready) {
+            return res.status(401).json({ message: 'User already exist, Please Login !' });
+        }
+
+        const hashedPassword = await userModel.hashPassword(password);
+
+        const user = await userService.createUser({
+            firstname: fullname.firstname,
+            lastname: fullname.lastname,
+            email,
+            password: hashedPassword
+        });
+
+        const token = user.generateAuthToken();
+
+        res.status(200).json({ token, user });
+    } catch (error) {
+        res.status(400).json({ message: "Registration Failed !" });
     }
-
-    const { fullname, email, password } = req.body;
-
-    const isUserAlready = await userModel.findOne({ email });
-
-    if (isUserAlready) {
-        return res.status(401).json({ message: 'User already exist, Please Login !' });
-    }
-
-    const hashedPassword = await userModel.hashPassword(password);
-
-    const user = await userService.createUser({
-        firstname: fullname.firstname,
-        lastname: fullname.lastname,
-        email,
-        password: hashedPassword
-    });
-
-    const token = user.generateAuthToken();
-
-    res.status(200).json({ token, user });
 
 }
 
 module.exports.loginUser = async (req, res, next) => {
 
-    try{
+    try {
 
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        console.log(errors)
-        return res.status(400).json({ message: errors.array() });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ message: errors.array()[0].msg });
+        }
+
+        const { email, password } = req.body;
+
+        const user = await userModel.findOne({ email }).select('+password');
+
+        if (!user) {
+            return res.status(401).json({ message: 'User not exist !!!' });
+        }
+
+        const isMatch = await user.comparePassword(password);
+
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid password' });
+        }
+
+        const token = user.generateAuthToken();
+
+        res.cookie('token', token);
+
+        res.status(200).json({ token, user });
+    } catch (error) {
+        res.status(400).json({ message: "Authentication error !" });
     }
-
-    const { email, password } = req.body;
-
-    const user = await userModel.findOne({ email }).select('+password');
-
-    if (!user) {
-        return res.status(401).json({ message: 'User not exist !!!' });
-    }
-
-    const isMatch = await user.comparePassword(password);
-
-    if (!isMatch) {
-        return res.status(401).json({ message: 'Invalid password' });
-    }
-
-    const token = user.generateAuthToken();
-
-    res.cookie('token', token);
-
-    res.status(200).json({ token, user });
-} catch(error){
-    res.status(400).json({ message: "Internal server error" });
-}
 }
 
 module.exports.getUserProfile = async (req, res, next) => {
@@ -73,7 +76,7 @@ module.exports.getUserProfile = async (req, res, next) => {
 
 module.exports.logoutUser = async (req, res, next) => {
     res.clearCookie('token');
-    const token = req.cookies.token || req.headers.authorization.split(' ')[ 1 ];
+    const token = req.cookies.token || req.headers.authorization.split(' ')[1];
 
     await blackListTokenModel.create({ token });
 
@@ -83,7 +86,7 @@ module.exports.logoutUser = async (req, res, next) => {
 
 module.exports.getUserById = async (req, res, next) => {
     try {
-        const userId = req.query.userId; // Change from req.params to req.query
+        const userId = req.query.userId; 
         const user = await userModel.findById(userId);
 
         if (!user) {

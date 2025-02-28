@@ -10,14 +10,14 @@ module.exports.getFare = async (req, res, next) => {
 
         const baseFare = {
             auto: 2,
-            moto: 4,
-            bike: 1
+            car: 4,
+            moto: 1
         };
 
         const RideData = {
             pickup,
             destination,
-            date: new Date().toISOString().split("T")[0], // YYYY-MM-DD
+            date: new Date().toISOString().split("T")[0],
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }),
             distance: parseInt(info.distance),
             traffic: info.traffic_level,
@@ -53,12 +53,12 @@ module.exports.getFare = async (req, res, next) => {
                 });
 
                 python.on("close", (code) => {
-                    resolve({ vehicleType, fare: parseFloat(result) });
+                    resolve({ vehicleType, fare: parseFloat(result).toFixed(2) });
                 });
             });
         };
 
-        const farePromises = ["bike", "auto", "moto"].map(calculateFare);
+        const farePromises = ["moto", "auto", "car"].map(calculateFare);
 
         Promise.all(farePromises)
             .then((results) => {

@@ -33,7 +33,7 @@ const CaptainRiding = () => {
             </div>
 
             <div className='flex-grow relative'>
-                <LiveRouteTracking ride={rideData} />
+                {/* <LiveRouteTracking ride={rideData} /> */}
             </div>
 
             <div className='h-[30%] items-center justify-between bg-yellow-400'

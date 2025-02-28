@@ -84,7 +84,7 @@ const Home = () => {
             })
             setPickupSuggestions(response.data)
         } catch {
-            // handle error
+            
         }
     }
 
@@ -184,28 +184,28 @@ const Home = () => {
 
 
     async function findTrip() {
-        
-        try {
-            setLoading(true);
-            if (!pickup || !destination) {
-                toast.error('Please enter both pickup and destination')
-                return
-            }
-            
 
+        setLoading(true);
+        if (!pickup || !destination) {
+            toast.error('Please enter both pickup and destination')
+            setLoading(false)
+            return
+        }
+
+        try {
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/price/fare`, {
                 pickup,
                 destination
             })
-
             setFare(response.data)
-            setVehiclePanel(true)
-            setPanelOpen(false)
+        } catch (error) {
             setLoading(false)
-        } catch(error){
-            toast.error(error)
+            toast.error("Invalid Addresses")
         }
-        
+        setVehiclePanel(true)
+        setPanelOpen(false)
+        setLoading(false)
+
     }
 
     async function createRide() {
@@ -261,7 +261,7 @@ const Home = () => {
             }
 
             <div className='h-[72%] w-screen'>
-                <LiveTracking />
+                {/* <LiveTracking /> */}
             </div>
             <div className='flex flex-col justify-end h-screen absolute top-0 w-full'>
                 <div ref={suggestionsRef} className='h-[28%] p-6 bg-white relative rounded-t-3xl'>

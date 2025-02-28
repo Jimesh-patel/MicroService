@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Start from './pages/Start'
 import UserLogin from './pages/UserLogin'
 import UserSignup from './pages/UserSignup'
@@ -18,6 +18,7 @@ import OnGoingRides from './pages/ongoingRides'
 import 'remixicon/fonts/remixicon.css'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 
 const App = () => {
 
@@ -58,6 +59,7 @@ const App = () => {
             <CaptainLogout />
           </CaptainProtectWrapper>
         } />
+         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
     </div>
   )

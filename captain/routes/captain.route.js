@@ -12,7 +12,8 @@ router.post('/register', [
     body('vehicle.color').isLength({ min: 3 }).withMessage('Color must be at least 3 characters long'),
     body('vehicle.plate').isLength({ min: 3 }).withMessage('Plate must be at least 3 characters long'),
     body('vehicle.capacity').isInt({ min: 1 }).withMessage('Capacity must be at least 1'),
-    body('vehicle.vehicleType').isIn([ 'car', 'motorcycle', 'auto' ]).withMessage('Invalid vehicle type')
+    body('vehicle.vehicleType').isIn([ 'car', 'moto', 'auto' ]).withMessage('Invalid vehicle type'),
+    body('paymentId').isString().withMessage('Invalid payment ID')
 ],
     captainController.registerCaptain
 )
@@ -37,7 +38,6 @@ router.patch('/status',
     captainController.changeCaptainStatus
 )
 
-
 router.get('/get-captains-in-radius',
     query('ltd').isNumeric(),
     query('lng').isNumeric(),
@@ -49,6 +49,11 @@ router.post('/confirm',
     authMiddleware.authCaptain,
     body('ride').isObject().withMessage('Invalid ride object'),
     captainController.confirmRide
+)
+
+router.get('/get-CaptainById', 
+    query('id').isString().withMessage('Invalid captain ID'),
+    captainController.getCaptainById
 )
 
 

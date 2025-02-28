@@ -24,6 +24,7 @@ router.put('/change-status',
     authMiddleware.authCaptain,
     body('rideId').isMongoId().withMessage('Invalid ride ID'),
     body('status').isString().isIn([ 'accepted', 'completed', 'cancelled' ]).withMessage('Invalid status'),
+    body('captainId').isMongoId().withMessage('Invalid captain ID'),
     rideController.changeRideStatus
 )
 
@@ -39,6 +40,12 @@ router.post('/end-ride',
     body('rideId').isMongoId().withMessage('Invalid ride id'),
     rideController.endRide
 )
+
+router.get('/get-user-rides',
+    authMiddleware.authUser,
+    rideController.getOngoingRidesForUser
+)
+
 
 
 module.exports = router;

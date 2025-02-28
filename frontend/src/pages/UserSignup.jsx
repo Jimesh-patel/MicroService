@@ -19,7 +19,7 @@ const UserSignup = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-  
+
     const newUser = {
       fullname: {
         firstname: firstName,
@@ -28,39 +28,30 @@ const UserSignup = () => {
       email,
       password,
     };
-  
+
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_BASE_URL}/users/register`,
         newUser
       );
-  
+      console.log(response)
+
       if (response.status === 200) {
         const data = response.data;
         setUser(data.user);
-        localStorage.setItem("token", data.token); 
+        localStorage.setItem("token", data.token);
         toast.success("Registration successful!");
         navigate("/home");
       }
     } catch (error) {
-      console.log(error)
-      if (error.response) {
-        if (error.response.status === 401) {
-          toast.error(error.response.data.message);
-        } else if (error.response.status === 400) {
-          toast.error(error.response.data.errors[0].msg);
-        } else {
-          toast.error("Internal server error");
-        }
-      } else {
-        toast.error("An unexpected error occurred. Please try again.");
-      }
+      const message = error.response.data.message;
+      toast.error(message);
     } finally {
       setLoading(false);
     }
   };
-  
-  
+
+
   return (
     <div>
       <div className='p-7 h-screen flex flex-col justify-between'>

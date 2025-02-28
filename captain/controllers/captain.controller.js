@@ -11,64 +11,72 @@ const { query } = require('express');
 
 
 module.exports.registerCaptain = async (req, res, next) => {
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array()[0].msg });
+        }
 
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        const { fullname, email, password, vehicle, paymentId } = req.body;
+
+        const isCaptainAlreadyExist = await captainModel.findOne({ email });
+
+        if (isCaptainAlreadyExist) {
+            return res.status(400).json({ message: 'Captain already exist, Please login...' });
+        }
+
+        const hashedPassword = await captainModel.hashPassword(password);
+
+        const captain = await captainService.createCaptain({
+            firstname: fullname.firstname,
+            lastname: fullname.lastname,
+            email,
+            password: hashedPassword,
+            color: vehicle.color,
+            plate: vehicle.plate,
+            capacity: vehicle.capacity,
+            vehicleType: vehicle.vehicleType,
+            paymentId
+        });
+
+        const token = captain.generateAuthToken();
+
+        res.status(201).json({ token, captain });
+    } catch (error) {
+        return res.status(401).json({ message: 'Registration Failed !' });
     }
-
-    const { fullname, email, password, vehicle } = req.body;
-
-    const isCaptainAlreadyExist = await captainModel.findOne({ email });
-
-    if (isCaptainAlreadyExist) {
-        return res.status(400).json({ message: 'Captain already exist' });
-    }
-
-    const hashedPassword = await captainModel.hashPassword(password);
-
-    const captain = await captainService.createCaptain({
-        firstname: fullname.firstname,
-        lastname: fullname.lastname,
-        email,
-        password: hashedPassword,
-        color: vehicle.color,
-        plate: vehicle.plate,
-        capacity: vehicle.capacity,
-        vehicleType: vehicle.vehicleType
-    });
-
-    const token = captain.generateAuthToken();
-
-    res.status(201).json({ token, captain });
-
 }
 
 module.exports.loginCaptain = async (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array()[0].msg });
+        }
+
+        const { email, password } = req.body;
+
+        const captain = await captainModel.findOne({ email }).select('+password');
+
+        if (!captain) {
+            return res.status(401).json({ message: 'User not exist, Please signup...' });
+        }
+
+        const isMatch = await captain.comparePassword(password);
+
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid password' });
+        }
+
+        const token = captain.generateAuthToken();
+
+        res.cookie('token', token);
+
+        res.status(200).json({ token, captain });
+
+    } catch (error) {
+        return res.status(400).json({ message: 'Login Failed !' });
     }
-
-    const { email, password } = req.body;
-
-    const captain = await captainModel.findOne({ email }).select('+password');
-
-    if (!captain) {
-        return res.status(401).json({ message: 'Invalid email or password' });
-    }
-
-    const isMatch = await captain.comparePassword(password);
-
-    if (!isMatch) {
-        return res.status(401).json({ message: 'Invalid email or password' });
-    }
-
-    const token = captain.generateAuthToken();
-
-    res.cookie('token', token);
-
-    res.status(200).json({ token, captain });
 }
 
 module.exports.getCaptainProfile = async (req, res, next) => {
@@ -122,6 +130,25 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
     }
 }
 
+module.exports.getCaptainById = async (req, res, next) => {
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { id } = req.query;
+
+        const captain = await captainService.getCaptainById(id);
+        if (!captain) {
+            return res.status(404).json({ message: 'Captain not found' });
+        }
+        res.status(200).json({ captain });
+    } catch (error) {
+        next(error);
+    }
+}
+
 
 subscribeToQueue("new-ride-available", async (data) => {
     const ride = JSON.parse(data);
@@ -132,7 +159,7 @@ subscribeToQueue("new-ride-available", async (data) => {
     });
     const pickupCoordinates = response.data;
     const captainsInRadius = await captainService.getCaptainsInTheRadius(pickupCoordinates.ltd, pickupCoordinates.lng, ride.vehicleType, 100);
-
+    
     if (captainsInRadius.length === 0) {
         console.log('No captains in radius');
         return;
@@ -155,10 +182,14 @@ module.exports.confirmRide = async (req, res, next) => {
         return res.status(400).json({ message: 'Ride is required' });
     }
 
+    if(ride.status !== 'pending') {
+        return res.status(400).json({ message: 'You are late, Ride is already accepted' });
+    }
+
     try {
         const response = await axios.put(
             `${process.env.BASE_URL}/rides/change-status`,
-            { rideId: ride._id, status: 'accepted' },
+            { rideId: ride._id, status: 'accepted', captainId: req.captain._id },
             {
                 headers: {
                     Authorization: `Bearer ${token}`

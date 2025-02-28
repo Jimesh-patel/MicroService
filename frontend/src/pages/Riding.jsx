@@ -17,40 +17,38 @@ const Riding = () => {
     });
 
     const handlePayment = async () => {
+        console.log("Ride:", ride); 
         try {
             // Step 1: Request an order from backend
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/payment/create-order`, {
                 amount: ride?.fare,
                 currency: "INR"
             });
-           
+
             const data = response.data;
             if (!data.orderId) throw new Error("Order creation failed");
 
             console.log(data.orderId);
+            console.log(ride?.captain.captain.paymentId);
             // Step 2: Open Razorpay Checkout
             const options = {
                 key: import.meta.env.RAZORPAY_KEY_ID,
-                amount: ride?.fare * 100, 
+                amount: ride?.fare * 100,
                 currency: "INR",
                 name: "GoCab",
                 description: "Ride Payment",
                 order_id: data.orderId,
                 handler: async function (response) {
                     // Step 3: Verify payment
-                    const verifyRes = await fetch("http://localhost:5000/verify-payment", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            razorpay_payment_id: response.razorpay_payment_id,
-                            razorpay_order_id: response.razorpay_order_id,
-                            razorpay_signature: response.razorpay_signature,
-                            amount: ride?.fare,
-                            driverId: "acc_PzVOH41SwZJaw6"
-                        })
+                    const verifyRes = await axios.post(`${import.meta.env.VITE_BASE_URL}/payment/verify-payment`, {
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_signature: response.razorpay_signature,
+                        amount: ride?.fare,
+                        driverAccountId: ride?.captain.captain.paymentId
                     });
 
-                    const verifyData = await verifyRes.json();
+                    const verifyData = verifyRes.data;
                     if (verifyData.success) {
                         alert("Payment Successful!");
                         // navigate("/home");
@@ -59,9 +57,8 @@ const Riding = () => {
                     }
                 },
                 prefill: {
-                    name: ride?.driver?.name || "Driver",
-                    email: "user@example.com",
-                    contact: "9999999999",
+                    name: ride?.captain.firstname || "Driver",
+                    email: ride?.captain.email || "test@gmail.com"
                 },
                 theme: { color: "#3399cc" }
             };
@@ -82,7 +79,7 @@ const Riding = () => {
                 <i className="text-lg font-medium ri-home-5-line"></i>
             </Link>
             <div className='h-1/2'>
-                <LiveRouteTracking ride={ride} />
+                {/* <LiveRouteTracking ride={ride} /> */}
             </div>
             <div className='h-1/2 p-4'>
                 <div className='flex flex-col items-center gap-4'>
@@ -107,13 +104,13 @@ const Riding = () => {
                     </div>
                 </div>
 
-                
-                {payment ? <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
+
+                {!payment ? <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
                     onClick={handlePayment}>
                     Pay ₹ {ride?.fare || "N/A"}
                 </button> : <button className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'
-                    >Payment Successful!
-                </button> }
+                >Payment Successful!
+                </button>}
             </div>
         </div>
     );

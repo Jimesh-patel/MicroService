@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CaptainDataContext } from '../context/CaptainContext'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { toast } from "react-toastify"
 
 const CaptainSignup = () => {
 
@@ -18,12 +19,12 @@ const CaptainSignup = () => {
   const [vehicleCapacity, setVehicleCapacity] = useState('')
   const [vehicleType, setVehicleType] = useState('')
 
+  const [paymentId, setPaymentId] = useState('')
 
   const { captain, setCaptain } = React.useContext(CaptainDataContext)
 
-
   const submitHandler = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const captainData = {
       fullname: {
         firstname: firstName,
@@ -36,28 +37,35 @@ const CaptainSignup = () => {
         plate: vehiclePlate,
         capacity: vehicleCapacity,
         vehicleType: vehicleType
+      },
+      paymentId: paymentId
+    }
+
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/register`, captainData);
+
+      if (response.status === 201) {
+        const data = response.data;
+        setCaptain(data.captain);
+        localStorage.setItem('token', data.token);
+        navigate('/captain-home');
       }
+    } catch (error) {
+      const message = error.response.data.message;
+      toast.error(message);
     }
 
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/register`, captainData)
-
-    if (response.status === 201) {
-      const data = response.data
-      setCaptain(data.captain)
-      localStorage.setItem('token', data.token)
-      navigate('/captain-home')
-    }
-
-    setEmail('')
-    setFirstName('')
-    setLastName('')
-    setPassword('')
-    setVehicleColor('')
-    setVehiclePlate('')
-    setVehicleCapacity('')
-    setVehicleType('')
-
+    setEmail('');
+    setFirstName('');
+    setLastName('');
+    setPassword('');
+    setVehicleColor('');
+    setVehiclePlate('');
+    setVehicleCapacity('');
+    setVehicleType('');
+    setPaymentId('');
   }
+
   return (
     <div className='py-5 px-5 h-screen flex flex-col justify-between'>
       <div>
@@ -170,8 +178,19 @@ const CaptainSignup = () => {
                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 011.04 1.08l-4.25 3.85a.75.75 0 01-1.04 0l-4.25-3.85a.75.75 0 01.02-1.06z" clipRule="evenodd" />
               </svg>
             </div>
-
           </div>
+
+          <h3 className='text-lg font-medium mb-2'>Enter Payment-Id</h3>
+
+          <input
+            className='bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base'
+            value={paymentId}
+            onChange={(e) => {
+              setPaymentId(e.target.value)
+            }}
+            required
+            placeholder='Payment-Id'
+          />
 
 
           <button

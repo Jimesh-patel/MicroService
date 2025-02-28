@@ -104,15 +104,16 @@ function getOtp(num) {
     return generateOtp(num);
 }
 
-module.exports.changeRideStatus = async (rideId, status) => {
-    if (!rideId || !status) {
+module.exports.changeRideStatus = async (rideId, status, captainId) => {
+    if (!rideId || !status || !captainId) {
         throw new Error('Ride id and status are required');
     }
 
     const ride = await rideModel.findOneAndUpdate({
         _id: rideId
     }, {
-        status
+        status,
+        captain: captainId
     }, { new: true }).select('+otp');
 
     if (!ride) {
@@ -157,11 +158,13 @@ module.exports.endRide = async ({ rideId, captain }) => {
     if (!rideId) {
         throw new Error('Ride id is required');
     }
-
+    
+    const captainId = captain.captain._id;
     const ride = await rideModel.findOne({
         _id: rideId,
-        captain: captain._id
+        captain: captainId
     });
+   
 
     if (!ride) {
         throw new Error('Ride not found');
@@ -178,4 +181,26 @@ module.exports.endRide = async ({ rideId, captain }) => {
     })
 
     return ride;
+}
+
+module.exports.getOngoingRidesForUser = async (userId) => {
+    if (!userId) {
+        throw new Error('User ID is required');
+    }
+
+    const ridesData = await rideModel.find({
+        user: userId,
+        status: 'ongoing'
+    });
+
+    const rides = await Promise.all(ridesData.map(async (ride) => {
+        const captainResponse = await axios.get(`${process.env.BASE_URL}/captains/get-CaptainById?id=${ride.captain}`);
+        const captain = captainResponse.data;
+        return {
+            ...ride.toObject(),
+            captain
+        };
+    }));
+
+    return rides;
 }

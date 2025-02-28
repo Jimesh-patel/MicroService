@@ -56,10 +56,10 @@ module.exports.changeRideStatus = async (req, res) => {
         return res.status(400).json({ errors: errors.array() });
     }
 
-    const { rideId, status } = req.body;
+    const { rideId, status, captainId } = req.body;
     
     try {
-        const ride = await rideService.changeRideStatus(rideId, status);
+        const ride = await rideService.changeRideStatus(rideId, status, captainId);
         res.status(200).json(ride);
     } catch (err) {
         console.log(err);
@@ -76,6 +76,7 @@ module.exports.startRide = async (req, res) => {
     const { rideId, otp } = req.query;
     try {
         let ride = await rideService.startRide({ rideId, otp, captain: req.captain });
+
 
         const userResponse = await axios.get(`${process.env.BASE_URL}/users/user`, {
             params: {
@@ -114,7 +115,7 @@ module.exports.endRide = async (req, res) => {
         const ride = await rideService.endRide({ rideId, captain: req.captain });
         const captain = await axios.patch(
             `${process.env.BASE_URL}/captains/status`,
-            { status: 'active' }, // Request body
+            { status: 'active' },
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -131,3 +132,13 @@ module.exports.endRide = async (req, res) => {
         return res.status(500).json({ message: err.message });
     } 
 }
+
+module.exports.getOngoingRidesForUser = async (req, res) => {
+    try {
+        const rides = await rideService.getOngoingRidesForUser(req.user._id);
+        return res.status(200).json(rides);
+    } catch (err) {
+        return res.status(500).json({ message: err.message });
+    }
+}
+
