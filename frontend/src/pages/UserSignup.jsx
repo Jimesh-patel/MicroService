@@ -7,18 +7,18 @@ import { toast } from "react-toastify";
 
 
 const UserSignup = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-  const { user, setUser } = useContext(UserDataContext)
-
+  const { setUser } = useContext(UserDataContext);
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const newUser = {
       fullname: {
@@ -34,7 +34,6 @@ const UserSignup = () => {
         `${import.meta.env.VITE_BASE_URL}/users/register`,
         newUser
       );
-      console.log(response)
 
       if (response.status === 200) {
         const data = response.data;
@@ -51,78 +50,69 @@ const UserSignup = () => {
     }
   };
 
-
   return (
-    <div>
-      <div className='p-7 h-screen flex flex-col justify-between'>
-        <div>
-          <img className='w-36 mb-10 -ml-2' src="Logo.png" alt="Logo" />
-
-          <form onSubmit={(e) => {
-            submitHandler(e)
-          }}>
-
-            <h3 className='text-lg w-1/2  font-medium mb-2 mt-5'>What's your name</h3>
-            <div className='flex gap-4 mb-7'>
-              <input
-                required
-                className='bg-[#eeeeee] w-1/2 rounded-lg px-4 py-2 border  text-lg placeholder:text-base'
-                type="text"
-                placeholder='First name'
-                value={firstName}
-                onChange={(e) => {
-                  setFirstName(e.target.value)
-                }}
-              />
-              <input
-                required
-                className='bg-[#eeeeee] w-1/2  rounded-lg px-4 py-2 border  text-lg placeholder:text-base'
-                type="text"
-                placeholder='Last name'
-                value={lastName}
-                onChange={(e) => {
-                  setLastName(e.target.value)
-                }}
-              />
-            </div>
-
-            <h3 className='text-lg font-medium mb-2'>What's your email</h3>
+    <div className="p-7 h-screen flex flex-col justify-around items-center">
+      <div className="w-full max-w-md mx-auto flex flex-col">
+        <div className="flex mb-10 -ml-2">
+          <img className="w-36" src="Logo.png" alt="Logo" />
+        </div>
+        <form className="w-full" onSubmit={submitHandler}>
+          <h3 className="text-lg font-medium mb-2 mt-5">What's your name</h3>
+          <div className="flex gap-4 mb-7 w-full">
             <input
               required
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value)
-              }}
-              className='bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base'
-              type="email"
-              placeholder='email@example.com'
+              className="bg-[#eeeeee] w-1/2 rounded-lg px-4 py-2 border text-lg placeholder:text-base"
+              type="text"
+              placeholder="First name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
             />
-
-            <h3 className='text-lg font-medium mb-2'>Enter Password</h3>
-
             <input
-              className='bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base'
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value)
-              }}
-              required type="password"
-              placeholder='password'
+              required
+              className="bg-[#eeeeee] w-1/2 rounded-lg px-4 py-2 border text-lg placeholder:text-base"
+              type="text"
+              placeholder="Last name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
             />
+          </div>
 
-            <button
-              className='bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg placeholder:text-base'
-            >
-              {loading ? "Loading ..." : "Create Account"}
-            </button>
+          <h3 className="text-lg font-medium mb-2">What's your email</h3>
+          <input
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base"
+            type="email"
+            placeholder="email@example.com"
+          />
 
-          </form>
-          <p className='text-center'>Already have a account? <Link to='/login' className='text-blue-600'>Login here</Link></p>
-        </div>
+          <h3 className="text-lg font-medium mb-2">Enter Password</h3>
+          <input
+            required
+            className="bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            placeholder="password"
+          />
 
+          <button
+            className="bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg placeholder:text-base my-5"
+            disabled={loading}
+          >
+            {loading ? "Loading ..." : "Create Account"}
+          </button>
+        </form>
+        <p>
+          Already have an account?{" "}
+          <Link to="/login" className="text-blue-600">
+            Login here
+          </Link>
+        </p>
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default UserSignup
+export default UserSignup;

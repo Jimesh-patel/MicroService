@@ -27,7 +27,9 @@ const OnGoingRides = () => {
         <div>
             <div className='h-20 w-full bg-white flex items-center justify-end'>
                 <img className='w-36 absolute left-5 top-5' src="Logo.png" alt="logo" />
-                <i className="ri-menu-3-line absolute text-3xl right-5"></i>
+                <button className="absolute right-5 z-20" onClick={() => navigate('/home')}>
+                    <i className="ri-arrow-left-s-line text-3xl"></i>
+                </button>
             </div>
             <div className="p-6 bg-gray-100 min-h-screen">
                 {rides.length > 0 ? (
