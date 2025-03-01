@@ -45,7 +45,7 @@ module.exports.changeCaptainStatus = async (captainId, status) => {
 module.exports.getCaptainsInTheRadius = async (ltd, lng, vehicleType, radius) => {
 
     // radius in km
-
+    console.log(ltd, lng, vehicleType)
     const captains = await captainModel.find({
         location: {
             $geoWithin: {

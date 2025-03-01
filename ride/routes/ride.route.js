@@ -46,6 +46,10 @@ router.get('/get-user-rides',
     rideController.getOngoingRidesForUser
 )
 
+router.get('/get-captain-rides',
+    authMiddleware.authCaptain,
+    rideController.getOngoingRidesForCaptain
+)
 
 
 module.exports = router;

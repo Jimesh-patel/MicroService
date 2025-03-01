@@ -17,6 +17,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.1",
-    "razorpay": "^2.9.5"
+    "razorpay": "^2.9.5",
+    "stripe": "^17.7.0"
   }
 }

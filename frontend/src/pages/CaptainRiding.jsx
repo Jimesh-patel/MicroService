@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import FinishRide from '../components/FinishRide'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -9,9 +9,12 @@ import LiveDistanceTime from '../components/LiveDistanceTime'
 const CaptainRiding = () => {
 
     const [finishRidePanel, setFinishRidePanel] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
     const finishRidePanelRef = useRef(null)
     const location = useLocation()
     const rideData = location.state?.ride
+
+    const navigate = useNavigate()
 
     useGSAP(function () {
         if (finishRidePanel) {
@@ -29,7 +32,17 @@ const CaptainRiding = () => {
         <div className='h-screen flex flex-col'>
             <div className='h-20 w-full bg-white flex items-center justify-end'>
                 <img className='w-36 absolute left-5 top-5' src="Logo.png" alt="logo" />
-                <i className="ri-menu-3-line absolute text-3xl right-5"></i>
+                <button className="absolute right-5 z-20" onClick={() => setMenuOpen(!menuOpen)}>
+                    <i className="ri-menu-3-line text-3xl"></i>
+                </button>
+                {menuOpen && (
+                    <div className="absolute top-16 right-5 bg-white shadow-lg rounded-lg w-40 z-20">
+                        <ul>
+                            <li className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/captain-rides')}>Rides</li>
+                            <li className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() =>  navigate('/captain/logout') }>Logout</li>
+                        </ul>
+                    </div>
+                )}
             </div>
 
             <div className='flex-grow relative'>

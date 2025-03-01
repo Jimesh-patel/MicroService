@@ -20,21 +20,21 @@ app.get('/', (req, res) => {
 });
 
 // Function to transfer payment to driver
-async function transferPaymentToDriver(amount, driverAccountId) {
-    const transferAmount = amount * 0.9 * 100; // 90% of the amount in paise
+// async function transferPaymentToDriver(amount, driverAccountId) {
+//     const transferAmount = amount * 0.9 * 100; // 90% of the amount in paise
 
-    const transfer = await razorpay.transfers.create({
-        amount: transferAmount,
-        currency: "INR",
-        account: driverAccountId,
-        notes: {
-            purpose: "Driver payment"
-        }
-    });
-    console.log(transfer)
+//     const transfer = await razorpay.transfers.create({
+//         amount: transferAmount,
+//         currency: "INR",
+//         account: driverAccountId,
+//         notes: {
+//             purpose: "Driver payment"
+//         }
+//     });
+//     console.log(transfer)
 
-    return transfer;
-}
+//     return transfer;
+// }
 
 // ✅ Create Order
 app.post("/create-order", async (req, res) => {
@@ -68,11 +68,11 @@ app.post("/verify-payment", async (req, res) => {
         if (expectedSignature !== razorpay_signature) {
             return res.status(400).json({ error: "Invalid payment signature" });
         }
-        console.log(amount, driverAccountId);
-        // Call the function to transfer payment to driver
-        const transfer = await transferPaymentToDriver(amount, driverAccountId);
+        // console.log(amount, driverAccountId);
+        // // Call the function to transfer payment to driver
+        // const transfer = await transferPaymentToDriver(amount, driverAccountId);
 
-        return res.json({ success: true, message: "Payment verified and transferred successfully", transferId: transfer.id });
+        return res.json({ success: true, message: "Payment successful" });
     } catch (error) {
         console.error("Payment verification failed:", error);
         res.status(500).json({ error: "Payment verification failed" });

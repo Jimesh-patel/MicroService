@@ -204,3 +204,25 @@ module.exports.getOngoingRidesForUser = async (userId) => {
 
     return rides;
 }
+
+module.exports.getOngoingRidesForCaptain = async (captain) => {
+    if (!captain) {
+        throw new Error('Captain is required');
+    }
+    const captainId = captain.captain._id;
+    const ridesData = await rideModel.find({
+        captain: captainId,
+        status: 'ongoing'
+    });
+
+    const rides = await Promise.all(ridesData.map(async (ride) => {
+        const userResponse = await axios.get(`${process.env.BASE_URL}/users/user?userId=${ride.user}`);
+        const user = userResponse.data;
+        return {
+            ...ride.toObject(),
+            user
+        };
+    }));
+
+    return rides;
+}

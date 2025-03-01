@@ -12,7 +12,7 @@ export const CaptainLogout = () => {
         }
     }).then((response) => {
         if (response.status === 200) {
-            localStorage.removeItem('captain-token')
+            localStorage.removeItem('token')
             navigate('/captain-login')
         }
     })

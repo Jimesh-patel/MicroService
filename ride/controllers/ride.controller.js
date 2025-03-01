@@ -5,6 +5,7 @@ const axios = require('axios')
 
 const io = require('socket.io-client');
 const gatewaySocket = io(process.env.BASE_URL);
+
 gatewaySocket.on('connect', () => {
     console.log('Ride microservice connected to Gateway WebSocket');
 });
@@ -136,6 +137,15 @@ module.exports.endRide = async (req, res) => {
 module.exports.getOngoingRidesForUser = async (req, res) => {
     try {
         const rides = await rideService.getOngoingRidesForUser(req.user._id);
+        return res.status(200).json(rides);
+    } catch (err) {
+        return res.status(500).json({ message: err.message });
+    }
+}
+
+module.exports.getOngoingRidesForCaptain = async (req, res) => {
+    try {
+        const rides = await rideService.getOngoingRidesForCaptain(req.captain);
         return res.status(200).json(rides);
     } catch (err) {
         return res.status(500).json({ message: err.message });

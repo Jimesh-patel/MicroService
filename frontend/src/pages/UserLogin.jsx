@@ -34,7 +34,7 @@ const UserLogin = () => {
       }
     } catch (error) {
         const message = error.response.data.message;
-        toast.error(message);
+        toast.error(message || "Internal Server Error");
     } finally {
       setLoading(false);
     }

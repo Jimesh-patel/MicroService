@@ -165,14 +165,16 @@ subscribeToQueue("new-ride-available", async (data) => {
         return;
     }
 
+    console.log(captainsInRadius)
+
     captainsInRadius.map(captain => {
+        console.log('Sending new ride to captain ' + captain.socketId);
         sendMessageToSocketId(captain.socketId, {
             event: 'new-ride',
             data: ride
         });
     });
 });
-
 
 module.exports.confirmRide = async (req, res, next) => {
     var { ride } = req.body;

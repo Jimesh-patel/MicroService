@@ -46,6 +46,7 @@ io.on('connection', (socket) => {
     }); 
 
     captainSocket.on('new-ride', (data) => {
+        console.log('New ride event received in gateway' + data);
         socket.emit('new-ride', data);
     });
 

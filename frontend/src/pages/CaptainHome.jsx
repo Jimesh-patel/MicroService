@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import CaptainDetails from '../components/CaptainDetails'
 import RidePopUp from '../components/RidePopUp'
 import { useGSAP } from '@gsap/react'
+import { useNavigate } from 'react-router-dom'
 import gsap from 'gsap'
 import ConfirmRidePopUp from '../components/ConfirmRidePopUp'
 import { useEffect, useContext } from 'react'
@@ -15,10 +16,12 @@ const CaptainHome = () => {
 
     const [ ridePopupPanel, setRidePopupPanel ] = useState(false)
     const [ confirmRidePopupPanel, setConfirmRidePopupPanel ] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
 
     const ridePopupPanelRef = useRef(null)
     const confirmRidePopupPanelRef = useRef(null)
     const [ ride, setRide ] = useState(null)
+    const navigate = useNavigate()
 
     const { socket } = useContext(SocketContext)
     const { captain } = useContext(CaptainDataContext)
@@ -114,7 +117,17 @@ const CaptainHome = () => {
         <div className='h-screen'>
             <div className='h-20 w-full bg-white flex items-center justify-end'>
                 <img className='w-36 absolute left-5 top-5' src="Logo.png" alt="logo" />
-                <i className="ri-menu-3-line absolute text-3xl right-5"></i>
+                <button className="absolute right-5 z-20" onClick={() => setMenuOpen(!menuOpen)}>
+                    <i className="ri-menu-3-line text-3xl"></i>
+                </button>
+                {menuOpen && (
+                    <div className="absolute top-16 right-5 bg-white shadow-lg rounded-lg w-40 z-20">
+                        <ul>
+                            <li className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/captain-rides')}>Rides</li>
+                            <li className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() =>  navigate('/captain/logout') }>Logout</li>
+                        </ul>
+                    </div>
+                )}
             </div>
             
             <div className='h-[55%]'>
