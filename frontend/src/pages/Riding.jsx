@@ -223,7 +223,7 @@ const Riding = () => {
                                             <i className="ri-user-3-line text-2xl"></i>
                                         </div>
                                         <div>
-                                            <h3 className='font-semibold text-lg'>{ride?.captain?.firstname || "Driver"} {ride?.captain?.lastname || ""}</h3>
+                                            <h3 className='font-semibold text-lg'>{ride?.captain?.captain.fullname.firstname || "Driver"} {ride?.captain?.captain.fullname.lastname || ""}</h3>
                                             <div className='flex items-center gap-1'>
                                                 <i className="ri-star-fill text-yellow-500"></i>
                                                 <span>{ride?.captain?.rating || "4.8"}</span>
@@ -237,10 +237,10 @@ const Riding = () => {
 
                                     <div className='flex items-center gap-2 text-sm'>
                                         <div className='px-3 py-1 bg-gray-200 rounded-full'>
-                                            {ride?.captain?.vehicle?.model || "Vehicle"} • {ride?.captain?.vehicle?.color || "Color"}
+                                            {ride?.captain?.captain.vehicle?.vehicleType || "Vehicle"} • {ride?.captain?.captain.vehicle?.color || "Color"}
                                         </div>
                                         <div className='px-3 py-1 bg-gray-200 rounded-full'>
-                                            {ride?.captain?.vehicle?.plateNumber || "KA-XX-XXXX"}
+                                            GJ-10-AB-{ride?.captain?.captain.vehicle?.plate}
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@ const Riding = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex items-start gap-5 p-2 border-b'>
+                                    <div className='flex items-start gap-5 p-2'>
                                         <i className="ri-map-pin-2-fill text-xl text-red-500 mt-1"></i>
                                         <div>
                                             <h3 className='text-base font-medium'>{ride?.destination?.split(' ')[0]}</h3>

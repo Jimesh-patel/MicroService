@@ -24,58 +24,73 @@ const OnGoingRides = () => {
     }, []);
 
     return (
-        <div>
-            <div className='h-20 w-full bg-white flex items-center justify-end'>
-                <img className='w-36 absolute left-5 top-5' src="Logo.png" alt="logo" />
-                <button className="absolute right-5 z-20" onClick={() => navigate('/home')}>
-                    <i className="ri-arrow-left-s-line text-3xl"></i>
+        <div className="flex flex-col min-h-screen bg-gray-100">
+            {/* Header */}
+            <div className='h-20 w-full bg-white flex items-center justify-between px-4 md:px-6 lg:px-8 shadow-sm'>
+                <img className='w-24 md:w-36' src="Logo.png" alt="logo" />
+                <button className="flex items-center justify-center p-2 hover:bg-gray-100 rounded-full transition-colors" onClick={() => navigate('/home')}>
+                    <i className="ri-arrow-left-s-line text-2xl md:text-3xl"></i>
                 </button>
             </div>
-            <div className="p-6 bg-gray-100 min-h-screen">
-                {rides.length > 0 ? (
-                    <ul className="space-y-6">
-                        {rides.map((ride) => (
-                            <li
-                                key={ride._id}
-                                className="p-5 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                                onClick={() => {
-                                    navigate('/riding', { state: { ride } })
-                                }}
-                            >
-                                <div className="flex flex-col">
-                                    <div className='flex items-center gap-5 border-b-2 pb-2'>
-                                        <i className="ri-map-pin-user-fill text-2xl "></i>
-                                        <div>
-                                            <h3 className='text-lg font-medium'>
-                                                {ride.pickup?.split(' ')[0]}
-                                            </h3>
-                                            <p className='text-sm -mt-1 text-gray-600'>
-                                                {ride.pickup?.split(' ').slice(1).join(' ')}
-                                            </p>
+            
+            {/* Main content - Grid layout based on screen size */}
+            <div className="flex-1 p-4 md:p-6">
+                <div className="container mx-auto">
+                    <h2 className="text-xl md:text-2xl font-semibold mb-4">Your Ongoing Rides</h2>
+                    
+                    {rides.length > 0 ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                            {rides.map((ride) => (
+                                <div
+                                    key={ride._id}
+                                    className="p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow cursor-pointer h-full"
+                                    onClick={() => {
+                                        navigate('/riding', { state: { ride } })
+                                    }}
+                                >
+                                    <div className="flex flex-col h-full">
+                                        <div className='flex items-center gap-3 border-b-2 pb-2'>
+                                            <i className="ri-map-pin-user-fill text-xl flex-shrink-0"></i>
+                                            <div className="overflow-hidden">
+                                                <h3 className='text-base font-medium truncate'>
+                                                    {ride.pickup?.split(' ')[0]}
+                                                </h3>
+                                                <p className='text-xs text-gray-600 truncate'>
+                                                    {ride.pickup?.split(' ').slice(1).join(' ')}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className='flex items-center gap-5 pt-2'>
-                                        <i className="ri-map-pin-range-line text-2xl"></i>
-                                        <div>
-                                            <h3 className='text-lg font-medium'>
-                                                {ride.destination?.split(' ')[0]}
-                                            </h3>
-                                            <p className='text-sm -mt-1 text-gray-600'>
-                                                {ride.destination?.split(' ').slice(1).join(' ')}
-                                            </p>
+                                        <div className='flex items-center gap-3 pt-2 mt-auto'>
+                                            <i className="ri-map-pin-range-line text-xl flex-shrink-0 "></i>
+                                            <div className="overflow-hidden">
+                                                <h3 className='text-base font-medium truncate'>
+                                                    {ride.destination?.split(' ')[0]}
+                                                </h3>
+                                                <p className='text-xs text-gray-600 truncate'>
+                                                    {ride.destination?.split(' ').slice(1).join(' ')}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p className="text-lg text-gray-600 text-center">
-                        No ongoing rides at the moment
-                    </p>
-                )}
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-10 bg-white rounded-xl shadow p-8">
+                            <i className="ri-route-line text-5xl text-gray-400 mb-3"></i>
+                            <p className="text-lg text-gray-600 mb-2">
+                                No ongoing rides at the moment
+                            </p>
+                            <button 
+                                onClick={() => navigate('/book-ride')} 
+                                className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                            >
+                                Book a Ride
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
-
         </div>
     );
 };

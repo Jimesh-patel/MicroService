@@ -1,0 +1,5 @@
+.env
+node_modules
+label_encoder.pkl
+model.pkl
+xgboost_model.pkl
