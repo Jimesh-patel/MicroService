@@ -5,6 +5,7 @@ const WaitingForDriver = (props) => {
     <div className='px-3 py-6'>
       <h5 className='w-full text-center' onClick={() => {
         props.setWaitingForDriver(false)
+        props.setLocationPanel(true)
       }}><i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i></h5>
 
       <div>

@@ -50,7 +50,7 @@ const LiveDistanceTime = (props) => {
   }, [liveLocation, props.ride.destination])
 
   return (
-    <div className="flex justify-around items-center px-3">
+    <div className="flex  items-center p-3 justify-around">
       <div className="text-center">
         <h4 className="text-lg font-semibold text-gray-700">Distance</h4>
         <p className="text-sm text-gray-600">{distanceTime?.distance || "N/A"}</p>

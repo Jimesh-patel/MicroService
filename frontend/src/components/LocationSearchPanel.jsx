@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const LocationSearchPanel = ({ suggestions, setPickup, setDestination, activeField }) => {
 
@@ -10,10 +10,9 @@ const LocationSearchPanel = ({ suggestions, setPickup, setDestination, activeFie
         }
     }
 
-
-
     return (
-        <div>
+        <div >
+          
             {suggestions && suggestions.length === 0 && <h2 className='text-center text-gray-500'>No suggestions found</h2>}
 
             {suggestions && suggestions.map((elem, idx) => (
