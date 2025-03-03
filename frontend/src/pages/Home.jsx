@@ -52,12 +52,10 @@ const Home = () => {
     useEffect(() => {
         socket.emit("join", { userType: "user", userId: user._id });
 
-        // Handle window resize for responsive behavior
         const handleResize = () => {
             const mobile = window.innerWidth < 768;
             setIsMobile(mobile);
 
-            // Reset panel state when switching between mobile and desktop
             if (mobile !== isMobile) {
                 setPanelOpen(false);
             }
@@ -83,6 +81,19 @@ const Home = () => {
 
         return () => {
             socket.off('ride-confirmed', handleRideConfirmed);
+        };
+    }, [socket]);
+
+    useEffect(() => {
+        const handleNoCaptains = (data) => {
+            console.log(data);
+            toast.error("No captains available at the moment");
+        };
+    
+        socket.on('no-captains', handleNoCaptains);
+    
+        return () => {
+            socket.off('no-captains', handleNoCaptains);
         };
     }, [socket]);
 

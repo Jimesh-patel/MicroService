@@ -196,7 +196,7 @@ const CaptainHome = () => {
             <div className='flex flex-col md:flex-row h-[calc(100vh-5rem)]'>
                 {/* Map Area - Full width on mobile, left side on desktop */}
                 <div className='h-[70vh] md:h-full md:w-2/3 md:flex-shrink-0'>
-                    <LiveTracking />
+                    {/* <LiveTracking /> */}
                 </div>
 
                 {/* Right side panel - Only visible on desktop */}
