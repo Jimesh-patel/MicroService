@@ -67,7 +67,7 @@ const CaptainRiding = () => {
                         <div className='flex-grow p-6'>
                             <h4 className='text-2xl font-semibold mb-4'>Trip Details</h4>
                             <div className='bg-gray-50 p-4 rounded-lg mb-6'>
-                                <LiveDistanceTime ride={rideData} />
+                                {/* <LiveDistanceTime ride={rideData} /> */}
                             </div>
 
                         </div>

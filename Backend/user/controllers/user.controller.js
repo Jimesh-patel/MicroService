@@ -2,6 +2,18 @@ const userModel = require('../models/user.model');
 const userService = require('../services/user.service');
 const { validationResult } = require('express-validator');
 const blackListTokenModel = require('../models/blackListToken.model');
+const crypto = require('crypto');
+const twilio = require('twilio');
+const bcrypt = require('bcrypt');
+
+const otpStore = new Map();  
+const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+
+function getOtp(num) {
+    return crypto.randomInt(Math.pow(10, num - 1), Math.pow(10, num)).toString();
+}
+
 
 module.exports.registerUser = async (req, res, next) => {
 
@@ -11,8 +23,8 @@ module.exports.registerUser = async (req, res, next) => {
             return res.status(400).json({ message: errors.array()[0].msg });
         }
 
-        const { fullname, email, password } = req.body;
-
+        const { fullname, email, password, phone } = req.body;
+        console.log(req.body);
         const isUserAlready = await userModel.findOne({ email });
 
         if (isUserAlready) {
@@ -25,13 +37,15 @@ module.exports.registerUser = async (req, res, next) => {
             firstname: fullname.firstname,
             lastname: fullname.lastname,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            phone
         });
 
         const token = user.generateAuthToken();
 
         res.status(200).json({ token, user });
     } catch (error) {
+        console.log(error);
         res.status(400).json({ message: "Registration Failed !" });
     }
 
@@ -86,7 +100,7 @@ module.exports.logoutUser = async (req, res, next) => {
 
 module.exports.getUserById = async (req, res, next) => {
     try {
-        const userId = req.query.userId; 
+        const userId = req.query.userId;
         const user = await userModel.findById(userId);
 
         if (!user) {
@@ -96,5 +110,91 @@ module.exports.getUserById = async (req, res, next) => {
         res.status(200).json(user);
     } catch (error) {
         next(error);
+    }
+};
+
+
+module.exports.sendOtp = async (req, res) => {
+    try {
+        const { phone } = req.body;
+        if (!phone) {
+            return res.status(400).json({ message: "Phone number is required" });
+        }
+
+        const otp = getOtp(6);
+        const hashedOtp = await bcrypt.hash(otp, 10);
+
+        otpStore.set(phone, { otp: hashedOtp, expiresAt: Date.now() + 300000 });
+        console.log(process.env.TWILIO_PHONE_NUMBER);
+        console.log(phone);
+        console.log(otp);
+
+        await client.messages.create({
+            body: `Your OTP is: ${otp}`,
+            from: process.env.TWILIO_PHONE_NUMBER,
+            to: phone
+        });
+
+        res.status(200).json({ message: "OTP sent successfully" });
+
+    } catch (error) {
+        res.status(500).json({ message: "Failed to send OTP", error: error.message });
+    }
+};
+
+
+module.exports.verifyOtp = async (req, res) => {
+    try {
+        const { phone, otp } = req.body;
+        if (!phone || !otp) {
+            return res.status(400).json({ message: "Phone and OTP are required" });
+        }
+
+        const storedOtpData = otpStore.get(phone);
+        if (!storedOtpData || Date.now() > storedOtpData.expiresAt) {
+            otpStore.delete(phone); 
+            return res.status(400).json({ message: "OTP expired or invalid" });
+        }
+
+        const isOtpValid = await bcrypt.compare(otp, storedOtpData.otp);
+        if (!isOtpValid) {
+            return res.status(400).json({ message: "Invalid OTP" });
+        }
+
+        otpStore.delete(phone); 
+        res.status(200).json({ message: "OTP verified successfully" });
+
+    } catch (error) {
+        res.status(500).json({ message: "OTP verification failed", error: error.message });
+    }
+};
+
+module.exports.resendOtp = async (req, res) => {
+    try {
+        const { phone } = req.body;
+        if (!phone) {
+            return res.status(400).json({ message: "Phone number is required" });
+        }
+
+        const existingOtp = otpStore.get(phone);
+        if (existingOtp && Date.now() < existingOtp.expiresAt) {
+            otpStore.delete(phone);
+        }
+
+        const newOtp = getOtp(6);
+        const hashedOtp = await bcrypt.hash(newOtp, 10);
+
+        otpStore.set(phone, { otp: hashedOtp, expiresAt: Date.now() + 300000 });
+
+        await client.messages.create({
+            body: `Your new OTP is: ${newOtp}`,
+            from: process.env.TWILIO_PHONE_NUMBER,
+            to: phone
+        });
+
+        res.status(200).json({ message: "New OTP sent successfully" });
+
+    } catch (error) {
+        res.status(500).json({ message: "Failed to resend OTP", error: error.message });
     }
 };

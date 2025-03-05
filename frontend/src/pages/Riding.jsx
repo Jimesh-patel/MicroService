@@ -130,7 +130,8 @@ const Riding = () => {
                         razorpay_order_id: response.razorpay_order_id,
                         razorpay_signature: response.razorpay_signature,
                         amount: ride?.fare,
-                        driverAccountId: ride?.captain.captain.paymentId
+                        driverAccountId: ride?.captain.captain.paymentId,
+                        driverPhone: ride?.captain.captain.phone
                     });
 
                     const verifyData = verifyRes.data;

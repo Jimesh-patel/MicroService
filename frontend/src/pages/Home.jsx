@@ -410,6 +410,7 @@ const Home = () => {
                 pickup,
                 destination
             });
+            console.log(response.data);
             setFare(response.data);
         } catch (error) {
             setLoading(false);

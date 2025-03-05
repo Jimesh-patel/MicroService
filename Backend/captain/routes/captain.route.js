@@ -13,7 +13,8 @@ router.post('/register', [
     body('vehicle.plate').isLength({ min: 3 }).withMessage('Plate must be at least 3 characters long'),
     body('vehicle.capacity').isInt({ min: 1 }).withMessage('Capacity must be at least 1'),
     body('vehicle.vehicleType').isIn([ 'car', 'moto', 'auto' ]).withMessage('Invalid vehicle type'),
-    body('paymentId').isString().withMessage('Invalid payment ID')
+    body('paymentId').isString().withMessage('Invalid payment ID'),
+    body('phone').isLength({ min: 10, max: 15 }).withMessage('Invalid Phone Number')
 ],
     captainController.registerCaptain
 )
@@ -55,6 +56,31 @@ router.get('/get-CaptainById',
     query('id').isString().withMessage('Invalid captain ID'),
     captainController.getCaptainById
 )
+
+router.post('/send-otp', [
+    body('phone')
+        .trim()
+        .isLength({ min: 10, max: 15 })
+        .withMessage('Invalid Phone Number')
+], captainController.sendOtp);
+
+router.post('/verify-otp', [
+    body('otp')
+        .trim()
+        .isLength({ min: 6, max: 6 })
+        .withMessage('Invalid OTP'),
+    body('phone')
+        .trim()
+        .isLength({ min: 10, max: 15 })
+        .withMessage('Invalid Phone Number')
+], captainController.verifyOtp);
+
+router.post('/resend-otp', [
+    body('phone')
+        .trim()
+        .isLength({ min: 10, max: 15 })
+        .withMessage('Invalid Phone Number')
+], captainController.resendOtp);
 
 
 module.exports = router;

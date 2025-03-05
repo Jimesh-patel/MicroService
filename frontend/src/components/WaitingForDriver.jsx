@@ -18,9 +18,8 @@ const WaitingForDriver = (props) => {
         {props.vehicleType == "auto" && <img className='w-20' src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1648431773/assets/1d/db8c56-0204-4ce4-81ce-56a11a07fe98/original/Uber_Auto_558x372_pixels_Desktop.png" alt="" />}
         <div className='text-right'>
           <h2 className='text-lg font-medium capitalize'>{props.ride?.captain.fullname.firstname}</h2>
-          <h4 className='text-xl font-semibold -mt-1 -mb-1'>{props.ride?.captain.vehicle.plate}</h4>
+          <h4 className='text-xl font-semibold -mt-1 -mb-1'>GJ-10-Ab-{props.ride?.captain.vehicle.plate}</h4>
           <p className='text-sm text-gray-600'>Maruti Suzuki Alto</p>
-          <h1 className='text-lg font-semibold'>  {props.ride?.otp} </h1>
         </div>
       </div>
 

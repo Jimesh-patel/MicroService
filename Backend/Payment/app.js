@@ -8,7 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 
 const cors = require('cors');
-app.use(cors());  
+app.use(cors());
+
+const twilio = require('twilio');
+const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_KEY_ID,
@@ -42,7 +45,7 @@ app.post("/create-order", async (req, res) => {
         const { amount, currency } = req.body;
 
         const order = await razorpay.orders.create({
-            amount: amount * 100, 
+            amount: amount * 100,
             currency,
             payment_capture: 1
         });
@@ -57,7 +60,7 @@ app.post("/create-order", async (req, res) => {
 // ✅ Verify Payment
 app.post("/verify-payment", async (req, res) => {
     try {
-        const { razorpay_payment_id, razorpay_order_id, razorpay_signature, amount, driverAccountId } = req.body;
+        const { razorpay_payment_id, razorpay_order_id, razorpay_signature, amount, driverAccountId, driverPhone } = req.body;
 
         const crypto = require("crypto");
         const expectedSignature = crypto
@@ -68,9 +71,12 @@ app.post("/verify-payment", async (req, res) => {
         if (expectedSignature !== razorpay_signature) {
             return res.status(400).json({ error: "Invalid payment signature" });
         }
-        // console.log(amount, driverAccountId);
-        // // Call the function to transfer payment to driver
-        // const transfer = await transferPaymentToDriver(amount, driverAccountId);
+        console.log("Payment verified " + driverPhone);
+        await client.messages.create({
+            body: `Payment of ₹${amount} received successfully.`,
+            from: process.env.TWILIO_PHONE_NUMBER,
+            to: driverPhone
+        });
 
         return res.json({ success: true, message: "Payment successful" });
     } catch (error) {

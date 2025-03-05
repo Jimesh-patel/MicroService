@@ -26,6 +26,12 @@ const captainSchema = new mongoose.Schema({
         required: true,
         select: false,
     },
+
+    phone: {
+        type: String,
+        required: true
+    },
+
     socketId: {
         type: String,
     },

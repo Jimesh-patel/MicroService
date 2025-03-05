@@ -10,12 +10,11 @@ async function connect() {
         channel = await connection.createChannel();
         console.log('Connected to RabbitMQ');
     } catch (error) {
-        console.log('Connecting to RabbitMQ at:', RABBITMQ_URL);
-
-        process.exit(1); 
+        console.error('Failed to connect to RabbitMQ:', error.message);
+        console.log('Retrying in 5 seconds...');
+        setTimeout(connect, 5000); 
     }
 }
-
 
 async function subscribeToQueue(queueName, callback) {
     if (!channel) await connect();
