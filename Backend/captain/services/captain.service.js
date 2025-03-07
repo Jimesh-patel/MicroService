@@ -26,7 +26,6 @@ module.exports.createCaptain = async ({
     return captain;
 }
 
-
 module.exports.changeCaptainStatus = async (captainId, status) => {
     const validStatuses = ['active', 'inactive', 'busy'];
 
@@ -46,7 +45,6 @@ module.exports.changeCaptainStatus = async (captainId, status) => {
 module.exports.getCaptainsInTheRadius = async (ltd, lng, vehicleType, radius) => {
 
     // radius in km
-    console.log(ltd, lng, vehicleType)
     const captains = await captainModel.find({
         location: {
             $geoWithin: {
@@ -61,7 +59,6 @@ module.exports.getCaptainsInTheRadius = async (ltd, lng, vehicleType, radius) =>
 }
 
 module.exports.getCaptainById = async (id) => {
-    console.log(id);
     const captain = await captainModel.findById(id).select('-password -__v');
     return captain;
 }

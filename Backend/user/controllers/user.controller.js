@@ -24,7 +24,6 @@ module.exports.registerUser = async (req, res, next) => {
         }
 
         const { fullname, email, password, phone } = req.body;
-        console.log(req.body);
         const isUserAlready = await userModel.findOne({ email });
 
         if (isUserAlready) {
@@ -45,7 +44,6 @@ module.exports.registerUser = async (req, res, next) => {
 
         res.status(200).json({ token, user });
     } catch (error) {
-        console.log(error);
         res.status(400).json({ message: "Registration Failed !" });
     }
 
@@ -125,9 +123,6 @@ module.exports.sendOtp = async (req, res) => {
         const hashedOtp = await bcrypt.hash(otp, 10);
 
         otpStore.set(phone, { otp: hashedOtp, expiresAt: Date.now() + 300000 });
-        console.log(process.env.TWILIO_PHONE_NUMBER);
-        console.log(phone);
-        console.log(otp);
 
         await client.messages.create({
             body: `Your OTP is: ${otp}`,

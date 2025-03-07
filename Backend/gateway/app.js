@@ -23,12 +23,8 @@ app.use('/maps', expressProxy('http://localhost:3004'));
 app.use('/price', expressProxy('http://localhost:3005'));
 app.use('/payment', expressProxy('http://localhost:3006'));
 
-// Connect to the Captain Server
 const captainSocket = Client('http://localhost:3002');
-// Connect to the User Server
 const userSocket = Client('http://localhost:3001');
-// Connect to the Ride Server
-const rideSocket = Client('http://localhost:3003');
 
 io.on('connection', (socket) => {
     console.log(`Client connected: ${socket.id}`);
@@ -71,9 +67,6 @@ io.on('connection', (socket) => {
     });
 });
 
-app.get('/', (req, res) => {
-    res.send('Welcome to GoCab Gateway Service');
-});
 
 server.listen(3000, () => {
     console.log('Gateway listening on port 3000');

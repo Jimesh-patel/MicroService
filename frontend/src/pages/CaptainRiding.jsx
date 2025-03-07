@@ -67,7 +67,7 @@ const CaptainRiding = () => {
                         <div className='flex-grow p-6'>
                             <h4 className='text-2xl font-semibold mb-4'>Trip Details</h4>
                             <div className='bg-gray-50 p-4 rounded-lg mb-6'>
-                                {/* <LiveDistanceTime ride={rideData} /> */}
+                                <LiveDistanceTime ride={rideData} />
                             </div>
 
                         </div>
@@ -109,7 +109,9 @@ const CaptainRiding = () => {
                 className='h-[calc(100vh-5rem)] fixed w-full md:w-1/3 md:right-0 z-[500] bottom-0 translate-y-full bg-white px-6 py-8 rounded-t-3xl md:rounded-none shadow-lg'
             >
                 <div className="absolute top-3 left-0 right-0 flex justify-center md:hidden">
-                    <div className="w-16 h-1 bg-gray-300 rounded-full"></div>
+                    <div className="w-16 h-1 bg-gray-300 rounded-full">
+    
+                    </div>
                 </div>
                 <FinishRide
                     ride={rideData}

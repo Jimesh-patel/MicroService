@@ -29,7 +29,6 @@ module.exports.createRide = async (req, res) => {
         res.status(201).json({ message: 'Ride created successfully', rideWithUser });
 
     } catch (error) {
-        console.log(error);
         res.status(500).json({ Message: error.message });
     }
 }
@@ -46,7 +45,6 @@ module.exports.getFare = async (req, res) => {
         const fare = await rideService.getFare(pickup, destination);
         return res.status(200).json(fare);
     } catch (err) {
-        console.log(err);
         return res.status(500).json({ message: err.message });
     }
 }
@@ -63,7 +61,6 @@ module.exports.changeRideStatus = async (req, res) => {
         const ride = await rideService.changeRideStatus(rideId, status, captainId);
         res.status(200).json(ride);
     } catch (err) {
-        console.log(err);
         res.status(500).json({ message: err.message });
     }
 }
@@ -97,7 +94,6 @@ module.exports.startRide = async (req, res) => {
 
         return res.status(200).json(ride);
     } catch (err) {
-        console.log(err);
         return res.status(500).json({ message: err.message });
     }
 }
@@ -122,13 +118,11 @@ module.exports.endRide = async (req, res) => {
                 }
             }
         );
-        
 
         gatewaySocket.emit('ride-ended', ride);
-
         return res.status(200).json(ride);
+        
     } catch (err) {
-        console.log(err)
         return res.status(500).json({ message: err.message });
     } 
 }

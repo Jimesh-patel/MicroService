@@ -1,12 +1,10 @@
 const captainModel = require('../models/captain.model');
 const captainService = require('../services/captain.service');
 const blackListTokenModel = require('../models/blackListToken.model');
-const { validationResult, body } = require('express-validator');
+const { validationResult } = require('express-validator');
 const axios = require('axios');
-const { params } = require('express-validator');
 const { subscribeToQueue } = require('../services/rabbitmq');
 const { sendMessageToSocketId } = require('../socket');
-const { query } = require('express');
 
 const crypto = require('crypto');
 const twilio = require('twilio');
@@ -19,7 +17,6 @@ const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUT
 function getOtp(num) {
     return crypto.randomInt(Math.pow(10, num - 1), Math.pow(10, num)).toString();
 }
-
 
 const io = require('socket.io-client');
 const gatewaySocket = io(process.env.BASE_URL);
@@ -153,7 +150,6 @@ module.exports.getCaptainsInTheRadius = async (req, res, next) => {
         res.status(200).json(captains);
 
     } catch (err) {
-        console.error(err);
         res.status(500).json({ message: 'Internal server error' });
     }
 }
@@ -189,12 +185,9 @@ subscribeToQueue("new-ride-available", async (data) => {
     const captainsInRadius = await captainService.getCaptainsInTheRadius(pickupCoordinates.ltd, pickupCoordinates.lng, ride.vehicleType, 100);
     
     if (captainsInRadius.length === 0) {
-        console.log('No captains in radius');
         gatewaySocket.emit('no-captains', ride);
         return;
     }
-
-    // console.log(captainsInRadius)
 
     captainsInRadius.map(captain => {
         sendMessageToSocketId(captain.socketId, {
@@ -231,7 +224,6 @@ module.exports.confirmRide = async (req, res, next) => {
 
         ride.status = response.data.status;
         ride.otp = response.data.otp;
-        console.log(ride);
         const phone = ride.user.phone;
 
         await client.messages.create({
@@ -256,7 +248,6 @@ module.exports.confirmRide = async (req, res, next) => {
 
         res.status(200).json(ride);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ message: 'Can not confirm ride' });
     }
 };
@@ -274,9 +265,6 @@ module.exports.sendOtp = async (req, res) => {
         const hashedOtp = await bcrypt.hash(otp, 10);
 
         otpStore.set(phone, { otp: hashedOtp, expiresAt: Date.now() + 300000 });
-        console.log(process.env.TWILIO_PHONE_NUMBER);
-        console.log(phone);
-        console.log(otp);
 
         await client.messages.create({
             body: `Your OTP is: ${otp}`,

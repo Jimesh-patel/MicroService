@@ -3,11 +3,10 @@ const { spawn } = require("child_process");
 
 module.exports.getFare = async (req, res, next) => {
     const { pickup, destination } = req.body;
-    console.log(pickup, destination);
+
     try {
         const infoResponse = await axios.get(`${process.env.BASE_URL}/maps/traffic?origin=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`);
         const info = infoResponse.data;
-        console.log(info)
         
         const baseFare = {
             auto: 2,
@@ -70,12 +69,10 @@ module.exports.getFare = async (req, res, next) => {
                 res.json(fareResults);
             })
             .catch((error) => {
-                console.log(error);
                 res.status(500).json({ Message: "Fare Calculation error..." });
             });
 
     } catch (error) {
-        console.log(error);
         res.status(500).json({ Message: "Fare Calculation error..." });
     }
 };

@@ -12,6 +12,9 @@ module.exports.getCoordinates = async (req, res, next) => {
 
     try {
         const coordinates = await mapService.getAddressCoordinate(address);
+        if(!coordinates){
+            return res.status(404).json({ message: 'Coordinates not found' });
+        }
         res.status(200).json(coordinates);
     } catch (error) {
         res.status(404).json({ message: 'Coordinates not found' });
@@ -30,11 +33,12 @@ module.exports.getDistanceTime = async (req, res, next) => {
         const { origin, destination } = req.query;
 
         const distanceTime = await mapService.getDistanceTime(origin, destination);
-
+        if(!distanceTime){
+            return res.status(404).json({ message: 'Distance and Time not found' });
+        }
         res.status(200).json(distanceTime);
 
     } catch (err) {
-        console.error(err);
         res.status(500).json({ message: 'Internal server error' });
     }
 }
@@ -50,6 +54,9 @@ module.exports.getAutoCompleteSuggestions = async (req, res, next) => {
         
         const { input } = req.query;
         const suggestions = await mapService.getAutoCompleteSuggestions(input);
+        if(!suggestions){
+            return res.status(404).json({ message: 'Suggestions not found' });
+        }
         res.status(200).json(suggestions);
         
     } catch (err) {
@@ -71,11 +78,12 @@ module.exports.getTrafficData = async (req, res, next) => {
         }
 
         const traffic = await mapService.getTrafficData(origin, destination);
-
+        if(!traffic){
+            return res.status(404).json({ message: 'Traffic data not found' });
+        }
         return res.status(200).json(traffic);
 
     } catch (err) {
-        console.error(err);
         res.status(500).json({ message: 'Internal server error' });
     }
 }

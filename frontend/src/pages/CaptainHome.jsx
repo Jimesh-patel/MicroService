@@ -171,7 +171,7 @@ const CaptainHome = () => {
     return (
         <div className='h-screen relative overflow-hidden'>
             {/* Header */}
-            <div className='h-20 w-full bg-white flex items-center justify-end shadow-sm'>
+            <div className='h-20 w-full bg-white flex items-center justify-end shadow-sm border-b-2'>
                 <img className='w-36 absolute left-5 top-5' src="Logo.png" alt="logo" />
                 <button className="absolute right-5 z-20" onClick={() => setMenuOpen(!menuOpen)}>
                     <i className="ri-menu-3-line text-3xl"></i>
@@ -200,7 +200,7 @@ const CaptainHome = () => {
                 </div>
 
                 {/* Right side panel - Only visible on desktop */}
-                <div className='hidden md:block md:w-1/3 md:h-full md:bg-white md:border-l md:border-gray-200 md:overflow-y-auto md:p-6'>
+                <div className='hidden md:block md:w-1/3 md:h-full md:bg-white border-l-2 md:border-gray-200 md:overflow-y-auto md:p-6'>
 
                     <div className='flex items-center justify-between mb-10'>
                         <h4 className='text-2xl font-semibold'>Captain Dashboard</h4>

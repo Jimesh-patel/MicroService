@@ -37,7 +37,6 @@ module.exports.authCaptain = async (req, res, next) => {
         }
 
         const url = `${process.env.BASE_URL}/captains/profile`;
-        console.log(`Requesting captain profile from URL: ${url}`);
 
         const response = await axios.get(url, {
             headers: {

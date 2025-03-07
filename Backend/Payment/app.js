@@ -22,24 +22,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to GoCab Payment Service');
 });
 
-// Function to transfer payment to driver
-// async function transferPaymentToDriver(amount, driverAccountId) {
-//     const transferAmount = amount * 0.9 * 100; // 90% of the amount in paise
 
-//     const transfer = await razorpay.transfers.create({
-//         amount: transferAmount,
-//         currency: "INR",
-//         account: driverAccountId,
-//         notes: {
-//             purpose: "Driver payment"
-//         }
-//     });
-//     console.log(transfer)
-
-//     return transfer;
-// }
-
-// ✅ Create Order
 app.post("/create-order", async (req, res) => {
     try {
         const { amount, currency } = req.body;
@@ -57,7 +40,7 @@ app.post("/create-order", async (req, res) => {
     }
 });
 
-// ✅ Verify Payment
+
 app.post("/verify-payment", async (req, res) => {
     try {
         const { razorpay_payment_id, razorpay_order_id, razorpay_signature, amount, driverAccountId, driverPhone } = req.body;
@@ -71,7 +54,7 @@ app.post("/verify-payment", async (req, res) => {
         if (expectedSignature !== razorpay_signature) {
             return res.status(400).json({ error: "Invalid payment signature" });
         }
-        console.log("Payment verified " + driverPhone);
+        
         await client.messages.create({
             body: `Payment of ₹${amount} received successfully.`,
             from: process.env.TWILIO_PHONE_NUMBER,
