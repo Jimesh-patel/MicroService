@@ -46,11 +46,11 @@ const Home = () => {
 
     const navigate = useNavigate()
 
-    const { socket } = useContext(SocketContext)
+    const { usersocket, captainsocket } = useContext(SocketContext)
     const { user } = useContext(UserDataContext)
 
     useEffect(() => {
-        socket.emit("join", { userType: "user", userId: user._id });
+        usersocket.emit("join", { userType: "user", userId: user._id });
 
         const handleResize = () => {
             const mobile = window.innerWidth < 768;
@@ -66,8 +66,9 @@ const Home = () => {
     }, [isMobile]);
 
     useEffect(() => {
-        socket.on('ride-started', ride => {
+        usersocket.on('ride-started', ride => {
             setWaitingForDriver(false);
+            console.log(ride)
             navigate('/riding', { state: { ride } });
         });
 
@@ -77,12 +78,12 @@ const Home = () => {
             setWaitingForDriver(true);
         };
 
-        socket.on('ride-confirmed', handleRideConfirmed);
+        usersocket.on('ride-confirmed', handleRideConfirmed);
 
         return () => {
-            socket.off('ride-confirmed', handleRideConfirmed);
+            usersocket.off('ride-confirmed', handleRideConfirmed);
         };
-    }, [socket]);
+    }, [usersocket]);
 
     useEffect(() => {
         const handleNoCaptains = (data) => {
@@ -90,12 +91,12 @@ const Home = () => {
             toast.error("No captains available at the moment");
         };
     
-        socket.on('no-captains', handleNoCaptains);
+        usersocket.on('no-captain', handleNoCaptains);
     
         return () => {
-            socket.off('no-captains', handleNoCaptains);
+            usersocket.off('no-captain', handleNoCaptains);
         };
-    }, [socket]);
+    }, [usersocket]);
 
     const handlePickupChange = async (e) => {
         setPickup(e.target.value)
@@ -107,8 +108,8 @@ const Home = () => {
                 }
             })
             setPickupSuggestions(response.data)
-        } catch {
-            // handle error
+        } catch (error) {
+            // toast.error(error.response?.data?.message || 'Internal Server Error');
         }
     }
 
@@ -122,8 +123,9 @@ const Home = () => {
                 }
             })
             setDestinationSuggestions(response.data)
-        } catch {
-            // handle error
+        } catch (error) {
+            // toast.error(error.response?.data?.message || 'Internal Server Error');
+
         }
     }
 
@@ -133,9 +135,7 @@ const Home = () => {
 
     useGSAP(function () {
         if (isMobile) {
-            // Mobile animation logic
             if (panelOpen) {
-                // Hide map and show form at top when panel is open on mobile
                 gsap.to(mapContainerRef.current, {
                     opacity: 0,
                     duration: 0.3,
@@ -165,7 +165,6 @@ const Home = () => {
                     visibility: 'visible'
                 });
             } else {
-                // Show map and position form at bottom when panel is closed on mobile
                 gsap.to(mapContainerRef.current, {
                     opacity: 1,
                     duration: 0.3,
@@ -195,7 +194,6 @@ const Home = () => {
                 });
             }
         } else {
-            // Desktop animation logic - updated to hide form when panel is open
             if (panelOpen) {
                 gsap.to(formContentRef.current, {
                     opacity: 0,
@@ -245,7 +243,6 @@ const Home = () => {
                     transform: 'translateY(0)'
                 });
             } else {
-                // For desktop, completely replace the form area with the panel
                 gsap.to(formContentRef.current, {
                     opacity: 0,
                     visibility: 'hidden',
@@ -265,7 +262,6 @@ const Home = () => {
                 });
             }
 
-            // Reset panel state when opening any panel
             if (panelOpen) {
                 setPanelOpen(false);
             }
@@ -281,7 +277,6 @@ const Home = () => {
                     transform: 'translateY(100%)'
                 });
                 
-                // Only restore form visibility if no other panels are active
                 if (!vehiclePanel && !confirmRidePanel && !vehicleFound && !waitingForDriver) {
                     gsap.to(formContentRef.current, {
                         opacity: 1,
@@ -316,7 +311,6 @@ const Home = () => {
                 })
             });
             
-            // Hide form content when panel opens in desktop
             if (!isMobile) {
                 gsap.to(formContentRef.current, {
                     opacity: 0,
@@ -347,7 +341,6 @@ const Home = () => {
                 })
             });
             
-            // Hide form content when panel opens in desktop
             if (!isMobile) {
                 gsap.to(formContentRef.current, {
                     opacity: 0,
@@ -378,7 +371,6 @@ const Home = () => {
                 })
             });
             
-            // Hide form content when panel opens in desktop
             if (!isMobile) {
                 gsap.to(formContentRef.current, {
                     opacity: 0,
@@ -405,18 +397,21 @@ const Home = () => {
             return;
         }
 
-        try {
-            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/price/fare`, {
-                pickup,
-                destination
-            });
-            console.log(response.data);
-            setFare(response.data);
-        } catch (error) {
-            setLoading(false);
-            toast.error("Invalid Addresses");
-            return;
+        if(!fare.bike || !fare.car || !fare.auto) {
+            try {
+                const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/price/fare`, {
+                    pickup,
+                    destination
+                });
+                // console.log(response.data);
+                setFare(response.data);
+            } catch (error) {
+                setLoading(false);
+                toast.error("Invalid Addresses");
+                return;
+            }
         }
+        
         setVehiclePanel(true);
         setPanelOpen(false);
         setLoading(false);

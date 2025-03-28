@@ -1,7 +1,7 @@
 const socketIo = require('socket.io');
 const captainModel = require('./models/captain.model');
 
-let io;
+let io; // 3002
 
 function initializeSocket(server) {
     io = socketIo(server, {

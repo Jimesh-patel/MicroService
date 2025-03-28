@@ -23,12 +23,12 @@ const CaptainHome = () => {
     const detailsPanelRef = useRef(null)
 
     const navigate = useNavigate()
-    const { socket } = useContext(SocketContext)
+    const { captainsocket } = useContext(SocketContext)
     const { captain, setCaptain } = useContext(CaptainDataContext);
     const [status, setStatus] = useState(captain.status);
 
     useEffect(() => {
-        socket.emit('join', {
+        captainsocket.emit('join', {
             userType: 'captain',
             userId: captain._id
         })
@@ -36,7 +36,7 @@ const CaptainHome = () => {
         const updateLocation = () => {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(position => {
-                    socket.emit('update-location-captain', {
+                    captainsocket.emit('update-location-captain', {
                         userId: captain._id,
                         location: {
                             ltd: position.coords.latitude,
@@ -53,7 +53,7 @@ const CaptainHome = () => {
         updateLocation()
 
         return () => clearInterval(locationInterval)
-    }, [captain._id, socket])
+    }, [captain._id, captainsocket])
 
     useEffect(() => {
         const handleNewRide = (data) => {
@@ -62,12 +62,12 @@ const CaptainHome = () => {
             setRidePopupPanel(true)
         }
 
-        socket.on('new-ride', handleNewRide)
+        captainsocket.on('new-ride', handleNewRide)
 
         return () => {
-            socket.off('new-ride', handleNewRide)
+            captainsocket.off('new-ride', handleNewRide)
         }
-    }, [socket])
+    }, [captainsocket])
 
     const handleBeforeUnload = async (event) => {
         event.preventDefault();
@@ -244,9 +244,7 @@ const CaptainHome = () => {
                 ref={ridePopupPanelRef}
                 className='fixed w-full md:w-1/3 md:right-0 z-40 bottom-0 translate-y-full bg-white px-6 py-8 rounded-t-3xl md:rounded-none shadow-lg'
             >
-                <div className="absolute top-3 left-0 right-0 flex justify-center md:hidden">
-                    <div className="w-16 h-1 bg-gray-300 rounded-full"></div>
-                </div>
+                
                 <RidePopUp
                     ride={ride}
                     loading={loading}
@@ -260,9 +258,7 @@ const CaptainHome = () => {
                 ref={confirmRidePopupPanelRef}
                 className='fixed h-[calc(100vh-5rem)] w-full md:w-1/3 md:right-0 z-30 bottom-0 translate-y-full bg-white px-6 py-8 rounded-t-3xl md:rounded-none shadow-lg overflow-y-auto'
             >
-                <div className="absolute top-3 left-0 right-0 flex justify-center md:hidden">
-                    <div className="w-16 h-1 bg-gray-300 rounded-full"></div>
-                </div>
+               
                 <ConfirmRidePopUp
                     ride={ride}
                     setConfirmRidePopupPanel={setConfirmRidePopupPanel}

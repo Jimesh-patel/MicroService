@@ -5,8 +5,11 @@ const blackListTokenModel = require('../models/blackListToken.model');
 const crypto = require('crypto');
 const twilio = require('twilio');
 const bcrypt = require('bcrypt');
+const { sendMessageToSocketId } = require('../socket');
 
-const otpStore = new Map();  
+const { subscribeToQueue, publishToQueue } = require('../services/rabbitmq');
+
+const otpStore = new Map();
 const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 
@@ -147,7 +150,7 @@ module.exports.verifyOtp = async (req, res) => {
 
         const storedOtpData = otpStore.get(phone);
         if (!storedOtpData || Date.now() > storedOtpData.expiresAt) {
-            otpStore.delete(phone); 
+            otpStore.delete(phone);
             return res.status(400).json({ message: "OTP expired or invalid" });
         }
 
@@ -156,7 +159,7 @@ module.exports.verifyOtp = async (req, res) => {
             return res.status(400).json({ message: "Invalid OTP" });
         }
 
-        otpStore.delete(phone); 
+        otpStore.delete(phone);
         res.status(200).json({ message: "OTP verified successfully" });
 
     } catch (error) {
@@ -193,3 +196,41 @@ module.exports.resendOtp = async (req, res) => {
         res.status(500).json({ message: "Failed to resend OTP", error: error.message });
     }
 };
+
+
+
+subscribeToQueue("ride-confirmed", async (msg) => {
+    const data = JSON.parse(msg);
+    sendMessageToSocketId(data.user.socketId, {
+        event: 'ride-confirmed',
+        data
+    });
+});
+
+subscribeToQueue("ride-start", async (msg) => {
+    const data = JSON.parse(msg);
+    console.log('Ride started');
+    sendMessageToSocketId(data.user.socketId, {
+        event: 'ride-started',
+        data
+    });
+});
+
+subscribeToQueue("ride-end", async (msg) => {
+    const data = JSON.parse(msg);
+    console.log('Ride ended : ' + data);
+    const user = await userModel.findById(data.user);
+    sendMessageToSocketId(user.socketId, {
+        event: 'ride-ended',
+        data
+    });
+});
+
+subscribeToQueue("no-captain", async (msg) => {
+    const data = JSON.parse(msg);
+    console.log('No captain');
+    sendMessageToSocketId(data.user.socketId, {
+        event: 'no-captain',
+        data
+    });
+});

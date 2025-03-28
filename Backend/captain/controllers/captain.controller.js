@@ -3,7 +3,7 @@ const captainService = require('../services/captain.service');
 const blackListTokenModel = require('../models/blackListToken.model');
 const { validationResult } = require('express-validator');
 const axios = require('axios');
-const { subscribeToQueue } = require('../services/rabbitmq');
+const { subscribeToQueue, publishToQueue } = require('../services/rabbitmq');
 const { sendMessageToSocketId } = require('../socket');
 
 const crypto = require('crypto');
@@ -18,20 +18,6 @@ function getOtp(num) {
     return crypto.randomInt(Math.pow(10, num - 1), Math.pow(10, num)).toString();
 }
 
-const io = require('socket.io-client');
-const gatewaySocket = io(process.env.BASE_URL);
-
-gatewaySocket.on('connect', () => {
-    console.log('Connected to gateway socket with ID:', gatewaySocket.id);
-});
-
-gatewaySocket.on('connect_error', (error) => {
-    console.error('Connection error:', error);
-});
-
-gatewaySocket.on('disconnect', (reason) => {
-    console.log('Disconnected from gateway socket:', reason);
-});
 
 
 module.exports.registerCaptain = async (req, res, next) => {
@@ -175,6 +161,7 @@ module.exports.getCaptainById = async (req, res, next) => {
 
 
 subscribeToQueue("new-ride-available", async (data) => {
+    console.log('New ride available');
     const ride = JSON.parse(data);
     const response = await axios.get(`${process.env.BASE_URL}/maps/get-coordinates`, {
         params: {
@@ -185,10 +172,12 @@ subscribeToQueue("new-ride-available", async (data) => {
     const captainsInRadius = await captainService.getCaptainsInTheRadius(pickupCoordinates.ltd, pickupCoordinates.lng, ride.vehicleType, 100);
     
     if (captainsInRadius.length === 0) {
-        gatewaySocket.emit('no-captains', ride);
+        // gatewaySocket.emit('no-captains', ride);
+        console.log('No captains in radius');
+        await publishToQueue('no-captain', JSON.stringify(ride));
         return;
     }
-
+    console.log('Captains in radius:', captainsInRadius);
     captainsInRadius.map(captain => {
         sendMessageToSocketId(captain.socketId, {
             event: 'new-ride',
@@ -237,10 +226,7 @@ module.exports.confirmRide = async (req, res, next) => {
             captain: req.captain
         }
 
-        sendMessageToSocketId(req.captain.socketId, {
-            event: 'ride-confirmed',
-            data: ride
-        })
+        await publishToQueue('ride-confirmed', JSON.stringify(ride));
 
         if (!response.data) {
             return res.status(500).json({ message: 'Ride not found' });
@@ -335,3 +321,8 @@ module.exports.resendOtp = async (req, res) => {
         res.status(500).json({ message: "Failed to resend OTP", error: error.message });
     }
 };
+
+
+
+
+

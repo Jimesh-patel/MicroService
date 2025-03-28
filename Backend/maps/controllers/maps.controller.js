@@ -13,7 +13,7 @@ module.exports.getCoordinates = async (req, res, next) => {
     try {
         const coordinates = await mapService.getAddressCoordinate(address);
         if(!coordinates){
-            return res.status(404).json({ message: 'Coordinates not found' });
+            return res.status(400).json({ message: 'Map Api Key expired' });
         }
         res.status(200).json(coordinates);
     } catch (error) {
@@ -34,7 +34,7 @@ module.exports.getDistanceTime = async (req, res, next) => {
 
         const distanceTime = await mapService.getDistanceTime(origin, destination);
         if(!distanceTime){
-            return res.status(404).json({ message: 'Distance and Time not found' });
+            return res.status(400).json({ message: 'Distance and Time not found' });
         }
         res.status(200).json(distanceTime);
 
@@ -54,8 +54,9 @@ module.exports.getAutoCompleteSuggestions = async (req, res, next) => {
         
         const { input } = req.query;
         const suggestions = await mapService.getAutoCompleteSuggestions(input);
+        console.log(suggestions);
         if(!suggestions){
-            return res.status(404).json({ message: 'Suggestions not found' });
+            return res.status(400).json({ message: 'Map Api Key expired' });
         }
         res.status(200).json(suggestions);
         
@@ -79,7 +80,7 @@ module.exports.getTrafficData = async (req, res, next) => {
 
         const traffic = await mapService.getTrafficData(origin, destination);
         if(!traffic){
-            return res.status(404).json({ message: 'Traffic data not found' });
+            return res.status(400).json({ message: 'Traffic data not found' });
         }
         return res.status(200).json(traffic);
 

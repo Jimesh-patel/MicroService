@@ -15,12 +15,10 @@ module.exports.getAddressCoordinate = async (address) => {
                 ltd: location.lat,
                 lng: location.lng
             };
-        } else {
-            throw new Error('Unable to fetch coordinates');
-        }
+        } 
     } catch (error) {
         console.error(error);
-        throw error;
+        // throw error;
     }
 }
 
@@ -45,13 +43,11 @@ module.exports.getDistanceTime = async (origin, destination) => {
             }
 
             return response.data.rows[ 0 ].elements[ 0 ];
-        } else {
-            throw new Error('Unable to fetch distance and time');
-        }
+        } 
 
     } catch (err) {
         console.error(err);
-        throw err;
+        // throw err;
     }
 }
 
@@ -70,11 +66,9 @@ module.exports.getAutoCompleteSuggestions = async (input) => {
         const response = await axios.get(url);
         if (response.data.status === 'OK') {
             return response.data.predictions.map(prediction => prediction.description).filter(value => value);
-        } else {
-            throw new Error('Unable to fetch suggestions');
-        }
+        } 
     } catch (err) {
-        // console.error(err);
+        console.error(err);
         // throw err;
     }
 }

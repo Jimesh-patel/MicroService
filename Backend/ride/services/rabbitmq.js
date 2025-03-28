@@ -11,7 +11,6 @@ async function connect() {
         console.log('Connected to RabbitMQ');
     } catch (error) {
         console.log('Connecting to RabbitMQ at:', RABBITMQ_URL);
-
         process.exit(1); 
     }
 }

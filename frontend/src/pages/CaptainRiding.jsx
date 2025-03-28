@@ -58,7 +58,7 @@ const CaptainRiding = () => {
             <div className='flex flex-col md:flex-row h-[calc(100vh-5rem)]'>
                 {/* Map Area - Full width on mobile, left side on desktop */}
                 <div className='h-[70vh] md:h-full md:w-2/3 md:flex-shrink-0'>
-                    <LiveRouteTracking ride={rideData} />
+                    {/* <LiveRouteTracking ride={rideData} /> */}
                 </div>
 
                 {/* Right side panel - Only visible on desktop */}
@@ -67,7 +67,7 @@ const CaptainRiding = () => {
                         <div className='flex-grow p-6'>
                             <h4 className='text-2xl font-semibold mb-4'>Trip Details</h4>
                             <div className='bg-gray-50 p-4 rounded-lg mb-6'>
-                                <LiveDistanceTime ride={rideData} />
+                                {/* <LiveDistanceTime ride={rideData} /> */}
                             </div>
 
                         </div>
@@ -92,7 +92,7 @@ const CaptainRiding = () => {
                             <i className="text-3xl text-gray-800 ri-arrow-up-wide-line"></i>
                         </h5>
                         <div className='my-4'>
-                            <LiveDistanceTime ride={rideData} />
+                            {/* <LiveDistanceTime ride={rideData} /> */}
                         </div>
                         <div className='flex items-center justify-center px-3 py-1'>
                             <button className='bg-green-600 text-white font-semibold p-4 px-7 rounded-lg hover:bg-green-700 transition-colors'>
@@ -108,11 +108,7 @@ const CaptainRiding = () => {
                 ref={finishRidePanelRef}
                 className='h-[calc(100vh-5rem)] fixed w-full md:w-1/3 md:right-0 z-[500] bottom-0 translate-y-full bg-white px-6 py-8 rounded-t-3xl md:rounded-none shadow-lg'
             >
-                <div className="absolute top-3 left-0 right-0 flex justify-center md:hidden">
-                    <div className="w-16 h-1 bg-gray-300 rounded-full">
-    
-                    </div>
-                </div>
+             
                 <FinishRide
                     ride={rideData}
                     setFinishRidePanel={setFinishRidePanel}

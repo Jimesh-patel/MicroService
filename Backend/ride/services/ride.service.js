@@ -136,9 +136,9 @@ module.exports.startRide = async ({ rideId, otp, captain }) => {
         throw new Error('Ride not found');
     }
 
-    if (ride.status !== 'accepted') {
-        throw new Error('Ride not accepted');
-    }
+    // if (ride.status !== 'accepted') {
+    //     throw new Error('Ride not accepted');
+    // }
 
     if (ride.otp !== otp) {
         throw new Error('Invalid OTP');

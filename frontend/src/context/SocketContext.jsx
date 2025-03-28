@@ -4,17 +4,27 @@ import { io } from 'socket.io-client';
 
 export const SocketContext = createContext();
 
-const socket = io(`${import.meta.env.VITE_BASE_URL}`); 
+const usersocket = io(import.meta.env.VITE_USER_BASE_URL);
+const captainsocket = io(import.meta.env.VITE_CAPTAIN_BASE_URL);
+
 
 const SocketProvider = ({ children }) => {
     useEffect(() => {
         
-        socket.on('connect', () => {
-            console.log('Connected to server');
+        usersocket.on('connect', () => {
+            console.log('User connected to server');
         });
 
-        socket.on('disconnect', () => {
-            console.log('Disconnected from server');
+        usersocket.on('disconnect', () => {
+            console.log('User disconnected from server');
+        });
+
+        captainsocket.on('connect', () => {
+            console.log('Captain connected to server');
+        });
+
+        captainsocket.on('disconnect', () => {
+            console.log('Captain disconnected from server');
         });
 
     }, []);
@@ -22,7 +32,7 @@ const SocketProvider = ({ children }) => {
 
 
     return (
-        <SocketContext.Provider value={{ socket }}>
+        <SocketContext.Provider value={{ usersocket, captainsocket }}>
             {children}
         </SocketContext.Provider>
     );

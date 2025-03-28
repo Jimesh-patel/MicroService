@@ -10,7 +10,7 @@ import gsap from 'gsap';
 const Riding = () => {
     const location = useLocation();
     const { ride } = location.state || {};
-    const { socket } = useContext(SocketContext);
+    const { usersocket } = useContext(SocketContext);
     const navigate = useNavigate();
     const [payment, setPayment] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -89,17 +89,17 @@ const Riding = () => {
 
     // Socket event listener
     useEffect(() => {
-        if (socket) {
-            socket.on("ride-ended", () => {
+        if (usersocket) {
+            usersocket.on("ride-ended", (ride) => {
                 navigate('/home');
             });
 
             // Clean up listener when component unmounts
             return () => {
-                socket.off("ride-ended");
+                usersocket.off("ride-ended");
             };
         }
-    }, [socket, navigate]);
+    }, [usersocket, navigate]);
 
     const handlePayment = async () => {
         console.log("Ride:", ride);
@@ -166,7 +166,7 @@ const Riding = () => {
             <div className="px-2 py-2 flex justify-around items-center">
                     {/* Live tracking info */}
                     <div className='p-4 rounded-lg w-full'>
-                        <LiveDistanceTime ride={ride} />
+                        {/* <LiveDistanceTime ride={ride} /> */}
                     </div>
             </div>
         );
@@ -267,7 +267,7 @@ const Riding = () => {
 
                                 {/* Live tracking info */}
                                 <div className='bg-gray-50 p-4 rounded-lg mb-6'>
-                                    <LiveDistanceTime ride={ride} />
+                                    {/* <LiveDistanceTime ride={ride} /> */}
                                 </div>
                             </div>
                         </div>
