@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+app.use('/test', (req, res) => {
+    res.send('Captain API is running...');
+});
 
 app.use('/', captainRoutes)
 

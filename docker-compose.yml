@@ -1,0 +1,79 @@
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - gateway
+    environment:
+      - ./Backend/gateway/.env
+      - REACT_APP_API_URL=http://gateway:8000
+
+  gateway:
+    build:
+      context: ./Backend/gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - user
+      - ride
+      - captain
+      - payment
+      - dynamic_price
+      - maps
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  user:
+    build:
+      context: ./Backend/user
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  ride:
+    build:
+      context: ./Backend/ride
+    ports:
+      - "5002:5002"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  captain:
+    build:
+      context: ./Backend/captain
+    ports:
+      - "5003:5003"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  payment:
+    build:
+      context: ./Backend/Payment
+    ports:
+      - "5004:5004"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  dynamic_price:
+    build:
+      context: ./Backend/Dynamic Price
+    ports:
+      - "5005:5005"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+  maps:
+    build:
+      context: ./Backend/maps
+    ports:
+      - "5006:5006"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+
+networks:
+  default:
+    driver: bridge

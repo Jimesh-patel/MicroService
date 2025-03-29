@@ -19,6 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
 
+app.use('/test', (req, res) => {
+    res.send('Hello from user service')
+});
+
 app.use('/', userRoutes)
+
+
 
 module.exports = app;
