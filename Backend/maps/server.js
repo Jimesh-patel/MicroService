@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const port = process.env.PORT || 3004;
+const port = process.env.MAPs_PORT || 3004;
 const server = http.createServer(app);
 
 server.listen(port, () => {

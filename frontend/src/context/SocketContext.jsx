@@ -10,7 +10,8 @@ const captainsocket = io(import.meta.env.VITE_CAPTAIN_BASE_URL);
 
 const SocketProvider = ({ children }) => {
     useEffect(() => {
-        
+        console.log('Connecting to sockets...');
+        console.log(import.meta.env.VITE_USER_BASE_URL);
         usersocket.on('connect', () => {
             console.log('User connected to server');
         });

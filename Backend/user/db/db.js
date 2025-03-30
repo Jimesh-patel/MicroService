@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 function connectToDb() {
-    const dbConnect = process.env.DB_CONNECT;
+    const dbConnect = process.env.DB_USER;
     if (!dbConnect) {
         console.error('DB_CONNECT environment variable is not set');
         return;

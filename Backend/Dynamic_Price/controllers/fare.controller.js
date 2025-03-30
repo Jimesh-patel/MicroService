@@ -7,7 +7,7 @@ module.exports.getFare = async (req, res, next) => {
     try {
         const infoResponse = await axios.get(`${process.env.BASE_URL}/maps/traffic?origin=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`);
         const info = infoResponse.data;
-        
+
         const baseFare = {
             auto: 2,
             car: 4,
@@ -27,7 +27,7 @@ module.exports.getFare = async (req, res, next) => {
         let fareResults = {};
 
         const calculateFare = (vehicleType) => {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 const base_fare = baseFare[vehicleType] * RideData.distance;
 
                 const args = [
@@ -49,12 +49,26 @@ module.exports.getFare = async (req, res, next) => {
                 });
 
                 python.stderr.on("data", (data) => {
-                    console.error("Python Error:", data.toString());
+                    console.error(`Python Error (${vehicleType}):`, data.toString());
                 });
 
                 python.on("close", (code) => {
-                    resolve({ vehicleType, fare: parseFloat(result).toFixed(2) });
+                    if (result && !isNaN(result)) {
+                        resolve({ vehicleType, fare: parseFloat(result).toFixed(2) });
+                    } else {
+                        // Fallback static fare calculation if Python script fails
+                        console.error(`Fallback to static fare for ${vehicleType}`);
+                        const staticFare = (baseFare[vehicleType] * RideData.distance * 1.2).toFixed(2);
+                        resolve({ vehicleType, fare: staticFare });
+                    }
                 });
+
+                // Timeout for Python script (failsafe)
+                setTimeout(() => {
+                    console.error(`Python script timeout for ${vehicleType}`);
+                    const staticFare = (baseFare[vehicleType] * RideData.distance * 1.2).toFixed(2);
+                    resolve({ vehicleType, fare: staticFare });
+                }, 5000); // 5 seconds timeout
             });
         };
 
@@ -69,10 +83,12 @@ module.exports.getFare = async (req, res, next) => {
                 res.json(fareResults);
             })
             .catch((error) => {
+                console.error("Fare Calculation Error:", error);
                 res.status(500).json({ Message: "Fare Calculation error..." });
             });
 
     } catch (error) {
-        res.status(500).json({ Message: "Fare Calculation error..." });
+        console.error("API Fetch Error:", error);
+        res.status(500).json({ Message: error.message });
     }
 };

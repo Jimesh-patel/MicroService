@@ -3,12 +3,22 @@ services:
   frontend:
     build:
       context: ./frontend
+      args:
+        VITE_BASE_URL: http://localhost:3000
+        VITE_USER_BASE_URL: http://localhost:3001
+        VITE_CAPTAIN_BASE_URL: http://localhost:3002
+        VITE_GOMAPS_PRO_API_KEY: AlzaSy39nL85_ldZLjjLLxzWUZ5LWDSDUYn3zLQ
+        RAZORPAY_KEY_ID: rzp_test_2GB2lm2oGH5jKF
+        RAZORPAY_KEY_SECRET: XNFm5ap0x3HjbzQDZ5yzLvEl
     ports:
       - "5000:80"
     depends_on:
       - gateway
     environment:
-      - ./frontend/.env
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
   gateway:
     build:
@@ -22,57 +32,78 @@ services:
       - payment
       - dynamic_price
       - maps
-    environment:
-      - MONGO_URI=${MONGO_URI}
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
   user:
     build:
       context: ./Backend/user
     ports:
-      - "5001:5001"
-    environment:
-      - MONGO_URI=${MONGO_URI}
-
-  ride:
-    build:
-      context: ./Backend/ride
-    ports:
-      - "5002:5002"
-    environment:
-      - MONGO_URI=${MONGO_URI}
+      - "3001:3001"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
   captain:
     build:
       context: ./Backend/captain
     ports:
-      - "5003:5003"
-    environment:
-      - MONGO_URI=${MONGO_URI}
+      - "3002:3002"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
-  payment:
+  ride:
     build:
-      context: ./Backend/Payment
+      context: ./Backend/ride
     ports:
-      - "5004:5004"
-    environment:
-      - MONGO_URI=${MONGO_URI}
-
-  dynamic_price:
-    build:
-      context: ./Backend/Dynamic Price
-    ports:
-      - "5005:5005"
-    environment:
-      - MONGO_URI=${MONGO_URI}
+      - "3003:3003"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
   maps:
     build:
       context: ./Backend/maps
     ports:
-      - "5006:5006"
-    environment:
-      - MONGO_URI=${MONGO_URI}
+      - "3004:3004"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
+
+  dynamic_price:
+    build:
+      context: ./Backend/dynamic_price
+    ports:
+      - "3005:3005"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
+
+  payment:
+    build:
+      context: ./Backend/payment
+    ports:
+      - "3006:3006"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - microservice_network
 
 networks:
-  default:
+  microservice_network:
     driver: bridge

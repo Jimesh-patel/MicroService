@@ -18,14 +18,16 @@ import OnGoingRides from './pages/OnGoingRides'
 import 'remixicon/fonts/remixicon.css'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import CaptainRides from './pages/CaptainRides'
+import CaptainRides from './pages/CaptainRides';
 
 
 const App = () => {
 
+  console.log("VITE_BASE_URL:", import.meta.env.VITE_BASE_URL);
+
   return (
     <div>
-
+      
       <ToastContainer />
 
       <Routes>

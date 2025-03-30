@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Start = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center relative bg-gray-100">
-      
+
       <div className="absolute top-5 left-5">
         <img className="w-36 md:w-44" src="Logo.png" alt="logo" />
       </div>
