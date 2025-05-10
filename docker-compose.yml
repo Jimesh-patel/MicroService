@@ -1,21 +1,25 @@
-
 services:
   frontend:
     build:
       context: ./frontend
       args:
-        VITE_BASE_URL: http://localhost:3000
-        VITE_USER_BASE_URL: http://localhost:3001
-        VITE_CAPTAIN_BASE_URL: http://localhost:3002
-        VITE_GOMAPS_PRO_API_KEY: AlzaSy39nL85_ldZLjjLLxzWUZ5LWDSDUYn3zLQ
-        RAZORPAY_KEY_ID: rzp_test_2GB2lm2oGH5jKF
-        RAZORPAY_KEY_SECRET: XNFm5ap0x3HjbzQDZ5yzLvEl
+        VITE_BASE_URL: http://gateway:3000
+        VITE_USER_BASE_URL: http://user:3001
+        VITE_CAPTAIN_BASE_URL: http://captain:3002
+        VITE_GOMAPS_PRO_API_KEY: AlzaSyYyWisdp7rqpRhBwcpcvm5Dxg21UKZpZjC
+        VITE_RAZORPAY_KEY_ID: rzp_test_bKWKJEeA520i0h
+        VITE_RAZORPAY_KEY_SECRET: xjAp9h1tGHQmCz1bk5Kdqwtq
     ports:
       - "5000:80"
     depends_on:
       - gateway
     environment:
-      - .env
+      - VITE_BASE_URL=http://gateway:3000
+      - VITE_USER_BASE_URL=http://user:3001
+      - VITE_CAPTAIN_BASE_URL=http://captain:3002
+      - VITE_GOMAPS_PRO_API_KEY=AlzaSyYyWisdp7rqpRhBwcpcvm5Dxg21UKZpZjC
+      - VITE_RAZORPAY_KEY_ID=rzp_test_bKWKJEeA520i0h
+      - VITE_RAZORPAY_KEY_SECRET=xjAp9h1tGHQmCz1bk5Kdqwtq
     restart: always
     networks:
       - microservice_network
@@ -32,8 +36,14 @@ services:
       - payment
       - dynamic_price
       - maps
-    env_file:
-      - .env
+    environment:
+      - USER_URL=http://user:3001
+      - CAPTAIN_URL=http://captain:3002
+      - RIDE_URL=http://ride:3003
+      - MAP_URL=http://maps:3004
+      - PAYMENT_URL=http://payment:3006
+      - PRICE_URL=http://dynamic_price:3005
+      - PORT=3000
     restart: always
     networks:
       - microservice_network
@@ -43,8 +53,14 @@ services:
       context: ./Backend/user
     ports:
       - "3001:3001"
-    env_file:
-      - .env
+    environment:
+      - PORT=3001
+      - JWT_SECRET=cab-booking-system
+      - DB_CONNECT=mongodb+srv://admin:admin@database-gocab.dlrjszf.mongodb.net/user_db?retryWrites=true&w=majority&appName=database-GoCab
+      - RABBITMQ_URL=amqps://imoyzplh:a3hs5HR1Ll51d51uc-mlXkeEFDaKJD4P@fuji.lmq.cloudamqp.com/imoyzplh
+      - TWILIO_ACCOUNT_SID=AC7ad6e274572af8bcb7f28622457911a1
+      - TWILIO_AUTH_TOKEN=2b1d17bf5a115436bc21296873e18d6b
+      - TWILIO_PHONE_NUMBER=+15393525954
     restart: always
     networks:
       - microservice_network
@@ -54,8 +70,15 @@ services:
       context: ./Backend/captain
     ports:
       - "3002:3002"
-    env_file:
-      - .env
+    environment:
+      - PORT=3002
+      - JWT_SECRET=cab-booking-system
+      - DB_CONNECT=mongodb+srv://admin:admin@database-gocab.dlrjszf.mongodb.net/captain_db?retryWrites=true&w=majority&appName=database-GoCab
+      - BASE_URL=http://gateway:3000
+      - RABBITMQ_URL=amqps://imoyzplh:a3hs5HR1Ll51d51uc-mlXkeEFDaKJD4P@fuji.lmq.cloudamqp.com/imoyzplh
+      - TWILIO_ACCOUNT_SID=AC7ad6e274572af8bcb7f28622457911a1
+      - TWILIO_AUTH_TOKEN=2b1d17bf5a115436bc21296873e18d6b
+      - TWILIO_PHONE_NUMBER=+15393525954
     restart: always
     networks:
       - microservice_network
@@ -65,8 +88,12 @@ services:
       context: ./Backend/ride
     ports:
       - "3003:3003"
-    env_file:
-      - .env
+    environment:
+      - PORT=3003
+      - DB_CONNECT=mongodb+srv://admin:admin@database-gocab.dlrjszf.mongodb.net/ride_db?retryWrites=true&w=majority&appName=database-GoCab
+      - JWT_SECRET=cab-booking-system
+      - BASE_URL=http://gateway:3000
+      - RABBITMQ_URL=amqps://imoyzplh:a3hs5HR1Ll51d51uc-mlXkeEFDaKJD4P@fuji.lmq.cloudamqp.com/imoyzplh
     restart: always
     networks:
       - microservice_network
@@ -76,19 +103,13 @@ services:
       context: ./Backend/maps
     ports:
       - "3004:3004"
-    env_file:
-      - .env
-    restart: always
-    networks:
-      - microservice_network
-
-  dynamic_price:
-    build:
-      context: ./Backend/dynamic_price
-    ports:
-      - "3005:3005"
-    env_file:
-      - .env
+    environment:
+      - PORT=3004
+      - JWT_SECRET=cab-booking-system
+      - BASE_URL=http://gateway:3000
+      - RABBITMQ_URL=amqps://imoyzplh:a3hs5HR1Ll51d51uc-mlXkeEFDaKJD4P@fuji.lmq.cloudamqp.com/imoyzplh
+      - GOMAPS_PRO_API_KEY=AlzaSyYyWisdp7rqpRhBwcpcvm5Dxg21UKZpZjC
+      - OPENWEATHER_API_KEY=2d99dc2ccbfdb13ed411ec67aecacc38
     restart: always
     networks:
       - microservice_network
@@ -98,8 +119,26 @@ services:
       context: ./Backend/payment
     ports:
       - "3006:3006"
-    env_file:
-      - .env
+    environment:
+      - POST=3006
+      - RAZORPAY_KEY_ID=rzp_test_bKWKJEeA520i0h
+      - RAZORPAY_KEY_SECRET=xjAp9h1tGHQmCz1bk5Kdqwtq
+      - DriverID=acc_Q0PAkrCR6JoMZP
+      - TWILIO_ACCOUNT_SID=AC7ad6e274572af8bcb7f28622457911a1
+      - TWILIO_AUTH_TOKEN=2b1d17bf5a115436bc21296873e18d6b
+      - TWILIO_PHONE_NUMBER=+15393525954
+    restart: always
+    networks:
+      - microservice_network
+
+  dynamic_price:
+    build:
+      context: ./Backend/dynamic_price
+    ports:
+      - "3005:3005"
+    environment:
+      - PORT=3005
+      - BASE_URL=http://gateway:3000
     restart: always
     networks:
       - microservice_network
