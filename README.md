@@ -105,14 +105,9 @@ cd go-cab
 
 #### 2. Create Environment Variables
 
-Create a `.env` file in the root directory 
+Create `env` folder in the root directory 
+and add all service .env file in it
 
-#### 3. Install Dependencies
-
-```bash
-# Install dependencies for all services
-npm install
-```
 
 #### 4. Run with Docker Compose
 
@@ -125,10 +120,10 @@ docker-compose up --build -d
 
 Once all services are running, access the frontend application at:
 ```
-http://localhost:3000
+http://frontend:3000
 ```
 
 And the API Gateway at:
 ```
-http://localhost:5000
+http://gateway:5000
 ```
