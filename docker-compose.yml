@@ -3,12 +3,12 @@ services:
     build:
       context: ./frontend
       args:
-        VITE_BASE_URL: ${VITE_BASE_URL}
-        VITE_USER_BASE_URL: ${VITE_USER_BASE_URL}
-        VITE_CAPTAIN_BASE_URL: ${VITE_CAPTAIN_BASE_URL}
-        VITE_GOMAPS_PRO_API_KEY: ${VITE_GOMAPS_PRO_API_KEY}
-        VITE_RAZORPAY_KEY_ID: ${VITE_RAZORPAY_KEY_ID}
-        VITE_RAZORPAY_KEY_SECRET: ${VITE_RAZORPAY_KEY_SECRET}
+        VITE_BASE_URL: http://localhost:3000
+        VITE_USER_BASE_URL: http://localhost:3001
+        VITE_CAPTAIN_BASE_URL: http://localhost:3002
+        VITE_GOMAPS_PRO_API_KEY: AlzaSyYyWisdp7rqpRhBwcpcvm5Dxg21UKZpZjC
+        VITE_RAZORPAY_KEY_ID: rzp_test_bKWKJEeA520i0h
+        VITE_RAZORPAY_KEY_SECRET: xjAp9h1tGHQmCz1bk5Kdqwtq
     ports:
       - "5000:80"
     depends_on:

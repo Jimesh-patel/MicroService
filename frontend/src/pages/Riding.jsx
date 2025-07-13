@@ -166,7 +166,7 @@ const Riding = () => {
             <div className="px-2 py-2 flex justify-around items-center">
                     {/* Live tracking info */}
                     <div className='p-4 rounded-lg w-full'>
-                        {/* <LiveDistanceTime ride={ride} /> */}
+                        <LiveDistanceTime ride={ride} />
                     </div>
             </div>
         );
@@ -190,7 +190,7 @@ const Riding = () => {
                     ref={mapContainerRef}
                     className={`${isMobile ? 'w-full' : 'w-2/3'} relative overflow-hidden`}
                 >
-                    {/* <LiveRouteTracking ride={ride} /> */}
+                    <LiveRouteTracking ride={ride} />
                 </div>
 
                 {/* Info Container */}
@@ -267,7 +267,7 @@ const Riding = () => {
 
                                 {/* Live tracking info */}
                                 <div className='bg-gray-50 p-4 rounded-lg mb-6'>
-                                    {/* <LiveDistanceTime ride={ride} /> */}
+                                    <LiveDistanceTime ride={ride} />
                                 </div>
                             </div>
                         </div>

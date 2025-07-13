@@ -459,7 +459,7 @@ const Home = () => {
                     className='w-full h-auto md:w-2/3 md:h-full md:float-left md:border-r-2'
                     style={{ height: isMobile ? '70vh' : '100%' }}
                 >
-                    {/* <LiveTracking /> */}
+                    <LiveTracking />
                 </div>
 
                 {/* Form Container */}
