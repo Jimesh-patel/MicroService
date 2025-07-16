@@ -1,4 +1,6 @@
 .env
 cmd.txt
-
+*/*.pkl
 env/*.env
+
+Run & Test/k8s-configmap-secrets.yaml

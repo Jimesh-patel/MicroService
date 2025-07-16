@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: jimeshpatel/microservice-frontend
+    ports:
+      - "5000:80"
+
+  gateway:
+    image: jimeshpatel/microservice-gateway
+    ports:
+      - "3000:3000"
+
+  captain:
+    image: jimeshpatel/microservice-captain
+    ports:
+      - "3002:3002"
+
+  user:
+    image: jimeshpatel/microservice-user
+    ports:
+      - "3001:3001"
+
+  ride:
+    image: jimeshpatel/microservice-ride
+    ports:
+      - "3003:3003"
+
+  payment:
+    image: jimeshpatel/microservice-payment
+    ports:
+      - "3006:3006"
+
+  dynamic_price:
+    image: jimeshpatel/microservice-dynamic_price
+    ports:
+      - "3005:3005"
+
+  maps:
+    image: jimeshpatel/microservice-maps
+    ports:
+      - "3004:3004"
