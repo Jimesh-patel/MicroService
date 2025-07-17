@@ -1,5 +1,33 @@
+# Full Kubernetes Configuration
+# Includes both Deployments and Services using image names from Docker UI screenshot
+# Replace `<namespace>` with your actual namespace if needed
+
 ---
-# ✅ NodePort Services
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: jimeshpatel/microservice-frontend
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: frontend-config
+            - secretRef:
+                name: frontend-secret
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -12,6 +40,30 @@ spec:
     - port: 80
       targetPort: 80
       nodePort: 30080
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+        - name: gateway
+          image: jimeshpatel/microservice-gateway
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: gateway-config
 ---
 apiVersion: v1
 kind: Service
@@ -25,6 +77,30 @@ spec:
     - port: 3000
       targetPort: 3000
       nodePort: 30000
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+        - name: user
+          image: jimeshpatel/microservice-user
+          ports:
+            - containerPort: 3001
+          envFrom:
+            - secretRef:
+                name: user-secret
 ---
 apiVersion: v1
 kind: Service
@@ -38,6 +114,30 @@ spec:
     - port: 3001
       targetPort: 3001
       nodePort: 30001
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: captain-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: captain
+  template:
+    metadata:
+      labels:
+        app: captain
+    spec:
+      containers:
+        - name: captain
+          image: jimeshpatel/microservice-captain
+          ports:
+            - containerPort: 3002
+          envFrom:
+            - secretRef:
+                name: captain-secret
 ---
 apiVersion: v1
 kind: Service
@@ -51,6 +151,30 @@ spec:
     - port: 3002
       targetPort: 3002
       nodePort: 30002
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ride-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ride
+  template:
+    metadata:
+      labels:
+        app: ride
+    spec:
+      containers:
+        - name: ride
+          image: jimeshpatel/microservice-ride
+          ports:
+            - containerPort: 3003
+          envFrom:
+            - secretRef:
+                name: ride-secret
 ---
 apiVersion: v1
 kind: Service
@@ -64,6 +188,30 @@ spec:
     - port: 3003
       targetPort: 3003
       nodePort: 30003
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maps-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maps
+  template:
+    metadata:
+      labels:
+        app: maps
+    spec:
+      containers:
+        - name: maps
+          image: jimeshpatel/microservice-maps
+          ports:
+            - containerPort: 3004
+          envFrom:
+            - configMapRef:
+                name: map-config
 ---
 apiVersion: v1
 kind: Service
@@ -77,6 +225,30 @@ spec:
     - port: 3004
       targetPort: 3004
       nodePort: 30004
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynamic-price-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynamic-price
+  template:
+    metadata:
+      labels:
+        app: dynamic-price
+    spec:
+      containers:
+        - name: dynamic-price
+          image: jimeshpatel/microservice-dynamic_price
+          ports:
+            - containerPort: 3005
+          envFrom:
+            - configMapRef:
+                name: dynamic-price-config
 ---
 apiVersion: v1
 kind: Service
@@ -90,6 +262,30 @@ spec:
     - port: 3005
       targetPort: 3005
       nodePort: 30005
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment
+  template:
+    metadata:
+      labels:
+        app: payment
+    spec:
+      containers:
+        - name: payment
+          image: jimeshpatel/microservice-payment
+          ports:
+            - containerPort: 3006
+          envFrom:
+            - secretRef:
+                name: payment-secret
 ---
 apiVersion: v1
 kind: Service
